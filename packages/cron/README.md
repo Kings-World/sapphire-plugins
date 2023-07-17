@@ -10,7 +10,7 @@ yarn add @kingsworld/plugin-cron @sapphire/framework
 
 ## Usage
 
-Make sure to register the plegin before creating the client
+Make sure to register the plugin before creating the client
 
 ```ts
 import "@kingsworld/plugin-cron/register";
