@@ -86,7 +86,7 @@ export class PingPong extends CronTask {
 
 ### Frequently Asked Questions
 
-##### What does the `this.info()`, `this.error()`, `this.warn()`, `this.debug()`, and `this.trace()` methods do instead the CronTask#run() method?
+##### What does the `this.info()`, `this.error()`, `this.warn()`, `this.debug()`, and `this.trace()` methods do in the CronTask#run() method?
 
 These methods are small helpers towards Sapphire's logger that prefixes logs with `CronTask[$name]`. The helpers are optional, however, I find them useful when using them in my own projects.
 
