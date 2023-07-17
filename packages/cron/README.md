@@ -65,7 +65,7 @@ export class PingPong extends CronTask {
 }
 ```
 
-Using the command constructor:
+Using the class constructor:
 
 ```ts
 import { CronTask } from "@kingsworld/plugin-cron";
