@@ -109,16 +109,14 @@ export class PingPong extends CronTask {
 First, clone the repo using git SSH, the GitHub CLI, or HTTP
 
 ```sh
-git clone git@github.com:Kings-World/cron-plugin.git # ssh
-git clone https://github.com/Kings-World/cron-plugin.git # http
-gh repo clone Kings-World/cron-plugin # github cli
+git clone git@github.com:Kings-World/sapphire-plugins.git # ssh
+git clone https://github.com/Kings-World/sapphire-plugins.git # http
+gh repo clone Kings-World/sapphire-plugins # github cli
 ```
 
-Second, install the dependencies using Yarn
+Finally, install the dependencies using Yarn
 
 ```sh
 yarn # shorthand
 yarn install # full command
 ```
-
-Finally, install Husky to leverage prettier and commitlint validation
