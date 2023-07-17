@@ -1,0 +1,79 @@
+{
+    "name": "@kingsworld/plugin-cron",
+    "version": "1.0.0",
+    "author": "Seren_Modz 21 <seren@kings-world.net>",
+    "license": "MIT",
+    "main": "dist/index.js",
+    "module": "dist/index.mjs",
+    "types": "dist/index.d.ts",
+    "exports": {
+        ".": {
+            "import": "./dist/index.mjs",
+            "require": "./dist/index.js",
+            "types": "./dist/index.d.ts"
+        },
+        "./register": {
+            "import": "./register.mjs",
+            "require": "./register.js",
+            "types": "./register.d.ts"
+        }
+    },
+    "sideEffects": [
+        "./dist/register.js",
+        "./register.js",
+        "./register.mjs"
+    ],
+    "scripts": {
+        "build": "tsc && yarn esm:register && yarn esm:default",
+        "clean:build": "rimraf dist && yarn build",
+        "esm:register": "gen-esm-wrapper dist/register.js dist/register.mjs",
+        "esm:default": "gen-esm-wrapper dist/index.js dist/index.mjs",
+        "postinstall": "is-ci || husky install"
+    },
+    "dependencies": {
+        "cron": "^2.3.1",
+        "tslib": "^2.6.0"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^17.6.6",
+        "@commitlint/config-conventional": "^17.6.6",
+        "@sapphire/framework": "^4.5.0",
+        "@sapphire/pieces": "^3.6.3",
+        "@sapphire/ts-config": "^4.0.0",
+        "@types/cron": "^2",
+        "@types/is-ci": "^3",
+        "@types/node": "^20.4.2",
+        "discord.js": "^14.11.0",
+        "gen-esm-wrapper": "^1.1.3",
+        "husky": "^8.0.3",
+        "is-ci": "^3.0.1",
+        "prettier": "^2.8.8",
+        "pretty-quick": "^3.1.3",
+        "typescript": "^5.1.6"
+    },
+    "homepage": "https://github.com/Kings-World/cron-plugin",
+    "repository": "github://Kings-World/cron-plugin",
+    "keywords": [
+        "sapphire",
+        "plugin",
+        "cron",
+        "typescript",
+        "ts",
+        "discord",
+        "yarn",
+        "bot"
+    ],
+    "bugs": {
+        "url": "https://github.com/Kings-World/cron-plugin/issues",
+        "email": "seren@kings-world.net"
+    },
+    "files": [
+        "dist/",
+        "!dist/.tsbuildinfo",
+        "./register.*"
+    ],
+    "publishConfig": {
+        "access": "public"
+    },
+    "packageManager": "yarn@3.6.1"
+}
