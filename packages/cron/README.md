@@ -86,18 +86,18 @@ export class PingPong extends CronTask {
 
 ### Frequently Asked Questions
 
-##### What does the `this.info()`, `this.error()`, `this.warn()`, `this.debug()`, and `this.trace()` methods do in the CronTask#run() method?
+##### What does the `this.info()`, `this.error()`, `this.warn()`, `this.debug()`, and `this.trace()` methods do in the CronTask class?
 
 These methods are small helpers towards Sapphire's logger that prefixes logs with `CronTask[$name]`. The helpers are optional, however, I find them useful when using them in my own projects.
 
 ```ts
 export class PingPong extends CronTask {
     run() {
-        this.info("Ping Pong! 🏓"); // YYYY-MM-DD HH:MM:SS - INFO - CronTask[ping] Ping Pong! 🏓
-        this.error("Ping Pong! 🏓"); // YYYY-MM-DD HH:MM:SS - ERROR - CronTask[ping] Ping Pong! 🏓
-        this.warn("Ping Pong! 🏓"); // YYYY-MM-DD HH:MM:SS - WARN - CronTask[ping] Ping Pong! 🏓
-        this.debug("Ping Pong! 🏓"); // YYYY-MM-DD HH:MM:SS - DEBUG - CronTask[ping] Ping Pong! 🏓
-        this.trace("Ping Pong! 🏓"); // YYYY-MM-DD HH:MM:SS - TRACE - CronTask[ping] Ping Pong! 🏓
+        this.info("Ping Pong! 🏓"); // INFO - CronTask[ping] Ping Pong! 🏓
+        this.error("Ping Pong! 🏓"); // ERROR - CronTask[ping] Ping Pong! 🏓
+        this.warn("Ping Pong! 🏓"); // WARN - CronTask[ping] Ping Pong! 🏓
+        this.debug("Ping Pong! 🏓"); // DEBUG - CronTask[ping] Ping Pong! 🏓
+        this.trace("Ping Pong! 🏓"); // TRACE - CronTask[ping] Ping Pong! 🏓
     }
 }
 ```
