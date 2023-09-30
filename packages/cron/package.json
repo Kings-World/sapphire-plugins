@@ -31,7 +31,7 @@
         "esm:default": "gen-esm-wrapper dist/index.js dist/index.mjs"
     },
     "dependencies": {
-        "cron": "^2.4.0",
+        "cron": "^3.0.0",
         "tslib": "^2.6.1"
     },
     "devDependencies": {

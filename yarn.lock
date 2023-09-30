@@ -382,7 +382,7 @@ __metadata:
   resolution: "@kingsworld/plugin-cron@workspace:packages/cron"
   dependencies:
     "@types/node": ^20.4.5
-    cron: ^2.4.0
+    cron: ^3.0.0
     gen-esm-wrapper: ^1.1.3
     tslib: ^2.6.1
     typescript: ^5.1.6
@@ -572,6 +572,13 @@ __metadata:
   version: 1.0.4
   resolution: "@tsconfig/node16@npm:1.0.4"
   checksum: 202319785901f942a6e1e476b872d421baec20cf09f4b266a1854060efbf78cde16a4d256e8bc949d31e6cd9a90f1e8ef8fb06af96a65e98338a2b6b0de0a0ff
+  languageName: node
+  linkType: hard
+
+"@types/luxon@npm:~3.3.0":
+  version: 3.3.2
+  resolution: "@types/luxon@npm:3.3.2"
+  checksum: b9111132720eae0269538872a5a496b29587ecfc8edc3b0ff7d269aa93a5ff00a131b23d1e9d1f12ec39f2c779ad21bd8d9f90b122c85a182771aabde7f676b8
   languageName: node
   linkType: hard
 
@@ -990,12 +997,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cron@npm:^2.4.0":
-  version: 2.4.0
-  resolution: "cron@npm:2.4.0"
+"cron@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "cron@npm:3.0.0"
   dependencies:
-    luxon: ^3.2.1
-  checksum: e1dfc2d2a8cfdee0c17daac791074d904b8d7ecdcd3cf9ca969f8efb00371113d1eb69d60fdebb9e94ac5b3bb3e904a7e687a2fcd276ffdb1f0381e8b6df26bd
+    "@types/luxon": ~3.3.0
+    luxon: ~3.3.0
+  checksum: 6bddb51f73c07bf1b95e28ac841d6ee90c85c2b766b53378cee44d7cffe7d838f85d5b54e292b273d36b75e1cf44c22be7d734ef30635d931ed985043178df13
   languageName: node
   linkType: hard
 
@@ -1692,7 +1700,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"luxon@npm:^3.2.1":
+"luxon@npm:~3.3.0":
   version: 3.3.0
   resolution: "luxon@npm:3.3.0"
   checksum: 50cf17a0dc155c3dcacbeae8c0b7e80db425e0ba97b9cbdf12a7fc142d841ff1ab1560919f033af46240ed44e2f70c49f76e3422524c7fc8bb8d81ca47c66187
