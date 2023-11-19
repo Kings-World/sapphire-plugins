@@ -35,11 +35,11 @@ export class CronTaskStore extends Store<CronTask> {
         const options = value.options;
 
         try {
-            value.job = new CronJob({
+            value.job = CronJob.from({
                 ...options,
+                onTick: () => void value.run.bind(value)(),
                 start: false,
                 context: value,
-                onTick: value.run.bind(value),
                 timeZone:
                     options.timeZone ?? this.container.cron.defaultTimezone,
             });

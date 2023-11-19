@@ -1,5 +1,3 @@
-import "tslib";
-
 import type { CronTaskStore } from "./lib/structures/CronTaskStore";
 import type { CronTaskHandler } from "./lib/CronTaskHandler";
 import type { CronTaskHandlerOptions } from "./lib/types/CronTaskTypes";
