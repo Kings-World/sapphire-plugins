@@ -71,7 +71,7 @@ Using the class constructor:
 import { CronTask } from "@kingsworld/plugin-cron";
 
 export class PingPong extends CronTask {
-    constructor(context: CronTask.Context, options: CronTask.Options) {
+    constructor(context: CronTask.LoaderContext, options: CronTask.Options) {
         super(context, {
             ...options,
             cronTime: "* * * * *",
