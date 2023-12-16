@@ -9,9 +9,7 @@ import {
     SapphireClient,
 } from "@sapphire/framework";
 import type { ClientOptions } from "discord.js";
-
-import { CronTaskStore } from "./lib/structures/CronTaskStore";
-import { CronTaskHandler } from "./lib/CronTaskHandler";
+import { CronTaskHandler, CronTaskStore } from "./index";
 
 export class CronTaskPlugin extends Plugin {
     static [preGenericsInitialization](
