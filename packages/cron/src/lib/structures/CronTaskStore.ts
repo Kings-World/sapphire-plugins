@@ -2,7 +2,7 @@ import { Store } from "@sapphire/pieces";
 import { CronTask } from "./CronTask";
 import { CronJob } from "cron";
 
-export class CronTaskStore extends Store<CronTask> {
+export class CronTaskStore extends Store<CronTask, "cron-tasks"> {
     constructor() {
         super(CronTask, { name: "cron-tasks" });
     }

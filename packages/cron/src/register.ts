@@ -14,8 +14,6 @@ import { CronTaskStore } from "./lib/structures/CronTaskStore";
 import { CronTaskHandler } from "./lib/CronTaskHandler";
 
 export class CronTaskPlugin extends Plugin {
-    service: string | undefined;
-
     static [preGenericsInitialization](
         this: SapphireClient,
         options: ClientOptions
