@@ -17,7 +17,7 @@
         "@commitlint/cli": "^18.4.2",
         "@commitlint/config-conventional": "^18.4.2",
         "@sapphire/framework": "^5.0.0",
-        "@sapphire/pieces": "^3.10.0",
+        "@sapphire/pieces": "^4.0.0",
         "@sapphire/ts-config": "^5.0.0",
         "@types/node": "^20.9.2",
         "discord.js": "^14.14.1",
