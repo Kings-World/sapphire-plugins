@@ -23,7 +23,7 @@ new SapphireClient({
     ...otherClientOptions,
     cron: {
         // the cron object is optional
-        defaultTimezone: "Europe/London", // the cron pacakge defaults to UTC
+        defaultTimezone: "Europe/London", // the cron package defaults to UTC
     },
 });
 ```
