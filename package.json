@@ -8,7 +8,7 @@
         "packages/*"
     ],
     "scripts": {
-        "clean": "rimraf \"packages/**/dist\" \"packages/**/.turbo\"",
+        "clean": "rimraf --glob \"packages/**/dist\" \"packages/**/.turbo\"",
         "build": "turbo run build",
         "typecheck": "turbo run typecheck",
         "prepublishOnly": "yarn build",
