@@ -1,3 +1,9 @@
+/**
+ * This script was made by https://github.com/sapphiredev
+ * I am using it to respect the build steps that they use in their plugins
+ * @see https://github.com/sapphiredev/plugins/tree/main/scripts
+ */
+
 import { esbuildPluginFilePathExtensions } from "esbuild-plugin-file-path-extensions";
 import { esbuildPluginVersionInjector } from "esbuild-plugin-version-injector";
 import { defineConfig, type Options } from "tsup";
