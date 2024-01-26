@@ -12,7 +12,7 @@
         "build": "turbo run build",
         "typecheck": "turbo run typecheck",
         "prepublishOnly": "yarn build",
-        "postinstall": "is-ci || husky install"
+        "postinstall": "is-ci || husky"
     },
     "devDependencies": {
         "@commitlint/cli": "^18.4.3",
