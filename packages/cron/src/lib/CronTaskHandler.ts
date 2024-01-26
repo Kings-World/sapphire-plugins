@@ -3,9 +3,11 @@ import type { CronTaskHandlerOptions } from "./types/CronTaskTypes";
 
 export class CronTaskHandler {
     defaultTimezone?: CronTaskHandlerOptions["defaultTimezone"];
+    sentry?: CronTaskHandlerOptions["sentry"];
 
     constructor(options?: CronTaskHandlerOptions) {
         this.defaultTimezone = options?.defaultTimezone;
+        this.sentry = options?.sentry;
     }
 
     startAll() {

@@ -14,7 +14,7 @@ export class CronTaskStore extends Store<CronTask, "cron-tasks"> {
         }
 
         Store.logger?.(
-            `[STORE => ${this.name}] [START] Started all cronjob tasks.`
+            `[STORE => ${this.name}] [START] Started all cronjob tasks.`,
         );
         return this;
     }
@@ -26,7 +26,7 @@ export class CronTaskStore extends Store<CronTask, "cron-tasks"> {
         }
 
         Store.logger?.(
-            `[STORE => ${this.name}] [STOP] Stopped all cronjob tasks.`
+            `[STORE => ${this.name}] [STOP] Stopped all cronjob tasks.`,
         );
         return this;
     }
@@ -34,19 +34,23 @@ export class CronTaskStore extends Store<CronTask, "cron-tasks"> {
     override set(key: string, value: CronTask): this {
         const options = value.options;
 
+        const { sentry, defaultTimezone } = this.container.cron;
+        const cronJob = sentry
+            ? sentry.cron.instrumentCron(CronJob, key)
+            : CronJob;
+
         try {
-            value.job = CronJob.from({
+            value.job = cronJob.from({
                 ...options,
                 onTick: () => void value.run.bind(value)(),
                 start: false,
                 context: value,
-                timeZone:
-                    options.timeZone ?? this.container.cron.defaultTimezone,
+                timeZone: options.timeZone ?? defaultTimezone,
             });
         } catch (error) {
             value.error(
                 "Encountered an error while creating the cron job",
-                error
+                error,
             );
             value.unload();
         }
