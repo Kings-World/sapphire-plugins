@@ -12,7 +12,7 @@
         "build": "turbo run build",
         "typecheck": "turbo run typecheck",
         "prepublishOnly": "yarn build",
-        "postinstall": "is-ci || husky install"
+        "postinstall": "is-ci || husky"
     },
     "devDependencies": {
         "@commitlint/cli": "^18.4.3",
@@ -24,7 +24,7 @@
         "discord.js": "^14.14.1",
         "esbuild-plugin-file-path-extensions": "^2.0.0",
         "esbuild-plugin-version-injector": "^1.2.1",
-        "husky": "^8.0.3",
+        "husky": "^9.0.0",
         "is-ci": "^3.0.1",
         "prettier": "^3.0.0",
         "pretty-quick": "^4.0.0",
