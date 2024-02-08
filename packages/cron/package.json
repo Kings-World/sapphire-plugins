@@ -1,7 +1,7 @@
 {
     "name": "@kingsworld/plugin-cron",
     "description": "A simple @sapphire/framework plugin that aims to make use of the cron package and allow users to make cron jobs within their Sapphire discord bot.",
-    "version": "1.4.0",
+    "version": "1.4.1",
     "author": "Seren_Modz 21 <seren@kings-world.net>",
     "license": "MIT",
     "main": "dist/cjs/index.cjs",
@@ -45,11 +45,9 @@
     "dependencies": {
         "cron": "^3.1.6"
     },
-    "optionalDependencies": {
-        "@sentry/node": "^7.98.0"
-    },
     "devDependencies": {
         "@favware/rollup-type-bundler": "^3.3.0",
+        "@sentry/node": "^7.100.1",
         "@types/node": "^20.11.6",
         "concurrently": "^8.2.2",
         "tsup": "^8.0.1",
