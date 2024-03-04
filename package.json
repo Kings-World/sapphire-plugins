@@ -15,8 +15,8 @@
         "postinstall": "is-ci || husky"
     },
     "devDependencies": {
-        "@commitlint/cli": "^18.6.0",
-        "@commitlint/config-conventional": "^18.6.0",
+        "@commitlint/cli": "^19.0.0",
+        "@commitlint/config-conventional": "^19.0.0",
         "@sapphire/framework": "^5.0.7",
         "@sapphire/pieces": "^4.2.2",
         "@sapphire/ts-config": "^5.0.0",
