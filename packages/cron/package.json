@@ -47,7 +47,7 @@
     },
     "devDependencies": {
         "@favware/rollup-type-bundler": "^3.3.0",
-        "@sentry/node": "^7.100.1",
+        "@sentry/node": "^8.0.0",
         "@types/node": "^20.11.6",
         "concurrently": "^8.2.2",
         "tsup": "^8.0.1",
