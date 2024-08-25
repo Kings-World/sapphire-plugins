@@ -4,7 +4,7 @@ import type { CronJobOptions } from "../types/CronTaskTypes";
 import type { Awaitable } from "@sapphire/framework";
 
 export abstract class CronTask<
-    Options extends CronTask.Options = CronTask.Options
+    Options extends CronTask.Options = CronTask.Options,
 > extends Piece<Options, "cron-tasks"> {
     declare job: CronJob<null, CronTask>;
 
@@ -17,35 +17,35 @@ export abstract class CronTask<
     info(message: string, ...other: unknown[]) {
         this.container.logger.info(
             `CronTask[${this.name}] ${message}`,
-            ...other
+            ...other,
         );
     }
 
     error(message: string, ...other: unknown[]) {
         this.container.logger.error(
             `CronTask[${this.name}] ${message}`,
-            ...other
+            ...other,
         );
     }
 
     warn(message: string, ...other: unknown[]) {
         this.container.logger.warn(
             `CronTask[${this.name}] ${message}`,
-            ...other
+            ...other,
         );
     }
 
     debug(message: string, ...other: unknown[]) {
         this.container.logger.debug(
             `CronTask[${this.name}] ${message}`,
-            ...other
+            ...other,
         );
     }
 
     trace(message: string, ...other: unknown[]) {
         this.container.logger.trace(
             `CronTask[${this.name}] ${message}`,
-            ...other
+            ...other,
         );
     }
 }

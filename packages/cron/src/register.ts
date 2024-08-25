@@ -14,7 +14,7 @@ import { CronTaskHandler, CronTaskStore } from "./index";
 export class CronTaskPlugin extends Plugin {
     static [preGenericsInitialization](
         this: SapphireClient,
-        options: ClientOptions
+        options: ClientOptions,
     ) {
         container.cron = new CronTaskHandler(options.cron);
     }
@@ -30,15 +30,15 @@ export class CronTaskPlugin extends Plugin {
 
 SapphireClient.plugins.registerPreGenericsInitializationHook(
     CronTaskPlugin[preGenericsInitialization],
-    "Cron-Task-PreGenericsInitialization"
+    "Cron-Task-PreGenericsInitialization",
 );
 
 SapphireClient.plugins.registerPostInitializationHook(
     CronTaskPlugin[postInitialization],
-    "Cron-Task-PostInitialization"
+    "Cron-Task-PostInitialization",
 );
 
 SapphireClient.plugins.registerPostLoginHook(
     CronTaskPlugin[postLogin],
-    "Cron-Task-PostLogin"
+    "Cron-Task-PostLogin",
 );
