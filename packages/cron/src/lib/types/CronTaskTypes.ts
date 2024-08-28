@@ -1,6 +1,5 @@
 import type { CronJobParams } from "cron";
 import type { CronTask } from "../structures/CronTask";
-import type Sentry from "@sentry/node";
 
 export interface CronTaskHandlerOptions {
     /**
@@ -10,13 +9,14 @@ export interface CronTaskHandlerOptions {
      * @default "UTC"
      */
     defaultTimezone?: string;
+
     /**
-     * The Sentry instance to use for instrumenting cron jobs.
+     * The ability to opt-out of instrumenting cron jobs with Sentry.
      * If you don't use Sentry, you can ignore this option.
      * @see https://docs.sentry.io/product/crons/
-     * @default undefined
+     * @default undefined // technically false
      */
-    sentry?: typeof Sentry;
+    disableSentry?: boolean;
 }
 
 export type CronJobOptions = Omit<

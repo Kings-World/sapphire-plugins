@@ -6,6 +6,7 @@ import {
     postInitialization,
     postLogin,
     preGenericsInitialization,
+    preLogin,
     SapphireClient,
 } from "@sapphire/framework";
 import type { ClientOptions } from "discord.js";
@@ -21,6 +22,13 @@ export class CronTaskPlugin extends Plugin {
 
     static [postInitialization](this: SapphireClient) {
         this.stores.register(new CronTaskStore());
+    }
+
+    static async [preLogin](this: SapphireClient) {
+        if (container.cron.disableSentry) return;
+        container.cron.sentry = await import("@sentry/node").catch(
+            () => undefined,
+        );
     }
 
     static [postLogin](this: SapphireClient) {
