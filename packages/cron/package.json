@@ -40,7 +40,8 @@
         "build:types:esm": "rollup-type-bundler -d dist/esm -t .mts",
         "build:types:cleanup": "tsx ../../scripts/clean-register-imports.mts",
         "build:rename-cjs-register": "tsx ../../scripts/rename-cjs-register.mts",
-        "typecheck": "tsc -b src"
+        "typecheck": "tsc -b src",
+        "prepack": "yarn build"
     },
     "dependencies": {
         "cron": "^3.1.7"
