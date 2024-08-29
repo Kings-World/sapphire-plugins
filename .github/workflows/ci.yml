@@ -10,6 +10,24 @@ env:
   TURBO_TELEMETRY_DISABLED: 1
 
 jobs:
+  linting:
+    name: Linting
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Project
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Dependencies
+        run: yarn install --immutable
+
+      - name: Run Linter
+        run: yarn lint --fix=false
+
   typechecking:
     name: Typechecking
     runs-on: ubuntu-latest
@@ -23,7 +41,7 @@ jobs:
           node-version: 20
 
       - name: Install Dependencies
-        run: yarn --immutable
+        run: yarn install --immutable
 
       - name: Run Typecheck
         run: yarn typecheck
@@ -41,7 +59,7 @@ jobs:
           node-version: 20
 
       - name: Install Dependencies
-        run: yarn --immutable
+        run: yarn install --immutable
 
       - name: Run Prettier
         run: yarn prettier --check .
@@ -61,7 +79,7 @@ jobs:
           node-version: 20
 
       - name: Install Dependencies
-        run: yarn --immutable
+        run: yarn install --immutable
 
       # https://commitlint.js.org/guides/ci-setup#github-actions
       - name: Validate current commit (last commit) with commitlint
@@ -85,7 +103,7 @@ jobs:
           node-version: 20
 
       - name: Install Dependencies
-        run: yarn --immutable
+        run: yarn install --immutable
 
       - name: Build
         run: yarn build
