@@ -125,7 +125,7 @@ new SapphireClient({
 
 One last thing that comes with the plugin is logging helper functions that can be used within your cron tasks.
 
-The methods are there to help when logging things to the console using Sapphire's logger. They simply prefix `CronTask[$name]` to the start of your messages. I is something I find useful when using them in my projects.
+The methods are there to help when logging things to the console using Sapphire's logger. They simply prefix `CronTask[$name]` to the start of your messages. It is something I find useful when using them in my projects.
 
 These methods are small helpers towards Sapphire's logger that prefixes logs with `CronTask[$name]`. The helpers are optional, however, I find them useful when using them in my projects.
 
