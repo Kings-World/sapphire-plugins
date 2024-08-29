@@ -26,9 +26,9 @@ export class CronTaskPlugin extends Plugin {
 
     static async [preLogin](this: SapphireClient) {
         if (container.cron.disableSentry) return;
-        container.cron.sentry = await import("@sentry/node").catch(
-            () => undefined,
-        );
+        container.cron.sentry = await import("@sentry/node")
+            .then((mod) => mod.default)
+            .catch(() => undefined);
     }
 
     static [postLogin](this: SapphireClient) {
@@ -44,6 +44,11 @@ SapphireClient.plugins.registerPreGenericsInitializationHook(
 SapphireClient.plugins.registerPostInitializationHook(
     CronTaskPlugin[postInitialization],
     "Cron-Task-PostInitialization",
+);
+
+SapphireClient.plugins.registerPreLoginHook(
+    CronTaskPlugin[preLogin],
+    "Cron-Task-PreLogin",
 );
 
 SapphireClient.plugins.registerPostLoginHook(
