@@ -38,7 +38,7 @@ However, if you would like to do so for a single task, you can do so in the cron
 ```
 
 ### Creating a task
- 
+
 Cron Tasks come with their own Sapphire store. They must be located within a `cron-tasks` directory alongside your other stores.
 
 ```
@@ -145,7 +145,7 @@ export class PingPong extends CronTask {
         this.debug("Your ping is being sent.");
 
         // TRACE - CronTask[ping] Tracing your ping's steps. Please wait!
-        this.trace("Tracing your ping's steps. Please wait!"); 
+        this.trace("Tracing your ping's steps. Please wait!");
     }
 }
 ```
