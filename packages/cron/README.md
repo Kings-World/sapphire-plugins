@@ -1,6 +1,6 @@
 # @kingsworld/plugin-cron
 
-A simple [@sapphire/framework](https://www.npmjs.com/package/@sapphire/framework) plugin that aims to make use of the [cron](https://www.npmjs.com/package/cron) package and allow users to make cron jobs within their Sapphire discord bot.
+A plugin for [@sapphire/framework](https://www.npmjs.com/package/@sapphire/framework) that adds integration for the [cron](https://www.npmjs.com/package/cron) package.
 
 ## Installation
 
@@ -16,7 +16,7 @@ Make sure to register the plugin before creating the client
 import "@kingsworld/plugin-cron/register";
 ```
 
-If you would like to set the default cron job timezone for all your cron jobs, you can do so within the client options. A list of TZ identifers can be found on [Wikipedia](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
+If you want to set the default cron job timezone for all your cron jobs, you can do so within the client options. A list of TZ identifiers can be found on [Wikipedia](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
 
 ```ts
 new SapphireClient({
@@ -38,8 +38,8 @@ However, if you would like to do so for a single task, you can do so in the cron
 ```
 
 ### Creating a task
-
-Cron Tasks come with their own store, just like Sapphire commands, listeners, and so on. They must be located within a `cron-tasks` directory that is located alongside your other stores.
+ 
+Cron Tasks come with their own Sapphire store. They must be located within a `cron-tasks` directory alongside your other stores.
 
 ```
 src
@@ -84,39 +84,68 @@ export class PingPong extends CronTask {
 }
 ```
 
-### Frequently Asked Questions
+### Managing tasks
 
-##### What does the `this.info()`, `this.error()`, `this.warn()`, `this.debug()`, and `this.trace()` methods do in the CronTask class?
+A cron-task can be disabled completely using the `enabled` option.
 
-These methods are small helpers towards Sapphire's logger that prefixes logs with `CronTask[$name]`. The helpers are optional, however, I find them useful when using them in my own projects.
+```js
+{
+    cronTime: "* * * * *", // every minute
+    enabled: false
+}
+```
+
+You can also stop/start them at any time during runtime.
+
+```js
+const pingTask = container.cron.store.get("ping");
+
+// to start the task
+pingTask.job.start();
+
+// to stop the task
+pingTask.job.stop();
+```
+
+### Sentry
+
+The plugin also supports Sentry's [Cron Monitoring](https://docs.sentry.io/product/crons/) product. Using it is as simple as having [@sentry/node](https://www.npmjs.com/package/@sentry/node) installed.
+
+If you would like to disable it for whatever reason, you can do so by adding `disableSentry` to your Client's cron options.
+
+```js
+new SapphireClient({
+    cron: {
+        disableSentry: true;
+    },
+});
+```
+
+### Logging Helpers
+
+One last thing that comes with the plugin is logging helper functions that can be used within your cron tasks.
+
+The methods are there to help when logging things to the console using Sapphire's logger. They simply prefix `CronTask[$name]` to the start of your messages. I is something I find useful when using them in my projects.
+
+These methods are small helpers towards Sapphire's logger that prefixes logs with `CronTask[$name]`. The helpers are optional, however, I find them useful when using them in my projects.
 
 ```ts
 export class PingPong extends CronTask {
     run() {
-        this.info("Ping Pong! 🏓"); // INFO - CronTask[ping] Ping Pong! 🏓
-        this.error("Ping Pong! 🏓"); // ERROR - CronTask[ping] Ping Pong! 🏓
-        this.warn("Ping Pong! 🏓"); // WARN - CronTask[ping] Ping Pong! 🏓
-        this.debug("Ping Pong! 🏓"); // DEBUG - CronTask[ping] Ping Pong! 🏓
-        this.trace("Ping Pong! 🏓"); // TRACE - CronTask[ping] Ping Pong! 🏓
+        // INFO - CronTask[ping] Your ping has been ponged successfully.
+        this.info("Your ping has been ponged successfully.");
+
+        // ERROR - CronTask[ping] Something went wrong when trying to send your ping!
+        this.error("Something went wrong when trying to send your ping!");
+
+        // WARN - CronTask[ping] The ping failed to send.
+        this.warn("The ping failed to send.");
+
+        // DEBUG - CronTask[ping] Your ping is being sent.
+        this.debug("Your ping is being sent.");
+
+        // TRACE - CronTask[ping] Tracing your ping's steps. Please wait!
+        this.trace("Tracing your ping's steps. Please wait!"); 
     }
 }
-```
-
-### Contributing
-
-#### Getting started
-
-First, clone the repo using git SSH, the GitHub CLI, or HTTP
-
-```sh
-git clone git@github.com:Kings-World/sapphire-plugins.git # ssh
-git clone https://github.com/Kings-World/sapphire-plugins.git # http
-gh repo clone Kings-World/sapphire-plugins # github cli
-```
-
-Finally, install the dependencies using Yarn
-
-```sh
-yarn # shorthand
-yarn install # full command
 ```
