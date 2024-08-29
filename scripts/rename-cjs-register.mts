@@ -4,12 +4,12 @@
  * @see https://github.com/sapphiredev/plugins/tree/main/scripts
  */
 
-import { bold, green } from "colorette";
-import { rename } from "node:fs/promises";
-import { join } from "node:path";
+import { bold, green } from 'colorette';
+import { rename } from 'node:fs/promises';
+import { join } from 'node:path';
 
-const inputPath = "dist/cjs/register.d.ts";
-const outputPath = "dist/cjs/register.d.cts";
+const inputPath = 'dist/cjs/register.d.ts';
+const outputPath = 'dist/cjs/register.d.cts';
 
 const fullInputPathUrl = join(process.cwd(), inputPath);
 const fullOutputPathUrl = join(process.cwd(), outputPath);

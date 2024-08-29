@@ -1,26 +1,26 @@
-import { container } from "@sapphire/framework";
-import type { CronTaskHandlerOptions } from "./types/CronTaskTypes";
-import type Sentry from "@sentry/node";
+import { container } from '@sapphire/framework';
+import type Sentry from '@sentry/node';
+import type { CronTaskHandlerOptions } from './types/CronTaskTypes';
 
 export class CronTaskHandler {
-    defaultTimezone?: CronTaskHandlerOptions["defaultTimezone"];
-    disableSentry?: boolean;
-    sentry?: typeof Sentry;
+	public defaultTimezone?: CronTaskHandlerOptions['defaultTimezone'];
+	public disableSentry?: boolean;
+	public sentry?: typeof Sentry;
 
-    constructor(options?: CronTaskHandlerOptions) {
-        this.defaultTimezone = options?.defaultTimezone;
-        this.disableSentry = options?.disableSentry;
-    }
+	public constructor(options?: CronTaskHandlerOptions) {
+		this.defaultTimezone = options?.defaultTimezone;
+		this.disableSentry = options?.disableSentry;
+	}
 
-    startAll() {
-        this.store.startAll();
-    }
+	public startAll() {
+		this.store.startAll();
+	}
 
-    stopAll() {
-        this.store.stopAll();
-    }
+	public stopAll() {
+		this.store.stopAll();
+	}
 
-    private get store() {
-        return container.stores.get("cron-tasks");
-    }
+	private get store() {
+		return container.stores.get('cron-tasks');
+	}
 }

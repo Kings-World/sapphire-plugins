@@ -13,18 +13,18 @@ yarn add @kingsworld/plugin-cron @sapphire/framework
 Make sure to register the plugin before creating the client
 
 ```ts
-import "@kingsworld/plugin-cron/register";
+import '@kingsworld/plugin-cron/register';
 ```
 
 If you want to set the default cron job timezone for all your cron jobs, you can do so within the client options. A list of TZ identifiers can be found on [Wikipedia](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
 
 ```ts
 new SapphireClient({
-    ...otherClientOptions,
-    cron: {
-        // the cron object is optional
-        defaultTimezone: "Europe/London", // the cron package defaults to UTC
-    },
+	...otherClientOptions,
+	cron: {
+		// the cron object is optional
+		defaultTimezone: 'Europe/London' // the cron package defaults to UTC
+	}
 });
 ```
 
@@ -52,35 +52,35 @@ src
 Using decorators from [@sapphire/decorators](https://www.npmjs.com/package/@sapphire/decorators):
 
 ```ts
-import { ApplyOptions } from "@sapphire/decorators";
-import { CronTask } from "@kingsworld/plugin-cron";
+import { ApplyOptions } from '@sapphire/decorators';
+import { CronTask } from '@kingsworld/plugin-cron';
 
 @ApplyOptions<CronTask.Options>({
-    cronTime: "* * * * *",
+	cronTime: '* * * * *'
 })
 export class PingPong extends CronTask {
-    run() {
-        this.container.logger.info("Ping Pong! 🏓");
-    }
+	run() {
+		this.container.logger.info('Ping Pong! 🏓');
+	}
 }
 ```
 
 Using the class constructor:
 
 ```ts
-import { CronTask } from "@kingsworld/plugin-cron";
+import { CronTask } from '@kingsworld/plugin-cron';
 
 export class PingPong extends CronTask {
-    constructor(context: CronTask.LoaderContext, options: CronTask.Options) {
-        super(context, {
-            ...options,
-            cronTime: "* * * * *",
-        });
-    }
+	constructor(context: CronTask.LoaderContext, options: CronTask.Options) {
+		super(context, {
+			...options,
+			cronTime: '* * * * *'
+		});
+	}
 
-    run() {
-        this.container.logger.info("Ping Pong! 🏓");
-    }
+	run() {
+		this.container.logger.info('Ping Pong! 🏓');
+	}
 }
 ```
 
@@ -98,7 +98,7 @@ A cron-task can be disabled completely using the `enabled` option.
 You can also stop/start them at any time during runtime.
 
 ```js
-const pingTask = container.cron.store.get("ping");
+const pingTask = container.cron.store.get('ping');
 
 // to start the task
 pingTask.job.start();
@@ -131,21 +131,21 @@ These methods are small helpers towards Sapphire's logger that prefixes logs wit
 
 ```ts
 export class PingPong extends CronTask {
-    run() {
-        // INFO - CronTask[ping] Your ping has been ponged successfully.
-        this.info("Your ping has been ponged successfully.");
+	run() {
+		// INFO - CronTask[ping] Your ping has been ponged successfully.
+		this.info('Your ping has been ponged successfully.');
 
-        // ERROR - CronTask[ping] Something went wrong when trying to send your ping!
-        this.error("Something went wrong when trying to send your ping!");
+		// ERROR - CronTask[ping] Something went wrong when trying to send your ping!
+		this.error('Something went wrong when trying to send your ping!');
 
-        // WARN - CronTask[ping] The ping failed to send.
-        this.warn("The ping failed to send.");
+		// WARN - CronTask[ping] The ping failed to send.
+		this.warn('The ping failed to send.');
 
-        // DEBUG - CronTask[ping] Your ping is being sent.
-        this.debug("Your ping is being sent.");
+		// DEBUG - CronTask[ping] Your ping is being sent.
+		this.debug('Your ping is being sent.');
 
-        // TRACE - CronTask[ping] Tracing your ping's steps. Please wait!
-        this.trace("Tracing your ping's steps. Please wait!");
-    }
+		// TRACE - CronTask[ping] Tracing your ping's steps. Please wait!
+		this.trace("Tracing your ping's steps. Please wait!");
+	}
 }
 ```
