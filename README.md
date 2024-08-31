@@ -14,10 +14,12 @@
 
 ## Contributors
 
+Please make sure to read the [Contributing Guide][contributing] before making a pull request.
+
 Thank you to all the people who already contributed.
 
 <a href="https://github.com/Kings-World/sapphire-plugins/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=Kings-World/sapphire-plugins" />
 </a>
 
-[contributing]: https://github.com/sapphiredev/.github/blob/main/.github/CONTRIBUTING.md
+[contributing]: https://github.com/Kings-World/sapphire-plugins/blob/main/.github/CONTRIBUTING.md
