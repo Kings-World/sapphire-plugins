@@ -1,0 +1,75 @@
+name: Publish
+
+on:
+  workflow_dispatch:
+    inputs:
+      package:
+        description: The package to release, this should be the path segment after packages/, without the @kingsworld/ prefix
+        required: true
+      skip-automatic-bump:
+        description: Whether to skip the automatic bumping of the packageversion
+        required: false
+        default: false
+        type: boolean
+      build:
+        description: Whether to run `yarn build` before publishing
+        required: false
+        default: false
+        type: boolean
+
+concurrency:
+  group: ${{ github.workflow }}|${{ github.head_ref || github.ref }}|${{ inputs.package }}
+  cancel-in-progress: true
+
+jobs:
+  publish:
+    name: Publish @kingsworld/${{ inputs.package }}
+    runs-on: ubuntu-latest
+    if: github.repository_owner == 'Kings-World'
+    steps:
+      - name: Checkout Project
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: main
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Dependencies
+        run: yarn install --immutable
+
+      - name: Configure Git
+        run: |
+          git remote set-url origin "https://${GITHUB_TOKEN}:x-oauth-basic@github.com/${GITHUB_REPOSITORY}.git"
+          git config --local user.email "${GITHUB_EMAIL}"
+          git config --local user.name "${GITHUB_USER}"
+        env:
+          GITHUB_USER: github-actions[bot]
+          GITHUB_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build Package
+        if: ${{ inputs.build }}
+        run: yarn build
+
+      - name: Bump versions and release
+        working-directory: packages/${{ inputs.package }}
+        run: |
+          if [ "${{ inputs.skip-automatic-bump }}" = "true" ]; then
+            yarn bump --skip-automatic-bump
+          else
+            yarn bump
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish to NPM
+        run: |
+          yarn config set npmAuthToken ${NODE_AUTH_TOKEN}
+          yarn config set npmPublishRegistry "https://registry.yarnpkg.com"
+          yarn npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
