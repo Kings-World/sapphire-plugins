@@ -1,0 +1,9 @@
+name: plugin-cron
+org: Kings-World
+install: true
+packagePath: packages/cron
+identifierBase: false
+pushTag: true
+githubRelease: true
+githubReleaseLatest: true
+githubRepo: Kings-World/sapphire-plugins

@@ -12,7 +12,8 @@
 		"lint": "eslint packages --ext mjs,js,ts,tsx --fix",
 		"format": "prettier --write \"packages/**/{src,tests,scripts}/**/*.{mjs,ts,js}\"",
 		"build": "turbo run build",
-		"typecheck": "turbo run typecheck"
+		"typecheck": "turbo run typecheck",
+		"check-update": "turbo run check-update"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^19.4.1",

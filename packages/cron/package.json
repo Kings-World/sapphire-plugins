@@ -41,12 +41,15 @@
 		"build:types:cleanup": "tsx ../../scripts/clean-register-imports.mts",
 		"build:rename-cjs-register": "tsx ../../scripts/rename-cjs-register.mts",
 		"typecheck": "tsc -b src",
-		"prepack": "yarn build"
+		"prepack": "yarn build",
+		"bump": "cliff-jumper",
+		"check-update": "cliff-jumper --dry-run"
 	},
 	"dependencies": {
 		"cron": "^3.1.7"
 	},
 	"devDependencies": {
+		"@favware/cliff-jumper": "^4.1.0",
 		"@favware/rollup-type-bundler": "^3.3.0",
 		"@sentry/node": "^7.119.0",
 		"@types/node": "^20.16.2",
