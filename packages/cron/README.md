@@ -49,19 +49,19 @@ const options = {
 	cron: {
 		/**
 		 * Whether to disable Sentry cron monitoring
-		 * @default true
+		 * @default false
 		 */
 		disableSentry: false,
 		/**
 		 * The timezone to use for the cron tasks
 		 * @default 'UTC'
 		 */
-		timeZone: 'Europe/London' // set the timezone
+		timeZone: 'Europe/London'
 	}
 };
 ```
 
--   The `disableSentry` option is used to disable [Sentry's cron monitoring](https://docs.sentry.io/product/crons/). If you do not use Sentry, you can safely ignore this option. If you use Sentry, you can set this to `false` to enable cron monitoring.
+- The `disableSentry` option is used to disable Sentry's cron monitoring. By default, it is set to `false`, which means Sentry cron monitoring is enabled if the `@sentry/node` package is installed and configured. This makes using Sentry an opt-in feature - you first opt in by installing `@sentry/node`. The `disableSentry` option then allows you to opt out in specific situations. You can set this to `true` to disable cron monitoring, which can be useful during development or if you haven't provided a Sentry DSN. If you don't use Sentry at all (i.e., `@sentry/node` is not installed), this option has no effect and can be safely ignored.
 
 In order to use the cron tasks anywhere other than a piece (commands, arguments, preconditions, etc.), you must first import the `container` property of `@sapphire/framework`. For pieces, you can simply use `this.container.cron` to access this plugin's methods.
 
@@ -86,10 +86,12 @@ import { container } from '@sapphire/framework';
 
 export class MyAwesomeService {
 	public createAwesomeTask() {
-		await container.cron.startAll();
+		container.cron.startAll();
 	}
 }
 ```
+
+It's important to note that the `startAll()` method is called automatically when the client is ready. Therefore, it's generally not necessary to call this method manually, unless you have a specific need to restart all cron tasks at some point after the client has been initialized.
 
 ### Create a task handler
 
