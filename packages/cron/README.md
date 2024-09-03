@@ -33,7 +33,7 @@ npm install @kingsworld/plugin-cron @sapphire/framework
 
 ## Usage
 
-This registers the necessary options and methods in the Sapphire client to be able to use the schedule plugin.
+This registers the necessary options and methods in the Sapphire client to be able to use the cron plugin.
 
 ```ts
 // Main bot file
