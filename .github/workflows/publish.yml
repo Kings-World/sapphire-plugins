@@ -21,6 +21,9 @@ concurrency:
   group: ${{ github.workflow }}|${{ github.head_ref || github.ref }}|${{ inputs.package }}
   cancel-in-progress: true
 
+env:
+  TURBO_TELEMETRY_DISABLED: 1
+
 jobs:
   publish:
     name: Publish @kingsworld/${{ inputs.package }}
