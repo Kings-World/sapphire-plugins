@@ -103,14 +103,14 @@ Cron tasks use their own store, like other types of pieces. You can create a dir
 import { CronTask } from '@kingsworld/plugin-cron';
 
 export class PingPong extends CronTask {
-	constructor(context: CronTask.LoaderContext, options: CronTask.Options) {
+	public constructor(context: CronTask.LoaderContext, options: CronTask.Options) {
 		super(context, {
 			...options,
 			cronTime: '* * * * *'
 		});
 	}
 
-	run() {
+	public run() {
 		this.container.logger.info('Ping Pong! 🏓');
 	}
 }
@@ -126,14 +126,14 @@ This is an example of how to use the `info` helper:
 import { CronTask } from '@kingsworld/plugin-cron';
 
 export class PingPong extends CronTask {
-	constructor(context: CronTask.LoaderContext, options: CronTask.Options) {
+	public constructor(context: CronTask.LoaderContext, options: CronTask.Options) {
 		super(context, {
 			...options,
 			cronTime: '* * * * *'
 		});
 	}
 
-	run() {
+	public run() {
 		this.info('Ping Pong! 🏓'); // CronTask[ping] Ping Pong! 🏓
 	}
 }
