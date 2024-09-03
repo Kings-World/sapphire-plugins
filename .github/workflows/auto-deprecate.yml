@@ -1,0 +1,29 @@
+name: NPM Auto Deprecate
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+
+env:
+  TURBO_TELEMETRY_DISABLED: 1
+
+jobs:
+  auto-deprecate:
+    name: NPM Auto Deprecate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Project
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Dependencies
+        run: yarn install --immutable
+
+      - name: Run NPM Auto Deprecate
+        run: yarn auto-deprecate
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
