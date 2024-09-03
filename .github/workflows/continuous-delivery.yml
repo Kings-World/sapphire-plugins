@@ -16,6 +16,9 @@ on:
     branches:
       - main
 
+env:
+  TURBO_TELEMETRY_DISABLED: 1
+
 jobs:
   publish:
     name: Publish Next to NPM
