@@ -10,7 +10,7 @@
 
 ## Contributing to the code
 
-**The issue tracker is only for issue reporting or proposals/suggestions. If you have a question, please use the discussions section**.
+**The issue tracker is only for issue reporting or proposals/suggestions. If you have a question, please use [Discussions]**.
 
 To contribute to this repository, feel free to create a new fork of the repository and submit a pull request. We highly
 suggest [ESLint] to be installed in your text editor or IDE of your choice to ensure builds from GitHub Actions do not
@@ -43,3 +43,4 @@ exhaustive list, but here are some things to consider before/while submitting yo
 [node.js]: https://nodejs.org/en/download/
 [yarn]: https://yarnpkg.com/getting-started/install
 [oop paradigms]: https://en.wikipedia.org/wiki/Object-oriented_programming
+[discussions]: https://github.com/Kings-World/sapphire-plugins/discussions
