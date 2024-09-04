@@ -24,6 +24,6 @@ jobs:
         run: yarn install --immutable
 
       - name: Run NPM Auto Deprecate
-        run: yarn auto-deprecate
+        run: yarn npm-deprecate
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
