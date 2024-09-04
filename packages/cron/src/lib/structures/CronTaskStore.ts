@@ -7,6 +7,11 @@ export class CronTaskStore extends Store<CronTask, 'cron-tasks'> {
 		super(CronTask, { name: 'cron-tasks' });
 	}
 
+	/**
+	 * Loops over all tasks and starts those that are enabled.
+	 * This gets called automatically when the Client is ready.
+	 * @returns CronTaskStore
+	 */
 	public startAll() {
 		for (const task of this.values()) {
 			if (!task.enabled) continue;
@@ -17,6 +22,10 @@ export class CronTaskStore extends Store<CronTask, 'cron-tasks'> {
 		return this;
 	}
 
+	/**
+	 * Loops over all tasks and stops those that are running.
+	 * @returns CronTaskStore
+	 */
 	public stopAll() {
 		for (const task of this.values()) {
 			if (!task.job.running) continue;
@@ -58,6 +67,10 @@ export class CronTaskStore extends Store<CronTask, 'cron-tasks'> {
 		return super.delete(key);
 	}
 
+	/**
+	 * Stops all running cron jobs and clears the store.
+	 * @returns void
+	 */
 	public override clear() {
 		this.stopAll();
 		return super.clear();
