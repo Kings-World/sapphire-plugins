@@ -56,7 +56,7 @@ const options = {
 		 * The timezone to use for the cron tasks
 		 * @default 'UTC'
 		 */
-		timeZone: 'Europe/London'
+		defaultTimezone: 'Europe/London'
 	}
 };
 ```
@@ -122,7 +122,7 @@ The `CronTask` class provides logging helpers that are similar to the ones provi
 
 This is an example of how to use the `info` helper:
 
-```ts
+```typescript
 import { CronTask } from '@kingsworld/plugin-cron';
 
 export class PingPong extends CronTask {
