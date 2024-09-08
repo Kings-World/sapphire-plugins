@@ -52,7 +52,7 @@
 		"@favware/cliff-jumper": "^4.1.0",
 		"@favware/rollup-type-bundler": "^3.3.0",
 		"@sentry/node": "^8.28.0",
-		"@types/node": "^20.16.2",
+		"@types/node": "^20.16.5",
 		"concurrently": "^8.2.2",
 		"tsup": "^8.2.4",
 		"tsx": "^4.19.0",
