@@ -1,5 +1,5 @@
 name: plugin-cron
-org: Kings-World
+org: kingsworld
 install: true
 packagePath: packages/cron
 identifierBase: false
