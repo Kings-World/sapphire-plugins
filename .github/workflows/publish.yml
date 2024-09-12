@@ -18,7 +18,7 @@ on:
       build:
         description: Whether to run `yarn build` before publishing
         required: false
-        default: false
+        default: true
         type: boolean
 
 concurrency:
@@ -39,6 +39,7 @@ jobs:
         with:
           fetch-depth: 0
           ref: main
+          token: ${{ secrets.KINGS_WORLD_APP_TOKEN }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -56,7 +57,7 @@ jobs:
         env:
           GITHUB_USER: github-actions[bot]
           GITHUB_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
-          GITHUB_TOKEN: ${{ secrets.KINGS_WORLD_APP_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build Package
         if: ${{ inputs.build }}
@@ -71,7 +72,7 @@ jobs:
             yarn bump
           fi
         env:
-          GITHUB_TOKEN: ${{ secrets.KINGS_WORLD_APP_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Publish to NPM
         run: |
