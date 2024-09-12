@@ -7,8 +7,7 @@ export class CronTaskHandler {
 	 * The default timezone to use for all cron tasks.
 	 * You can override this per task, using the timeZone option.
 	 * @see https://github.com/moment/luxon/blob/master/docs/zones.md#specifying-a-zone
-	 * @see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-	 * @default 'UTC'
+	 * @default 'system'
 	 */
 	public defaultTimezone: CronTaskHandlerOptions['defaultTimezone'];
 
@@ -28,7 +27,7 @@ export class CronTaskHandler {
 	public sentry?: typeof Sentry;
 
 	public constructor(options?: CronTaskHandlerOptions) {
-		this.defaultTimezone = options?.defaultTimezone ?? 'UTC';
+		this.defaultTimezone = options?.defaultTimezone ?? 'system';
 		this.disableSentry = options?.disableSentry ?? false;
 	}
 
