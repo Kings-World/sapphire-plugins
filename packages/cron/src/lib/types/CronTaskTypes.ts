@@ -6,8 +6,7 @@ export interface CronTaskHandlerOptions {
 	 * The default timezone to use for all cron tasks.
 	 * You can override this per task, using the timeZone option.
 	 * @see https://github.com/moment/luxon/blob/master/docs/zones.md#specifying-a-zone
-	 * @see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-	 * @default 'UTC'
+	 * @default 'system'
 	 */
 	defaultTimezone: string;
 

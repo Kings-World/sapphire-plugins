@@ -54,7 +54,7 @@ const options = {
 		disableSentry: false,
 		/**
 		 * The timezone to use for the cron tasks
-		 * @default 'UTC'
+		 * @default 'system'
 		 */
 		defaultTimezone: 'Europe/London'
 	}
