@@ -19,7 +19,7 @@ declare module '@sapphire/pieces' {
 
 declare module 'discord.js' {
 	export interface ClientOptions {
-		cron?: CronTaskHandlerOptions;
+		cron?: Partial<CronTaskHandlerOptions>;
 	}
 }
 
