@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+# [@kingsworld/plugin-cron@2.0.2](https://github.com/Kings-World/sapphire-plugins/compare/@kingsworld/plugin-cron@2.0.1...@kingsworld/plugin-cron@2.0.2) - (2024-09-15)
+
+## 🐛 Bug Fixes
+
+- The ClientOptions#cron also needs to be partial ([f31d23a](https://github.com/Kings-World/sapphire-plugins/commit/f31d23a39187b2fc901c9d83723efafcd6942b4d)) ([#44](https://github.com/Kings-World/sapphire-plugins/pull/44) by @SerenModz21)
+
 # [@kingsworld/plugin-cron@2.0.1](https://github.com/Kings-World/sapphire-plugins/compare/@kingsworld/plugin-cron@2.0.0...@kingsworld/plugin-cron@2.0.1) - (2024-09-15)
 
 ## 🐛 Bug Fixes
