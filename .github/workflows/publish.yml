@@ -33,21 +33,14 @@ jobs:
     name: Publish @kingsworld/${{ inputs.package }}
     runs-on: ubuntu-latest
     if: github.repository_owner == 'Kings-World'
+    permissions:
+      contents: write
     steps:
-      - name: Generate Access Token
-        id: app-token
-        uses: actions/create-github-app-token@v1
-        with:
-          app-id: ${{ secrets.KINGS_WORLD_APP_ID }}
-          private-key: ${{ secrets.KINGS_WORLD_PRIVATE_KEY }}
-          owner: ${{ github.repository_owner }}
-
       - name: Checkout Project
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
           ref: main
-          persist-credentials: false
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -65,7 +58,7 @@ jobs:
         env:
           GITHUB_USER: github-actions[bot]
           GITHUB_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
-          GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build Package
         if: ${{ inputs.build }}
@@ -80,7 +73,7 @@ jobs:
             yarn bump
           fi
         env:
-          GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Publish to NPM
         working-directory: packages/${{ inputs.package }}
