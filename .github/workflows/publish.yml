@@ -34,12 +34,20 @@ jobs:
     runs-on: ubuntu-latest
     if: github.repository_owner == 'Kings-World'
     steps:
+      - name: Generate Access Token
+        id: app-token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ secrets.KINGS_WORLD_APP_ID }}
+          private-key: ${{ secrets.KINGS_WORLD_PRIVATE_KEY }}
+
       - name: Checkout Project
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
           ref: main
-          token: ${{ secrets.KINGS_WORLD_APP_TOKEN }}
+          token: ${{ steps.app-token.outputs.token }}
+          persist-credentials: false
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
