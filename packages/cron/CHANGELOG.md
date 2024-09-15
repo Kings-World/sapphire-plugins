@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+# [@kingsworld/plugin-cron@2.0.1](https://github.com/Kings-World/sapphire-plugins/compare/@kingsworld/plugin-cron@2.0.0...@kingsworld/plugin-cron@2.0.1) - (2024-09-15)
+
+## 🐛 Bug Fixes
+
+- Use the partial helper to make options optional ([fa10a8a](https://github.com/Kings-World/sapphire-plugins/commit/fa10a8a072354362a5816323b5c66ff6ace97b9d)) ([#43](https://github.com/Kings-World/sapphire-plugins/pull/43) by @SerenModz21)
+
 # [@kingsworld/plugin-cron@2.0.0](https://github.com/Kings-World/sapphire-plugins/tree/@kingsworld/plugin-cron@2.0.0) - (2024-09-12)
 
 ## 🏠 Refactor
