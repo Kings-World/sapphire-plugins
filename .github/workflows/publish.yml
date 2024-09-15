@@ -47,7 +47,6 @@ jobs:
         with:
           fetch-depth: 0
           ref: main
-          token: ${{ steps.app-token.outputs.token }}
           persist-credentials: false
 
       - name: Setup Node.js
@@ -66,7 +65,7 @@ jobs:
         env:
           GITHUB_USER: github-actions[bot]
           GITHUB_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
 
       - name: Build Package
         if: ${{ inputs.build }}
@@ -81,7 +80,7 @@ jobs:
             yarn bump
           fi
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
 
       - name: Publish to NPM
         working-directory: packages/${{ inputs.package }}
