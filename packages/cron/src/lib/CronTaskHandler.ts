@@ -26,7 +26,7 @@ export class CronTaskHandler {
 	 */
 	public sentry?: typeof Sentry;
 
-	public constructor(options?: CronTaskHandlerOptions) {
+	public constructor(options?: Partial<CronTaskHandlerOptions>) {
 		this.defaultTimezone = options?.defaultTimezone ?? 'system';
 		this.disableSentry = options?.disableSentry ?? false;
 	}
