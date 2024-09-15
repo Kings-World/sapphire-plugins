@@ -16,8 +16,8 @@
 		"check-update": "turbo run check-update"
 	},
 	"devDependencies": {
-		"@commitlint/cli": "^19.4.1",
-		"@commitlint/config-conventional": "^19.4.1",
+		"@commitlint/cli": "^19.5.0",
+		"@commitlint/config-conventional": "^19.5.0",
 		"@favware/npm-deprecate": "^1.0.7",
 		"@sapphire/eslint-config": "^5.0.5",
 		"@sapphire/framework": "^5.2.1",
@@ -28,7 +28,7 @@
 		"@typescript-eslint/eslint-plugin": "^7.13.1",
 		"@typescript-eslint/parser": "^7.13.1",
 		"cz-conventional-changelog": "^3.3.0",
-		"discord.js": "^14.16.1",
+		"discord.js": "^14.16.2",
 		"esbuild-plugin-file-path-extensions": "^2.1.2",
 		"esbuild-plugin-version-injector": "^1.2.1",
 		"eslint": "^8.57.0",
@@ -38,7 +38,7 @@
 		"prettier": "^3.3.3",
 		"rimraf": "^6.0.1",
 		"tsup": "^8.2.4",
-		"turbo": "^2.1.1",
+		"turbo": "^2.1.2",
 		"typescript": "~5.4.5"
 	},
 	"commitlint": {
@@ -56,5 +56,5 @@
 		}
 	},
 	"prettier": "@sapphire/prettier-config",
-	"packageManager": "yarn@4.4.1"
+	"packageManager": "yarn@4.5.0"
 }
