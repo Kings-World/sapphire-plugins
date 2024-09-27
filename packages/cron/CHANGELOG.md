@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+# [@kingsworld/plugin-cron@2.0.3](https://github.com/Kings-World/sapphire-plugins/compare/@kingsworld/plugin-cron@2.0.2...@kingsworld/plugin-cron@2.0.3) - (2024-09-27)
+
+## 🐛 Bug Fixes
+
+- **cron:** Correctly handle the sentry import ([c596f64](https://github.com/Kings-World/sapphire-plugins/commit/c596f64b2ae233ad2be5e02d3c68aa30329c88ce)) ([#47](https://github.com/Kings-World/sapphire-plugins/pull/47) by @SerenModz21)
+
 # [@kingsworld/plugin-cron@2.0.2](https://github.com/Kings-World/sapphire-plugins/compare/@kingsworld/plugin-cron@2.0.1...@kingsworld/plugin-cron@2.0.2) - (2024-09-15)
 
 ## 🐛 Bug Fixes
