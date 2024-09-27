@@ -15,7 +15,7 @@ export class CronTaskPlugin extends Plugin {
 
 	public static async [preLogin](this: SapphireClient) {
 		if (container.cron.disableSentry) return;
-		container.cron.sentry = await import('@sentry/node').then((mod) => mod.default).catch(() => undefined);
+		container.cron.sentry = await import('@sentry/node').catch(() => undefined);
 	}
 
 	public static [postLogin](this: SapphireClient) {
