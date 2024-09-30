@@ -1,6 +1,7 @@
 import { Store } from '@sapphire/pieces';
 import { CronJob } from 'cron';
 import { CronTask } from './CronTask';
+import { Info, DateTime, FixedOffsetZone, type Zone } from 'luxon';
 
 export class CronTaskStore extends Store<CronTask, 'cron-tasks'> {
 	public constructor() {
@@ -48,7 +49,7 @@ export class CronTaskStore extends Store<CronTask, 'cron-tasks'> {
 				onTick: () => void value.run.bind(value)(),
 				start: false,
 				context: value,
-				timeZone: options.timeZone ?? defaultTimezone
+				timeZone: this.formatLuxonZone(options.timeZone ?? defaultTimezone)
 			});
 		} catch (error) {
 			value.error('Encountered an error while creating the cron job', error);
@@ -74,5 +75,25 @@ export class CronTaskStore extends Store<CronTask, 'cron-tasks'> {
 	public override clear() {
 		this.stopAll();
 		return super.clear();
+	}
+
+	/**
+	 * Formats a Luxon-compatible timezone string into a TZ timezone string.
+	 * This is required because Sentry requires time zones to be in TZ format.
+	 * @param timezone The Luxon-compatible timezone to format.
+	 * @returns The formatted TZ timezone.
+	 * @private
+	 */
+	private formatLuxonZone(timezone?: string | Zone | number) {
+		const zone = Info.normalizeZone(timezone);
+
+		// If the zone is invalid, return the system zone
+		if (!zone.isValid) return DateTime.local().zoneName;
+
+		// If the zone is a fixed offset zone, return the IANA name
+		if (zone instanceof FixedOffsetZone) return zone.ianaName;
+
+		// Otherwise, return the zone name
+		return zone.name;
 	}
 }
