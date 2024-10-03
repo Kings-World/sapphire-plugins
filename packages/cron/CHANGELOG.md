@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+# [@kingsworld/plugin-cron@2.1.0](https://github.com/Kings-World/sapphire-plugins/compare/@kingsworld/plugin-cron@2.0.3...@kingsworld/plugin-cron@2.1.0) - (2024-10-03)
+
+## 🚀 Features
+
+- Format luxon timezones to their tz identifier ([47cb7ef](https://github.com/Kings-World/sapphire-plugins/commit/47cb7ef6970ae6255fe068f2f5cec1ace1ed8109)) ([#49](https://github.com/Kings-World/sapphire-plugins/pull/49) by @SerenModz21)
+
 # [@kingsworld/plugin-cron@2.0.3](https://github.com/Kings-World/sapphire-plugins/compare/@kingsworld/plugin-cron@2.0.2...@kingsworld/plugin-cron@2.0.3) - (2024-09-27)
 
 ## 🐛 Bug Fixes
