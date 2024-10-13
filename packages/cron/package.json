@@ -51,9 +51,9 @@
 	"devDependencies": {
 		"@favware/cliff-jumper": "^4.1.0",
 		"@favware/rollup-type-bundler": "^3.3.0",
-		"@sentry/node": "^8.33.1",
+		"@sentry/node": "^8.34.0",
 		"@types/luxon": "^3.4.2",
-		"@types/node": "^20.16.10",
+		"@types/node": "^20.16.11",
 		"concurrently": "^9.0.1",
 		"tsup": "^8.3.0",
 		"tsx": "^4.19.1",
