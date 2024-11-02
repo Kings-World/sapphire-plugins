@@ -7,8 +7,8 @@
 			"enabled": false
 		},
 		{
-			"matchPackagePatterns": ["typescript"],
-			"enabled": false
+			"enabled": false,
+			"matchPackageNames": ["/typescript/"]
 		}
 	]
 }
