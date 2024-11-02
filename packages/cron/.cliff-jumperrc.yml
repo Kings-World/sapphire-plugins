@@ -6,4 +6,5 @@ identifierBase: false
 pushTag: true
 githubRelease: true
 githubReleaseLatest: true
-githubRepo: Kings-World/sapphire-plugins
+gitRepo: Kings-World/sapphire-plugins
+gitHostVariant: github
