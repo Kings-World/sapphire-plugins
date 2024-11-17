@@ -46,12 +46,12 @@
 		"check-update": "cliff-jumper --dry-run"
 	},
 	"dependencies": {
-		"cron": "^3.2.0"
+		"cron": "^3.2.1"
 	},
 	"devDependencies": {
 		"@favware/cliff-jumper": "^5.0.0",
 		"@favware/rollup-type-bundler": "^3.3.0",
-		"@sentry/node": "^8.37.1",
+		"@sentry/node": "^8.38.0",
 		"@types/luxon": "^3.4.2",
 		"@types/node": "^22.9.0",
 		"concurrently": "^9.1.0",
