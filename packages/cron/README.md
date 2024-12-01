@@ -16,14 +16,14 @@ This plugin adds support for cron tasks to the Sapphire framework. It uses the [
 
 ## Features
 
--   Full TypeScript support
--   Includes ESM entrypoint
+- Full TypeScript support
+- Includes ESM entrypoint
 
 ## Installation
 
 `@kingsworld/plugin-cron` depends on the following packages. Be sure to install these along with this package!
 
--   [`@sapphire/framework`](https://www.npmjs.com/package/@sapphire/framework)
+- [`@sapphire/framework`](https://www.npmjs.com/package/@sapphire/framework)
 
 You can use the following command to install this package along with `cron`, or replace `npm install` with your package manager of choice.
 
@@ -61,7 +61,7 @@ const options = {
 };
 ```
 
--   The `disableSentry` option is used to disable Sentry's cron monitoring. By default, it is set to `false`, which means Sentry cron monitoring is enabled if the `@sentry/node` package is installed and configured. This makes using Sentry an opt-in feature - you first opt in by installing `@sentry/node`. The `disableSentry` option then allows you to opt out in specific situations. You can set this to `true` to disable cron monitoring, which can be useful during development or if you haven't provided a Sentry DSN. If you don't use Sentry at all (i.e., `@sentry/node` is not installed), this option has no effect and can be safely ignored.
+- The `disableSentry` option is used to disable Sentry's cron monitoring. By default, it is set to `false`, which means Sentry cron monitoring is enabled if the `@sentry/node` package is installed and configured. This makes using Sentry an opt-in feature - you first opt in by installing `@sentry/node`. The `disableSentry` option then allows you to opt out in specific situations. You can set this to `true` to disable cron monitoring, which can be useful during development or if you haven't provided a Sentry DSN. If you don't use Sentry at all (i.e., `@sentry/node` is not installed), this option has no effect and can be safely ignored.
 
 In order to use the cron tasks anywhere other than a piece (commands, arguments, preconditions, etc.), you must first import the `container` property of `@sapphire/framework`. For pieces, you can simply use `this.container.cron` to access this plugin's methods.
 

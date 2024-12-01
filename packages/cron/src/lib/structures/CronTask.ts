@@ -25,7 +25,7 @@ import type { CronJobOptions } from '../types/CronTaskTypes';
  * ```
  */
 export abstract class CronTask<Options extends CronTask.Options = CronTask.Options> extends Piece<Options, 'cron-tasks'> {
-	public declare job: CronJob<null, CronTask>;
+	declare public job: CronJob<null, CronTask>;
 
 	public constructor(context: CronTask.LoaderContext, options: Options) {
 		super(context, options);
