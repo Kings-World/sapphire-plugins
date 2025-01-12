@@ -49,7 +49,7 @@
 		"cron": "^3.5.0"
 	},
 	"devDependencies": {
-		"@favware/cliff-jumper": "^5.0.0",
+		"@favware/cliff-jumper": "^6.0.0",
 		"@favware/rollup-type-bundler": "^3.3.0",
 		"@sentry/node": "^8.48.0",
 		"@types/luxon": "^3.4.2",
