@@ -53,10 +53,10 @@
 		"@favware/rollup-type-bundler": "^4.0.0",
 		"@sentry/node": "^8.55.0",
 		"@types/luxon": "^3.4.2",
-		"@types/node": "^22.13.4",
+		"@types/node": "^22.13.5",
 		"concurrently": "^9.1.2",
 		"tsup": "^8.3.6",
-		"tsx": "^4.19.2",
+		"tsx": "^4.19.3",
 		"typescript": "~5.4.5"
 	},
 	"homepage": "https://github.com/Kings-World/sapphire-plugins",
