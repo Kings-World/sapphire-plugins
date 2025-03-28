@@ -700,7 +700,7 @@ __metadata:
     "@types/luxon": "npm:^3.4.2"
     "@types/node": "npm:^22.13.11"
     concurrently: "npm:^9.1.2"
-    cron: "npm:^3.5.0"
+    cron: "npm:^4.1.1"
     tsup: "npm:^8.4.0"
     tsx: "npm:^4.19.3"
     typescript: "npm:~5.4.5"
@@ -2675,13 +2675,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cron@npm:^3.5.0":
-  version: 3.5.0
-  resolution: "cron@npm:3.5.0"
+"cron@npm:^4.1.1":
+  version: 4.1.1
+  resolution: "cron@npm:4.1.1"
   dependencies:
     "@types/luxon": "npm:~3.4.0"
     luxon: "npm:~3.5.0"
-  checksum: 10/0e667d87c9acc162db835439bff2664483f1fcbd471ae30a26c7426c736fa1798d27067cc4d0294d8a27890a1bc6c9deeefe47811cc339f11a8ba8288f51886d
+  checksum: 10/aadad1f32ac72832c73808b2321692f6ae43677bbd58329cb68684e4810af31ec56786028d16e62f80bd692c440a4b16be563821aa00db9c1f563861660375c6
   languageName: node
   linkType: hard
 

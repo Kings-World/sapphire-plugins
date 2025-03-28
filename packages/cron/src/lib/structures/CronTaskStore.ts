@@ -29,7 +29,7 @@ export class CronTaskStore extends Store<CronTask, 'cron-tasks'> {
 	 */
 	public stopAll() {
 		for (const task of this.values()) {
-			if (!task.job.running) continue;
+			if (!task.job.isActive) continue;
 			task.job.stop();
 		}
 
@@ -61,7 +61,7 @@ export class CronTaskStore extends Store<CronTask, 'cron-tasks'> {
 
 	public override delete(key: string) {
 		const task = this.get(key);
-		if (task?.job.running) {
+		if (task?.job.isActive) {
 			task.job.stop();
 		}
 
