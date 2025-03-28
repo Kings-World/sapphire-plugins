@@ -40,6 +40,11 @@ jobs:
         with:
           node-version: 20
 
+      # this is the same as the tsc problem matcher from actions/setup-node
+      # the only difference being the "Error: " prefix being added to the regex
+      - name: Add Problem Matcher
+        run: echo "::add-matcher::.github/turbo-tsc.json"
+
       - name: Install Dependencies
         run: yarn install --immutable
 
