@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+# [@kingsworld/plugin-cron@2.1.1](https://github.com/Kings-World/sapphire-plugins/compare/@kingsworld/plugin-cron@2.1.0...@kingsworld/plugin-cron@2.1.1) - (2025-04-05)
+
+## 🐛 Bug Fixes
+
+- **deps:** Update all non-major dependencies ([83f972e](https://github.com/Kings-World/sapphire-plugins/commit/83f972eda0f3db62cfab8916e5c444abc0247e10)) ([#97](https://github.com/Kings-World/sapphire-plugins/pull/97) by @renovate[bot])
+- **deps:** Update dependency cron to v4 ([1550eff](https://github.com/Kings-World/sapphire-plugins/commit/1550eff0705e5430281291aeb0fe18a830186915)) ([#91](https://github.com/Kings-World/sapphire-plugins/pull/91) by @renovate[bot])
+- **deps:** Update all non-major dependencies ([d5bd44f](https://github.com/Kings-World/sapphire-plugins/commit/d5bd44fbbe46d8aaa92b6157dccb9536debc66a0)) ([#80](https://github.com/Kings-World/sapphire-plugins/pull/80) by @renovate[bot])
+- **deps:** Update all non-major dependencies ([fab1c9f](https://github.com/Kings-World/sapphire-plugins/commit/fab1c9f661175bc9c2fdfc7d9ab3af59d16acc6f)) ([#79](https://github.com/Kings-World/sapphire-plugins/pull/79) by @renovate[bot])
+- **deps:** Update all non-major dependencies ([e44b9ef](https://github.com/Kings-World/sapphire-plugins/commit/e44b9efa5b164699dd4393188c38e6f3fdadcc3e)) ([#75](https://github.com/Kings-World/sapphire-plugins/pull/75) by @renovate[bot])
+
 # [@kingsworld/plugin-cron@2.1.0](https://github.com/Kings-World/sapphire-plugins/compare/@kingsworld/plugin-cron@2.0.3...@kingsworld/plugin-cron@2.1.0) - (2024-10-03)
 
 ## 🚀 Features
