@@ -5,20 +5,20 @@ import type { ClientOptions } from 'discord.js';
 import { CronTaskHandler, CronTaskStore } from './index';
 
 export class CronTaskPlugin extends Plugin {
-	public static [preGenericsInitialization](this: SapphireClient, options: ClientOptions) {
+	public static override [preGenericsInitialization](this: SapphireClient, options: ClientOptions) {
 		container.cron = new CronTaskHandler(options.cron);
 	}
 
-	public static [postInitialization](this: SapphireClient) {
+	public static override [postInitialization](this: SapphireClient) {
 		this.stores.register(new CronTaskStore());
 	}
 
-	public static async [preLogin](this: SapphireClient) {
+	public static override async [preLogin](this: SapphireClient) {
 		if (container.cron.disableSentry) return;
 		container.cron.sentry = await import('@sentry/node').catch(() => undefined);
 	}
 
-	public static [postLogin](this: SapphireClient) {
+	public static override [postLogin](this: SapphireClient) {
 		container.cron.startAll();
 	}
 }
