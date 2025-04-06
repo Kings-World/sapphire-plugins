@@ -100,7 +100,16 @@ export class CronTaskStore extends Store<CronTask, 'cron-tasks'> {
 					},
 					...options
 				},
-				sentry?.withMonitor(key, value.run.bind(value)) ?? value.run.bind(value)
+				() => {
+					if (sentry) {
+						return sentry.withMonitor(key, () => void value.run.bind(value)(), {
+							schedule: { type: 'crontab', value: pattern },
+							timezone: timeZone
+						});
+					}
+
+					return value.run.bind(value)();
+				}
 			);
 		} catch (error) {
 			value.error('Encountered an error while creating the cron job', error);

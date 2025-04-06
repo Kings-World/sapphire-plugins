@@ -3,8 +3,9 @@ import type { CronTaskHandlerOptions } from './types/CronTaskTypes';
 
 export class CronTaskHandler {
 	/**
-	 * The default IANA timezone to use for all cron jobs.
+	 * The default IANA/TZ timezone to use for all cron jobs.
 	 * You can override this per task, using the timezone option.
+	 * @see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 	 */
 	public defaultTimezone?: CronTaskHandlerOptions['defaultTimezone'];
 
