@@ -24,7 +24,7 @@
 		"@sapphire/pieces": "^4.3.1",
 		"@sapphire/prettier-config": "^2.0.0",
 		"@sapphire/ts-config": "^5.0.1",
-		"@types/node": "^22.13.14",
+		"@types/node": "^22.14.0",
 		"@typescript-eslint/eslint-plugin": "^7.13.1",
 		"@typescript-eslint/parser": "^7.13.1",
 		"cz-conventional-changelog": "^3.3.0",
@@ -33,12 +33,12 @@
 		"esbuild-plugin-version-injector": "^1.2.1",
 		"eslint": "^8.57.1",
 		"eslint-config-prettier": "^10.1.1",
-		"eslint-plugin-prettier": "^5.2.5",
+		"eslint-plugin-prettier": "^5.2.6",
 		"lint-staged": "^15.5.0",
 		"prettier": "^3.5.3",
 		"rimraf": "^6.0.1",
 		"tsup": "^8.4.0",
-		"turbo": "^2.4.4",
+		"turbo": "^2.5.0",
 		"typescript": "~5.4.5"
 	},
 	"commitlint": {
