@@ -1,6 +1,6 @@
 import type { Awaitable } from '@sapphire/framework';
 import { Piece } from '@sapphire/pieces';
-import type { CronJob } from 'cron';
+import type { Cron } from 'croner';
 import type { CronJobOptions } from '../types/CronTaskTypes';
 
 /**
@@ -25,7 +25,7 @@ import type { CronJobOptions } from '../types/CronTaskTypes';
  * ```
  */
 export abstract class CronTask<Options extends CronTask.Options = CronTask.Options> extends Piece<Options, 'cron-tasks'> {
-	declare public job: CronJob<null, CronTask>;
+	declare public job: Cron;
 
 	public constructor(context: CronTask.LoaderContext, options: Options) {
 		super(context, options);

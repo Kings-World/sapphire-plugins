@@ -19,7 +19,7 @@ export class CronTaskPlugin extends Plugin {
 	}
 
 	public static override [postLogin](this: SapphireClient) {
-		container.cron.startAll();
+		container.stores.get('cron-tasks').resumeAll();
 	}
 }
 

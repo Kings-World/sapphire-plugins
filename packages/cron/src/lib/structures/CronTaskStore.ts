@@ -1,7 +1,6 @@
 import { Store } from '@sapphire/pieces';
-import { CronJob } from 'cron';
+import { Cron } from 'croner';
 import { CronTask } from './CronTask';
-import { Info, DateTime, FixedOffsetZone, type Zone } from 'luxon';
 
 export class CronTaskStore extends Store<CronTask, 'cron-tasks'> {
 	public constructor() {
@@ -9,27 +8,62 @@ export class CronTaskStore extends Store<CronTask, 'cron-tasks'> {
 	}
 
 	/**
-	 * Loops over all tasks and starts those that are enabled.
-	 * This gets called automatically when the Client is ready.
+	 * Loops over all tasks and pauses those that are running.
+	 *
+	 * @remarks
+	 * This method will only pause tasks that:
+	 * - Are enabled
+	 * - Are currently running
+	 * - Have not been permanently stopped
+	 *
 	 * @returns CronTaskStore
 	 */
-	public startAll() {
+	public pauseAll() {
 		for (const task of this.values()) {
-			if (!task.enabled) continue;
-			task.job.start();
+			if (!task.enabled || !task.job.isRunning()) continue;
+			task.job.pause();
 		}
 
-		Store.logger?.(`[STORE => ${this.name}] [START] Started all cronjob tasks.`);
+		Store.logger?.(`[STORE => ${this.name}] [PAUSE] Paused all cronjob tasks.`);
+		return this;
+	}
+
+	/**
+	 * Loops over all tasks and resumes those that are paused.
+	 *
+	 * @remarks
+	 * This method will only resume tasks that:
+	 * - Are enabled
+	 * - Are not currently running
+	 * - Have not been permanently stopped
+	 *
+	 * @returns CronTaskStore
+	 */
+	public resumeAll() {
+		for (const task of this.values()) {
+			if (!task.enabled || task.job.isRunning() || task.job.isStopped()) continue;
+			task.job.resume();
+		}
+
+		Store.logger?.(`[STORE => ${this.name}] [RESUME] Resumed all cronjob tasks.`);
 		return this;
 	}
 
 	/**
 	 * Loops over all tasks and stops those that are running.
+	 *
+	 * @remarks
+	 * This method will only stop tasks that:
+	 * - Are enabled
+	 * - Have not been permanently stopped
+	 *
+	 * ⚠️ Stopping jobs is **permanent** and cannot be resumed afterwards!
+	 *
 	 * @returns CronTaskStore
 	 */
 	public stopAll() {
 		for (const task of this.values()) {
-			if (!task.job.isActive) continue;
+			if (!task.enabled || task.job.isStopped()) continue;
 			task.job.stop();
 		}
 
@@ -38,19 +72,36 @@ export class CronTaskStore extends Store<CronTask, 'cron-tasks'> {
 	}
 
 	public override set(key: string, value: CronTask): this {
-		const { options } = value;
-
+		const { pattern, timezone, ...options } = value.options;
 		const { sentry, defaultTimezone } = this.container.cron;
-		const cronJob = sentry ? sentry.cron.instrumentCron(CronJob, key) : CronJob;
+
+		// if a task with the same key already exists, stop it before creating a new one
+		if (this.has(key)) {
+			Store.logger?.(`[STORE => ${this.name}] [SET] Stopping existing cronjob task before creating a new one.`);
+			this.get(key)?.job.stop();
+		}
+
+		const timeZone = timezone ?? defaultTimezone;
 
 		try {
-			value.job = cronJob.from({
-				...options,
-				onTick: () => void value.run.bind(value)(),
-				start: false,
-				context: value,
-				timeZone: this.formatLuxonZone(options.timeZone ?? defaultTimezone)
-			});
+			Store.logger?.(
+				`[STORE => ${this.name}] [SET] Creating cronjob for ${key} with '${pattern}' as the pattern and '${timeZone}' for the timezone`
+			);
+
+			value.job = new Cron(
+				pattern,
+				{
+					name: key,
+					timezone: timeZone,
+					paused: true, // we start the job manually once the client is ready
+					catch: (error) => {
+						value.error('Encountered an error while running the cron job', error);
+						if (sentry) sentry.captureException(error);
+					},
+					...options
+				},
+				sentry?.withMonitor(key, value.run.bind(value)) ?? value.run.bind(value)
+			);
 		} catch (error) {
 			value.error('Encountered an error while creating the cron job', error);
 			void value.unload();
@@ -59,9 +110,12 @@ export class CronTaskStore extends Store<CronTask, 'cron-tasks'> {
 		return super.set(key, value);
 	}
 
+	/**
+	 * Deletes a task from the store and stops it if it's running.
+	 */
 	public override delete(key: string) {
 		const task = this.get(key);
-		if (task?.job.isActive) {
+		if (task && !task.job.isStopped()) {
 			task.job.stop();
 		}
 
@@ -70,30 +124,9 @@ export class CronTaskStore extends Store<CronTask, 'cron-tasks'> {
 
 	/**
 	 * Stops all running cron jobs and clears the store.
-	 * @returns void
 	 */
 	public override clear() {
 		this.stopAll();
 		return super.clear();
-	}
-
-	/**
-	 * Formats a Luxon-compatible timezone string into a TZ timezone string.
-	 * This is required because Sentry requires time zones to be in TZ format.
-	 * @param timezone The Luxon-compatible timezone to format.
-	 * @returns The formatted TZ timezone.
-	 * @private
-	 */
-	private formatLuxonZone(timezone?: string | Zone | number) {
-		const zone = Info.normalizeZone(timezone);
-
-		// If the zone is invalid, return the system zone
-		if (!zone.isValid) return DateTime.local().zoneName;
-
-		// If the zone is a fixed offset zone, return the IANA name
-		if (zone instanceof FixedOffsetZone) return zone.ianaName;
-
-		// Otherwise, return the zone name
-		return zone.name;
 	}
 }
