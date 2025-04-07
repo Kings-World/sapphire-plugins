@@ -73,7 +73,7 @@ export class CronTaskStore extends Store<CronTask, 'cron-tasks'> {
 
 	public override set(key: string, value: CronTask): this {
 		const { pattern, timezone, ...options } = value.options;
-		const { sentry, defaultTimezone } = this.container.cron;
+		const { sentry, defaultTimezone } = this.container.cronTasks;
 
 		// if a task with the same key already exists, stop it before creating a new one
 		if (this.has(key)) {

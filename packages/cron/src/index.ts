@@ -9,7 +9,7 @@ export * from './lib/types/CronTaskTypes';
 
 declare module '@sapphire/pieces' {
 	interface Container {
-		cron: CronTaskHandler;
+		cronTasks: CronTaskHandler;
 	}
 
 	interface StoreRegistryEntries {
@@ -19,7 +19,7 @@ declare module '@sapphire/pieces' {
 
 declare module 'discord.js' {
 	export interface ClientOptions {
-		cron?: Partial<CronTaskHandlerOptions>;
+		cronTasks?: Partial<CronTaskHandlerOptions>;
 	}
 }
 
