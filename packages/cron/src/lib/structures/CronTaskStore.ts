@@ -72,7 +72,7 @@ export class CronTaskStore extends Store<CronTask, 'cron-tasks'> {
 	}
 
 	public override set(key: string, value: CronTask): this {
-		const { pattern, timezone, ...options } = value.options;
+		const { pattern, timezone, protect, ...options } = value.options;
 		const { sentry, defaultTimezone } = this.container.cronTasks;
 
 		// if a task with the same key already exists, stop it before creating a new one
@@ -94,9 +94,11 @@ export class CronTaskStore extends Store<CronTask, 'cron-tasks'> {
 					name: key,
 					timezone: timeZone,
 					paused: true, // we start the job manually once the client is ready
+					protect: value.protect ? (job) => void value.protect!(job) : protect,
 					catch: (error) => {
 						value.error('Encountered an error while running the cron job', error);
 						if (sentry) sentry.captureException(error);
+						void value.catch?.(error, value.job);
 					},
 					...options
 				},

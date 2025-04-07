@@ -33,6 +33,10 @@ export abstract class CronTask<Options extends CronTask.Options = CronTask.Optio
 
 	public abstract run(): Awaitable<unknown>;
 
+	public abstract protect?(job: Cron): Awaitable<unknown>;
+
+	public abstract catch?(error: unknown, job: Cron): Awaitable<unknown>;
+
 	/**
 	 * A helper function to log messages with the `CronTask[${name}]` prefix.
 	 * @param message The message to include after the prefix

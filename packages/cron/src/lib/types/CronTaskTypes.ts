@@ -16,6 +16,12 @@ export interface CronTaskHandlerOptions {
 	disableSentry: boolean;
 }
 
-export interface CronJobOptions extends Pick<CronOptions, 'maxRuns' | 'protect' | 'unref' | 'timezone'> {
+export interface CronJobOptions extends Pick<CronOptions, 'maxRuns' | 'unref' | 'timezone'> {
 	pattern: string;
+	/**
+	 * If true, prevents the job from running if the previous execution is still in progress.
+	 * If the task has a protect method, it will be called if the job is blocked.
+	 * @default false
+	 */
+	protect?: boolean;
 }
