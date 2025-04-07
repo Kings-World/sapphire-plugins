@@ -1,6 +1,6 @@
 import type { Awaitable } from '@sapphire/framework';
 import { Piece } from '@sapphire/pieces';
-import type { CronJob } from 'cron';
+import type { Cron } from 'croner';
 import type { CronJobOptions } from '../types/CronTaskTypes';
 
 /**
@@ -14,7 +14,7 @@ import type { CronJobOptions } from '../types/CronTaskTypes';
  * 	public constructor(context: CronTask.LoaderContext, options: CronTask.Options) {
  * 		super(context, {
  * 			...options,
- * 			cronTime: '* * * * *'
+ * 			pattern: '* * * * *'
  * 		});
  * 	}
  *
@@ -25,13 +25,17 @@ import type { CronJobOptions } from '../types/CronTaskTypes';
  * ```
  */
 export abstract class CronTask<Options extends CronTask.Options = CronTask.Options> extends Piece<Options, 'cron-tasks'> {
-	declare public job: CronJob<null, CronTask>;
+	declare public job: Cron;
 
 	public constructor(context: CronTask.LoaderContext, options: Options) {
 		super(context, options);
 	}
 
 	public abstract run(): Awaitable<unknown>;
+
+	public abstract protect?(job: Cron): Awaitable<unknown>;
+
+	public abstract catch?(error: unknown, job: Cron): Awaitable<unknown>;
 
 	/**
 	 * A helper function to log messages with the `CronTask[${name}]` prefix.

@@ -6,7 +6,7 @@ import { CronTaskHandler, CronTaskStore } from './index';
 
 export class CronTaskPlugin extends Plugin {
 	public static override [preGenericsInitialization](this: SapphireClient, options: ClientOptions) {
-		container.cron = new CronTaskHandler(options.cron);
+		container.cronTasks = new CronTaskHandler(options.cronTasks);
 	}
 
 	public static override [postInitialization](this: SapphireClient) {
@@ -14,12 +14,12 @@ export class CronTaskPlugin extends Plugin {
 	}
 
 	public static override async [preLogin](this: SapphireClient) {
-		if (container.cron.disableSentry) return;
-		container.cron.sentry = await import('@sentry/node').catch(() => undefined);
+		if (container.cronTasks.disableSentry) return;
+		container.cronTasks.sentry = await import('@sentry/node').catch(() => undefined);
 	}
 
 	public static override [postLogin](this: SapphireClient) {
-		container.cron.startAll();
+		this.stores.get('cron-tasks').resumeAll();
 	}
 }
 
