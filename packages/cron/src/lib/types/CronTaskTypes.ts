@@ -17,7 +17,7 @@ export interface CronTaskHandlerOptions {
 }
 
 export interface CronJobOptions extends Pick<CronOptions, 'maxRuns' | 'unref' | 'timezone'> {
-	pattern: string;
+	pattern: string | Date;
 	/**
 	 * If true, prevents the job from running if the previous execution is still in progress.
 	 * If the task has a protect method, it will be called if the job is blocked.

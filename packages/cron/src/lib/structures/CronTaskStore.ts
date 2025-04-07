@@ -1,6 +1,7 @@
 import { Store } from '@sapphire/pieces';
 import { Cron } from 'croner';
 import { CronTask } from './CronTask';
+import { normalizePattern } from '../utils/normalizePattern';
 
 export class CronTaskStore extends Store<CronTask, 'cron-tasks'> {
 	public constructor() {
@@ -103,10 +104,11 @@ export class CronTaskStore extends Store<CronTask, 'cron-tasks'> {
 					...options
 				},
 				() => {
-					if (sentry) {
+					// we only want to monitor cron patterns and not single-use tasks that croner supports
+					if (sentry && typeof pattern === 'string' && !pattern.includes(':')) {
 						return sentry.withMonitor(key, () => void value.run.bind(value)(), {
 							schedule: { type: 'crontab', value: pattern },
-							timezone: timeZone
+							timezone: timeZone ? normalizePattern(timeZone) : undefined
 						});
 					}
 
