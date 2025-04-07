@@ -26,16 +26,14 @@ import type { CronJobOptions } from '../types/CronTaskTypes';
  */
 export abstract class CronTask<Options extends CronTask.Options = CronTask.Options> extends Piece<Options, 'cron-tasks'> {
 	declare public job: Cron;
+	public protect: ((job: Cron) => Awaitable<unknown>) | undefined = undefined;
+	public catch: ((error: unknown, job: Cron) => Awaitable<unknown>) | undefined = undefined;
 
 	public constructor(context: CronTask.LoaderContext, options: Options) {
 		super(context, options);
 	}
 
 	public abstract run(): Awaitable<unknown>;
-
-	public abstract protect?(job: Cron): Awaitable<unknown>;
-
-	public abstract catch?(error: unknown, job: Cron): Awaitable<unknown>;
 
 	/**
 	 * A helper function to log messages with the `CronTask[${name}]` prefix.
