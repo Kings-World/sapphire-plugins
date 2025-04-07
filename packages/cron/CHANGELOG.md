@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+# [@kingsworld/plugin-cron@3.0.3](https://github.com/Kings-World/sapphire-plugins/compare/@kingsworld/plugin-cron@3.0.2...@kingsworld/plugin-cron@3.0.3) - (2025-04-07)
+
+## 🐛 Bug Fixes
+
+- Correct optional methods type for protect and catch ([1a161dc](https://github.com/Kings-World/sapphire-plugins/commit/1a161dc3dd96fc1aa6a446cea3e042102d52b56c))
+
 # [@kingsworld/plugin-cron@3.0.2](https://github.com/Kings-World/sapphire-plugins/compare/@kingsworld/plugin-cron@3.0.1...@kingsworld/plugin-cron@3.0.2) - (2025-04-07)
 
 ## 🐛 Bug Fixes
