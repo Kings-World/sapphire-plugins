@@ -2,7 +2,7 @@
 
 # @kingsworld/plugin-cron
 
-**Plugin for <a href="https://github.com/sapphiredev/framework">@sapphire/framework</a> to add support for cron tasks using <a href="https://github.com/kelektiv/node-cron">cron</a>.**
+**Plugin for <a href="https://github.com/sapphiredev/framework">@sapphire/framework</a> to add support for cron tasks using <a href="https://github.com/Hexagon/croner">croner</a>.**
 
 [![GitHub](https://img.shields.io/github/license/Kings-World/sapphire-plugins)](https://github.com/Kings-World/sapphire-plugins/blob/main/LICENSE.md)
 [![npm bundle size](https://pkg-size.dev/badge/bundle/83411)](https://pkg-size.dev/@kingsworld/plugin-cron)
@@ -46,7 +46,7 @@ Then, you can configure the plugin in the configuration options in your Sapphire
 ```ts
 const options = {
 	...otherClientOptionsGoHere,
-	cron: {
+	cronTasks: {
 		/**
 		 * Whether to disable Sentry cron monitoring
 		 * @default false
@@ -54,7 +54,7 @@ const options = {
 		disableSentry: false,
 		/**
 		 * The timezone to use for the cron tasks
-		 * @default 'system'
+		 * @default undefined
 		 */
 		defaultTimezone: 'Europe/London'
 	}
@@ -63,30 +63,38 @@ const options = {
 
 - The `disableSentry` option is used to disable Sentry's cron monitoring. By default, it is set to `false`, which means Sentry cron monitoring is enabled if the `@sentry/node` package is installed and configured. This makes using Sentry an opt-in feature - you first opt in by installing `@sentry/node`. The `disableSentry` option then allows you to opt out in specific situations. You can set this to `true` to disable cron monitoring, which can be useful during development or if you haven't provided a Sentry DSN. If you don't use Sentry at all (i.e., `@sentry/node` is not installed), this option has no effect and can be safely ignored.
 
-In order to use the cron tasks anywhere other than a piece (commands, arguments, preconditions, etc.), you must first import the `container` property of `@sapphire/framework`. For pieces, you can simply use `this.container.cron` to access this plugin's methods.
+In order to use the cron tasks anywhere other than a piece (commands, arguments, preconditions, etc.), you must first import the `container` property of `@sapphire/framework`. From there, you can access the store.
 
-This is a simple example of how to start a task from a service.
+This is a simple example of how to pause and resume a task from a service.
 
 ```typescript
 import { container } from '@sapphire/framework';
 
 export class MyAwesomeService {
 	public createAwesomeTask() {
-		const task = container.cron.store.get('my-awesome-task');
+		const task = container.stores.get('cron-tasks').get('my-awesome-task');
 
-		task.job.start();
+		// To pause the task:
+		task.job.pause();
+
+		// To resume the task:
+		task.job.resume();
 	}
 }
 ```
 
-This is a simple example of how to start all tasks from a service.
+This is a simple example of how to pause or resume all tasks from a service.
 
 ```typescript
 import { container } from '@sapphire/framework';
 
 export class MyAwesomeService {
 	public createAwesomeTask() {
-		container.cron.startAll();
+		// To pause all tasks:
+		container.stores.get('cron-tasks').pauseAll();
+
+		// To resume all tasks:
+		container.stores.get('cron-tasks').resumeAll();
 	}
 }
 ```
@@ -106,7 +114,7 @@ export class PingPong extends CronTask {
 	public constructor(context: CronTask.LoaderContext, options: CronTask.Options) {
 		super(context, {
 			...options,
-			cronTime: '* * * * *'
+			pattern: '* * * * *'
 		});
 	}
 
@@ -129,7 +137,7 @@ export class PingPong extends CronTask {
 	public constructor(context: CronTask.LoaderContext, options: CronTask.Options) {
 		super(context, {
 			...options,
-			cronTime: '* * * * *'
+			pattern: '* * * * *'
 		});
 	}
 

@@ -14,7 +14,7 @@ import type { CronJobOptions } from '../types/CronTaskTypes';
  * 	public constructor(context: CronTask.LoaderContext, options: CronTask.Options) {
  * 		super(context, {
  * 			...options,
- * 			cronTime: '* * * * *'
+ * 			pattern: '* * * * *'
  * 		});
  * 	}
  *
