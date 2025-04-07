@@ -7,43 +7,11 @@ All notable changes to this project will be documented in this file.
 ## 🏠 Refactor
 
 - **cron:** Replace the cron package with croner ([efd4ebb](https://github.com/Kings-World/sapphire-plugins/commit/efd4ebbd2e38f106bc322ffb962c5dcccb503c63)) ([#102](https://github.com/Kings-World/sapphire-plugins/pull/102) by @SerenModz21)
-  - 💥 **Signed-off-by:** Seren_Modz 21 <seren@kings-world.net>
-
-* refactor: replace cron with croner
-  - 💥 **Signed-off-by:** Seren_Modz 21 <seren@kings-world.net>
-
-* refactor: replace cron with croner
-  - 💥 **Signed-off-by:** Seren_Modz 21 <seren@kings-world.net>
-
-* style: rename cron to cronTasks
-  - 💥 **Signed-off-by:** Seren_Modz 21 <seren@kings-world.net>
-
-* docs: update documentation
-  - 💥 **Signed-off-by:** Seren_Modz 21 <seren@kings-world.net>
-
-* refactor: use this.stores instead of container.stores
-  - 💥 **Signed-off-by:** Seren_Modz 21 <seren@kings-world.net>
-
-* feat: add protect and catch methods for additional logic
-  - 💥 **Signed-off-by:** Seren_Modz 21 <seren@kings-world.net>
-
-* refactor: normalize pattern for sentry and prevent dates or iso string from being monitored
-  - 💥 **Signed-off-by:** Seren_Modz 21 <seren@kings-world.net>
-
-* refactor: update version
-
-i accidentally publish 3.0.0 by accident when i was new to using cliff-jumper
-
-therefore, i have to skip that and go straight to 3.0.1
-  - 💥 **Signed-off-by:** Seren_Modz 21 <seren@kings-world.net>
-
----------
   - 💥 **BREAKING CHANGE:** The `cronTime` option has been replaced with `pattern`.
   - 💥 **BREAKING CHANGE:** The `timeZone` option has been replaced with `timezone`.
   - 💥 **BREAKING CHANGE:** The `cron` package has been replaced with `croner`.
   - 💥 **BREAKING CHANGE:** `container.cron.startAll()` and `container.cron.stopAll()` have been removed. Instead, you should pause and resume using the plugin's store.
   - 💥 **BREAKING CHANGE:** References to the word `cron` have been replaced with `cronTasks` for consistency. For example, `container.cron` is now `container.cronTasks` and `ClientOptions.cron` is now `ClientOptions.cronTasks`.
-  - 💥 **Signed-off-by:** Seren_Modz 21 <seren@kings-world.net>
 - Add the override keyword to the plugin methods ([a581de3](https://github.com/Kings-World/sapphire-plugins/commit/a581de3ae477d1f5fcff5e8376fb7c60fdae7daa))
 
 # [@kingsworld/plugin-cron@2.1.1](https://github.com/Kings-World/sapphire-plugins/compare/@kingsworld/plugin-cron@2.1.0...@kingsworld/plugin-cron@2.1.1) - (2025-04-05)
