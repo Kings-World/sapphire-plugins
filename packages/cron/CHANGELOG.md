@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+# [@kingsworld/plugin-cron@3.0.2](https://github.com/Kings-World/sapphire-plugins/compare/@kingsworld/plugin-cron@3.0.1...@kingsworld/plugin-cron@3.0.2) - (2025-04-07)
+
+## 🐛 Bug Fixes
+
+- The protect and catch methods cannot be abstract ([9e230ac](https://github.com/Kings-World/sapphire-plugins/commit/9e230ac9a4df3d76cf50981cd64927cec9f4611e))
+
 # [@kingsworld/plugin-cron@3.0.1](https://github.com/Kings-World/sapphire-plugins/compare/@kingsworld/plugin-cron@2.1.1...@kingsworld/plugin-cron@3.0.1) - (2025-04-07)
 
 ## 🏠 Refactor
