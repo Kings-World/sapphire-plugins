@@ -1,6 +1,6 @@
 {
 	"name": "@kingsworld/plugin-cron",
-	"description": "A simple @sapphire/framework plugin that aims to make use of the cron package and allow users to make cron jobs within their Sapphire discord bot.",
+	"description": "A simple @sapphire/framework plugin that aims to make use of the croner package and allow users to make cron jobs within their Sapphire discord bot.",
 	"version": "3.0.3",
 	"author": "Seren_Modz 21 <seren@kings-world.net>",
 	"license": "MIT",
@@ -68,6 +68,7 @@
 		"sapphire",
 		"plugin",
 		"cron",
+		"croner",
 		"typescript",
 		"ts",
 		"discord",
