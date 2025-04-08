@@ -12,7 +12,7 @@
 
 ## Description
 
-This plugin adds support for cron tasks to the Sapphire framework. It uses the [cron](ttps://www.npmjs.com/package/@kingsworld/plugin-cron) package to create and manage cron tasks.
+This plugin adds support for cron tasks to the Sapphire framework. It creates and manages cron tasks using the [croner](https://www.npmjs.com/package/croner) package.
 
 ## Features
 
@@ -25,7 +25,7 @@ This plugin adds support for cron tasks to the Sapphire framework. It uses the [
 
 - [`@sapphire/framework`](https://www.npmjs.com/package/@sapphire/framework)
 
-You can use the following command to install this package along with `cron`, or replace `npm install` with your package manager of choice.
+You can use the following command to install this package or replace `npm install` with your package manager.
 
 ```sh
 npm install @kingsworld/plugin-cron @sapphire/framework
@@ -63,7 +63,7 @@ const options = {
 
 - The `disableSentry` option is used to disable Sentry's cron monitoring. By default, it is set to `false`, which means Sentry cron monitoring is enabled if the `@sentry/node` package is installed and configured. This makes using Sentry an opt-in feature - you first opt in by installing `@sentry/node`. The `disableSentry` option then allows you to opt out in specific situations. You can set this to `true` to disable cron monitoring, which can be useful during development or if you haven't provided a Sentry DSN. If you don't use Sentry at all (i.e., `@sentry/node` is not installed), this option has no effect and can be safely ignored.
 
-In order to use the cron tasks anywhere other than a piece (commands, arguments, preconditions, etc.), you must first import the `container` property of `@sapphire/framework`. From there, you can access the store.
+To use the cron tasks anywhere other than a piece (commands, arguments, preconditions, etc.), you must first import the `container` property of `@sapphire/framework`. From there, you can access the store.
 
 This is a simple example of how to pause and resume a task from a service.
 
@@ -99,7 +99,7 @@ export class MyAwesomeService {
 }
 ```
 
-It's important to note that the `startAll()` method is called automatically when the client is ready. Therefore, it's generally not necessary to call this method manually, unless you have a specific need to restart all cron tasks at some point after the client has been initialized.
+It's important to note that the `startAll()` method is called automatically when the client is ready. Therefore, it's generally not necessary to call this method manually unless you have a specific need to restart all cron tasks at some point after the client has been initialized.
 
 ### Create a task handler
 
