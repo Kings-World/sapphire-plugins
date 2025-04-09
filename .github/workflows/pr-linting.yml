@@ -1,0 +1,30 @@
+name: PR Linting
+
+on:
+  pull_request_target:
+    types:
+      - opened
+      - edited
+      - reopened
+      - synchronize
+
+jobs:
+  title:
+    name: Title Validation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Project
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Dependencies
+        run: yarn --immutable
+
+      - name: Run Validation
+        run: echo "$PR_TITLE" | yarn commitlint
+        env:
+          PR_TITLE: ${{ github.event.pull_request.title}}
