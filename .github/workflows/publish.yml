@@ -33,6 +33,8 @@ jobs:
     name: Publish @kingsworld/${{ inputs.package }}
     runs-on: ubuntu-latest
     if: github.repository_owner == 'Kings-World'
+    permissions:
+      id-token: write
     steps:
       - name: Generate Access Token
         id: app-token
