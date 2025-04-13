@@ -27,4 +27,4 @@ jobs:
       - name: Run Validation
         run: echo "$PR_TITLE" | yarn commitlint
         env:
-          PR_TITLE: ${{ github.event.pull_request.title}}
+          PR_TITLE: ${{ github.event.pull_request.title }}
