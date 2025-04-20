@@ -696,7 +696,7 @@ __metadata:
   dependencies:
     "@favware/cliff-jumper": "npm:^6.0.0"
     "@favware/rollup-type-bundler": "npm:^4.0.0"
-    "@sentry/node": "npm:^9.12.0"
+    "@sentry/node": "npm:^9.13.0"
     "@types/node": "npm:^22.14.1"
     concurrently: "npm:^9.1.2"
     croner: "npm:^9.0.0"
@@ -1641,16 +1641,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sentry/core@npm:9.12.0":
-  version: 9.12.0
-  resolution: "@sentry/core@npm:9.12.0"
-  checksum: 10/dd5e9cc0bde5c52c873b40a51bb40ed72da9567a92dcd0baa924ba090fa6723839a012093517e0955b26d722fd8a9b5ba4462217a40920a0b0d05209144d3b61
+"@sentry/core@npm:9.13.0":
+  version: 9.13.0
+  resolution: "@sentry/core@npm:9.13.0"
+  checksum: 10/31fa3a682c37080f3bcd40d8fa1d1b9434205d6c27d88f946cde34347de238dc291bd6d020ab9b00bdeca70f70cd47d48516d977757e0a9d629fece87eff341f
   languageName: node
   linkType: hard
 
-"@sentry/node@npm:^9.12.0":
-  version: 9.12.0
-  resolution: "@sentry/node@npm:9.12.0"
+"@sentry/node@npm:^9.13.0":
+  version: 9.13.0
+  resolution: "@sentry/node@npm:9.13.0"
   dependencies:
     "@opentelemetry/api": "npm:^1.9.0"
     "@opentelemetry/context-async-hooks": "npm:^1.30.1"
@@ -1683,18 +1683,18 @@ __metadata:
     "@opentelemetry/sdk-trace-base": "npm:^1.30.1"
     "@opentelemetry/semantic-conventions": "npm:^1.30.0"
     "@prisma/instrumentation": "npm:6.5.0"
-    "@sentry/core": "npm:9.12.0"
-    "@sentry/opentelemetry": "npm:9.12.0"
+    "@sentry/core": "npm:9.13.0"
+    "@sentry/opentelemetry": "npm:9.13.0"
     import-in-the-middle: "npm:^1.13.0"
-  checksum: 10/7d3a9fd726b809ed8c2545a5e0c312fcc5e883f217edcca41942709bf3050a7d7ba4fec90cba3e51600d5101d53d4bee99d0ae2c252e85718704bc9811775312
+  checksum: 10/669437fbc0fa121c2045b1b8c721d43be886443728b9f343a4342674605ebbfeb3b83c9165a3be824e55756d0970a5b3e154fb80dcc08200ae205819aba9c68d
   languageName: node
   linkType: hard
 
-"@sentry/opentelemetry@npm:9.12.0":
-  version: 9.12.0
-  resolution: "@sentry/opentelemetry@npm:9.12.0"
+"@sentry/opentelemetry@npm:9.13.0":
+  version: 9.13.0
+  resolution: "@sentry/opentelemetry@npm:9.13.0"
   dependencies:
-    "@sentry/core": "npm:9.12.0"
+    "@sentry/core": "npm:9.13.0"
   peerDependencies:
     "@opentelemetry/api": ^1.9.0
     "@opentelemetry/context-async-hooks": ^1.30.1
@@ -1702,7 +1702,7 @@ __metadata:
     "@opentelemetry/instrumentation": ^0.57.1
     "@opentelemetry/sdk-trace-base": ^1.30.1
     "@opentelemetry/semantic-conventions": ^1.28.0
-  checksum: 10/059456caee82a4e0f6092a0701dab15cfd405ffb0372b811fff4b70a590e3c9a254d2d0e33bdf94184731172cf56d8a1ae737ed4090042cb723f61146a595ef5
+  checksum: 10/d483537808e7d536a5429f7c8e1b59fc92acc4661519c0f6f0973fa8323b5e2e0cf3e30df8a646a1c84c190aabe6f1fd5edde72709364b216e5783128a239ba6
   languageName: node
   linkType: hard
 
