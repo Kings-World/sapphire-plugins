@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+# [@kingsworld/plugin-cron@3.0.4](https://github.com/Kings-World/sapphire-plugins/compare/@kingsworld/plugin-cron@3.0.3...@kingsworld/plugin-cron@3.0.4) - (2025-04-20)
+
+## 📝 Documentation
+
+- Replace mentions of cron with croner ([451ffce](https://github.com/Kings-World/sapphire-plugins/commit/451ffcef074c867600efee50b89e2175dbb1d0c5)) ([#103](https://github.com/Kings-World/sapphire-plugins/pull/103) by @SerenModz21)
+
 # [@kingsworld/plugin-cron@3.0.3](https://github.com/Kings-World/sapphire-plugins/compare/@kingsworld/plugin-cron@3.0.2...@kingsworld/plugin-cron@3.0.3) - (2025-04-07)
 
 ## 🐛 Bug Fixes
