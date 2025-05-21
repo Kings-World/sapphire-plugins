@@ -5,10 +5,6 @@
 		{
 			"matchDepTypes": ["engines"],
 			"enabled": false
-		},
-		{
-			"enabled": false,
-			"matchPackageNames": ["/typescript/"]
 		}
 	]
 }
