@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+# [@kingsworld/plugin-cron@3.0.5](https://github.com/Kings-World/sapphire-plugins/compare/@kingsworld/plugin-cron@3.0.4...@kingsworld/plugin-cron@3.0.5) - (2025-05-21)
+
+## 🐛 Bug Fixes
+
+- Correct the usage of the normalizePattern() function ([2db627a](https://github.com/Kings-World/sapphire-plugins/commit/2db627a85d91f185820f0796df360b4ade3c77c5)) ([#112](https://github.com/Kings-World/sapphire-plugins/pull/112) by @SerenModz21)
+
 # [@kingsworld/plugin-cron@3.0.4](https://github.com/Kings-World/sapphire-plugins/compare/@kingsworld/plugin-cron@3.0.3...@kingsworld/plugin-cron@3.0.4) - (2025-04-20)
 
 ## 📝 Documentation
