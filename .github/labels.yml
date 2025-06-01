@@ -3,6 +3,7 @@
   color: 'd73a4a'
   description: Something isn't working
 - name: dependencies
+  description: ''
   color: 'ededed'
 - name: documentation
   color: '0075ca'
