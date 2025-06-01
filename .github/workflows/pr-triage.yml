@@ -38,3 +38,5 @@ jobs:
     steps:
       - name: Apply Labels to PR
         uses: actions/labeler@v5
+        with:
+          sync-labels: true
