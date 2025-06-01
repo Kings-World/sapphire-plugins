@@ -33,4 +33,4 @@
 # custom labels
 - name: packages:cron
   color: 'fbca04'
-  description: Anything that has relation to the Cron plugin
+  description: '@kingsworld/plugin-cron'
