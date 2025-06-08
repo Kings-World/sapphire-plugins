@@ -20,11 +20,11 @@
 		"@commitlint/config-conventional": "^19.8.1",
 		"@favware/npm-deprecate": "^2.0.0",
 		"@sapphire/eslint-config": "^5.0.6",
-		"@sapphire/framework": "^5.3.5",
-		"@sapphire/pieces": "^4.4.0",
+		"@sapphire/framework": "^5.3.6",
+		"@sapphire/pieces": "^4.4.1",
 		"@sapphire/prettier-config": "^2.0.0",
 		"@sapphire/ts-config": "^5.0.1",
-		"@types/node": "^22.15.29",
+		"@types/node": "^22.15.30",
 		"@typescript-eslint/eslint-plugin": "^7.18.0",
 		"@typescript-eslint/parser": "^7.18.0",
 		"cz-conventional-changelog": "^3.3.0",
@@ -56,5 +56,5 @@
 		}
 	},
 	"prettier": "@sapphire/prettier-config",
-	"packageManager": "yarn@4.9.1"
+	"packageManager": "yarn@4.9.2"
 }
