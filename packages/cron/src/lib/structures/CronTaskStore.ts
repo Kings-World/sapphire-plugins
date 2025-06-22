@@ -106,7 +106,7 @@ export class CronTaskStore extends Store<CronTask, 'cron-tasks'> {
 				async () => {
 					// we only want to monitor cron patterns and not single-use tasks that croner supports
 					if (sentry && typeof pattern === 'string' && !pattern.includes(':')) {
-						await sentry.withMonitor(key, () => value.run.bind(value)(), {
+						await sentry.withMonitor(key, value.run.bind(value), {
 							schedule: { type: 'crontab', value: normalizePattern(pattern) },
 							timezone: timeZone
 						});
