@@ -95,24 +95,24 @@ export class CronTaskStore extends Store<CronTask, 'cron-tasks'> {
 					name: key,
 					timezone: timeZone,
 					paused: true, // we start the job manually once the client is ready
-					protect: value.protect ? (job) => void value.protect!(job) : protect,
+					protect: value.protect?.bind(value) ?? protect,
 					catch: (error) => {
 						value.error('Encountered an error while running the cron job', error);
-						if (sentry) sentry.captureException(error);
-						void value.catch?.(error, value.job);
+						sentry?.captureException(error);
+						value.catch?.bind(value)(error, value.job);
 					},
 					...options
 				},
-				() => {
+				async () => {
 					// we only want to monitor cron patterns and not single-use tasks that croner supports
 					if (sentry && typeof pattern === 'string' && !pattern.includes(':')) {
-						return sentry.withMonitor(key, () => void value.run.bind(value)(), {
+						return void sentry.withMonitor(key, async () => await value.run.bind(value)(), {
 							schedule: { type: 'crontab', value: normalizePattern(pattern) },
 							timezone: timeZone
 						});
 					}
 
-					return value.run.bind(value)();
+					await value.run.bind(value)();
 				}
 			);
 		} catch (error) {
