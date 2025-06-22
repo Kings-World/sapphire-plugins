@@ -46,14 +46,14 @@
 		"check-update": "cliff-jumper --dry-run"
 	},
 	"dependencies": {
-		"croner": "^9.0.0"
+		"croner": "^9.1.0"
 	},
 	"devDependencies": {
 		"@favware/cliff-jumper": "^6.0.0",
 		"@favware/rollup-type-bundler": "^4.0.0",
-		"@sentry/node": "^9.29.0",
-		"@types/node": "^22.15.31",
-		"concurrently": "^9.1.2",
+		"@sentry/node": "^9.30.0",
+		"@types/node": "^22.15.32",
+		"concurrently": "^9.2.0",
 		"tsup": "^8.5.0",
 		"tsx": "^4.20.3",
 		"typescript": "^5.8.3"
