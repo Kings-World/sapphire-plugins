@@ -9,6 +9,9 @@ on:
 env:
   TURBO_TELEMETRY_DISABLED: 1
 
+permissions:
+  contents: read
+
 jobs:
   linting:
     name: Linting
