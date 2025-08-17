@@ -696,12 +696,12 @@ __metadata:
   dependencies:
     "@favware/cliff-jumper": "npm:^6.0.0"
     "@favware/rollup-type-bundler": "npm:^4.0.0"
-    "@sentry/node": "npm:^9.45.0"
-    "@types/node": "npm:^22.17.1"
+    "@sentry/node": "npm:^9.46.0"
+    "@types/node": "npm:^22.17.2"
     concurrently: "npm:^9.2.0"
     croner: "npm:^9.1.0"
     tsup: "npm:^8.5.0"
-    tsx: "npm:^4.20.3"
+    tsx: "npm:^4.20.4"
     typescript: "npm:^5.9.2"
   languageName: unknown
   linkType: soft
@@ -718,7 +718,7 @@ __metadata:
     "@sapphire/pieces": "npm:^4.4.1"
     "@sapphire/prettier-config": "npm:^2.0.0"
     "@sapphire/ts-config": "npm:^5.0.1"
-    "@types/node": "npm:^22.17.1"
+    "@types/node": "npm:^22.17.2"
     "@typescript-eslint/eslint-plugin": "npm:^7.18.0"
     "@typescript-eslint/parser": "npm:^7.18.0"
     cz-conventional-changelog: "npm:^3.3.0"
@@ -732,7 +732,7 @@ __metadata:
     prettier: "npm:^3.6.2"
     rimraf: "npm:^6.0.1"
     tsup: "npm:^8.5.0"
-    turbo: "npm:^2.5.5"
+    turbo: "npm:^2.5.6"
     typescript: "npm:^5.9.2"
   languageName: unknown
   linkType: soft
@@ -1628,19 +1628,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sentry/core@npm:9.45.0":
-  version: 9.45.0
-  resolution: "@sentry/core@npm:9.45.0"
-  checksum: 10/d6404405ac44ed5bc7ab36e42500c272b18bdff2a066e51a5cd4db411e602f665ed6af75c6aba63372e53de51e6bf55a4dbad470cd6912b9e1effaca54c39eae
+"@sentry/core@npm:9.46.0":
+  version: 9.46.0
+  resolution: "@sentry/core@npm:9.46.0"
+  checksum: 10/a42a5e92f4650ba89b5caa1885cd2cf2766b2726dfb03d567299ba6d6ada6c87436d20af2cd0444a14df082e71415f526b4597e0af69927b216ad8e09a233ad9
   languageName: node
   linkType: hard
 
-"@sentry/node-core@npm:9.45.0":
-  version: 9.45.0
-  resolution: "@sentry/node-core@npm:9.45.0"
+"@sentry/node-core@npm:9.46.0":
+  version: 9.46.0
+  resolution: "@sentry/node-core@npm:9.46.0"
   dependencies:
-    "@sentry/core": "npm:9.45.0"
-    "@sentry/opentelemetry": "npm:9.45.0"
+    "@sentry/core": "npm:9.46.0"
+    "@sentry/opentelemetry": "npm:9.46.0"
     import-in-the-middle: "npm:^1.14.2"
   peerDependencies:
     "@opentelemetry/api": ^1.9.0
@@ -1650,13 +1650,13 @@ __metadata:
     "@opentelemetry/resources": ^1.30.1 || ^2.0.0
     "@opentelemetry/sdk-trace-base": ^1.30.1 || ^2.0.0
     "@opentelemetry/semantic-conventions": ^1.34.0
-  checksum: 10/4451c18dd556e4dcaf62ce8a408a4bf1cad3c73005f520055de630cebc11e63d025fbd683f93e287699d4168ae35c9b2bd358d288bbc8ec091e8ffd93c2727dc
+  checksum: 10/1c42912ae0d6dd77cf7ca0cb05956e74557c193a23b5e5157926105f47c1d4cedb6aef66d468b6845a5a48ef53b831ef2dcc72ad06c6e154bcd4d1b00b8950a2
   languageName: node
   linkType: hard
 
-"@sentry/node@npm:^9.45.0":
-  version: 9.45.0
-  resolution: "@sentry/node@npm:9.45.0"
+"@sentry/node@npm:^9.46.0":
+  version: 9.46.0
+  resolution: "@sentry/node@npm:9.46.0"
   dependencies:
     "@opentelemetry/api": "npm:^1.9.0"
     "@opentelemetry/context-async-hooks": "npm:^1.30.1"
@@ -1688,27 +1688,27 @@ __metadata:
     "@opentelemetry/sdk-trace-base": "npm:^1.30.1"
     "@opentelemetry/semantic-conventions": "npm:^1.34.0"
     "@prisma/instrumentation": "npm:6.11.1"
-    "@sentry/core": "npm:9.45.0"
-    "@sentry/node-core": "npm:9.45.0"
-    "@sentry/opentelemetry": "npm:9.45.0"
+    "@sentry/core": "npm:9.46.0"
+    "@sentry/node-core": "npm:9.46.0"
+    "@sentry/opentelemetry": "npm:9.46.0"
     import-in-the-middle: "npm:^1.14.2"
     minimatch: "npm:^9.0.0"
-  checksum: 10/588a6f29bbe738b71ffb9ddb57b584ccb612f7945a433c31186d4e056d7272c3c746fbeac7d07ac6bba57130d7fe4136b9a98a98f596ad2ea1987d41c7c5174e
+  checksum: 10/15dedae73c086a320d0c350c68bb73dae93586665e716d3b254ee02054af42c646191c5922adf242908669de63bc9972cca9a8f29495f2523913b080fa0e192d
   languageName: node
   linkType: hard
 
-"@sentry/opentelemetry@npm:9.45.0":
-  version: 9.45.0
-  resolution: "@sentry/opentelemetry@npm:9.45.0"
+"@sentry/opentelemetry@npm:9.46.0":
+  version: 9.46.0
+  resolution: "@sentry/opentelemetry@npm:9.46.0"
   dependencies:
-    "@sentry/core": "npm:9.45.0"
+    "@sentry/core": "npm:9.46.0"
   peerDependencies:
     "@opentelemetry/api": ^1.9.0
     "@opentelemetry/context-async-hooks": ^1.30.1 || ^2.0.0
     "@opentelemetry/core": ^1.30.1 || ^2.0.0
     "@opentelemetry/sdk-trace-base": ^1.30.1 || ^2.0.0
     "@opentelemetry/semantic-conventions": ^1.34.0
-  checksum: 10/6687064714b067a251cc83d80dc0889047554cda449edb5bc1081cd8e1d1c40190577f0af9713539aca6df4b4b122915c93728f932e016bc645a537379c18952
+  checksum: 10/a29de286adf207d3210163da33f9e89a187e5009f8d16717028feb8cb7fc7117c3453d3364a9ac0d8063d21d27d62fc51cffc12552b013bf6286653804a5e5d2
   languageName: node
   linkType: hard
 
@@ -1753,12 +1753,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^22.17.1":
-  version: 22.17.1
-  resolution: "@types/node@npm:22.17.1"
+"@types/node@npm:*, @types/node@npm:^22.17.2":
+  version: 22.17.2
+  resolution: "@types/node@npm:22.17.2"
   dependencies:
     undici-types: "npm:~6.21.0"
-  checksum: 10/775d3996693ce2e717267c810669a8122308676487130c91590022ded38a999fef63fd63b4631fdbbceeea9470f0ecf6a2333a3abbc4f917f40b404bbb57e9bc
+  checksum: 10/b830746c65e014d7d47102ab2f24ec74bdb60156b9b75af42e75d81375f211904347125c00543b5fd7119223b3157726bc9814619205571c0a0afd6ce3c43abb
   languageName: node
   linkType: hard
 
@@ -6052,9 +6052,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tsx@npm:^4.20.3":
-  version: 4.20.3
-  resolution: "tsx@npm:4.20.3"
+"tsx@npm:^4.20.4":
+  version: 4.20.4
+  resolution: "tsx@npm:4.20.4"
   dependencies:
     esbuild: "npm:~0.25.0"
     fsevents: "npm:~2.3.3"
@@ -6064,62 +6064,62 @@ __metadata:
       optional: true
   bin:
     tsx: dist/cli.mjs
-  checksum: 10/62f40d06a41deebd51690b086f4387d842a826542639b6a26fd6cf09158c6b44956ca9d9088146330ab0622587b2329981cc3584b89025040f3aa100c50ac13c
+  checksum: 10/dc5d7b7a15fc67f9e3bd20a6d0b3322bd798aa544ce6ab1e857134ea5803f2cd7ac8f4a2099e4ca842dd6e22f2d5a5ea0e0057f571f4d2101ba64b676ffaea3d
   languageName: node
   linkType: hard
 
-"turbo-darwin-64@npm:2.5.5":
-  version: 2.5.5
-  resolution: "turbo-darwin-64@npm:2.5.5"
+"turbo-darwin-64@npm:2.5.6":
+  version: 2.5.6
+  resolution: "turbo-darwin-64@npm:2.5.6"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"turbo-darwin-arm64@npm:2.5.5":
-  version: 2.5.5
-  resolution: "turbo-darwin-arm64@npm:2.5.5"
+"turbo-darwin-arm64@npm:2.5.6":
+  version: 2.5.6
+  resolution: "turbo-darwin-arm64@npm:2.5.6"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"turbo-linux-64@npm:2.5.5":
-  version: 2.5.5
-  resolution: "turbo-linux-64@npm:2.5.5"
+"turbo-linux-64@npm:2.5.6":
+  version: 2.5.6
+  resolution: "turbo-linux-64@npm:2.5.6"
   conditions: os=linux & cpu=x64
   languageName: node
   linkType: hard
 
-"turbo-linux-arm64@npm:2.5.5":
-  version: 2.5.5
-  resolution: "turbo-linux-arm64@npm:2.5.5"
+"turbo-linux-arm64@npm:2.5.6":
+  version: 2.5.6
+  resolution: "turbo-linux-arm64@npm:2.5.6"
   conditions: os=linux & cpu=arm64
   languageName: node
   linkType: hard
 
-"turbo-windows-64@npm:2.5.5":
-  version: 2.5.5
-  resolution: "turbo-windows-64@npm:2.5.5"
+"turbo-windows-64@npm:2.5.6":
+  version: 2.5.6
+  resolution: "turbo-windows-64@npm:2.5.6"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
 
-"turbo-windows-arm64@npm:2.5.5":
-  version: 2.5.5
-  resolution: "turbo-windows-arm64@npm:2.5.5"
+"turbo-windows-arm64@npm:2.5.6":
+  version: 2.5.6
+  resolution: "turbo-windows-arm64@npm:2.5.6"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"turbo@npm:^2.5.5":
-  version: 2.5.5
-  resolution: "turbo@npm:2.5.5"
+"turbo@npm:^2.5.6":
+  version: 2.5.6
+  resolution: "turbo@npm:2.5.6"
   dependencies:
-    turbo-darwin-64: "npm:2.5.5"
-    turbo-darwin-arm64: "npm:2.5.5"
-    turbo-linux-64: "npm:2.5.5"
-    turbo-linux-arm64: "npm:2.5.5"
-    turbo-windows-64: "npm:2.5.5"
-    turbo-windows-arm64: "npm:2.5.5"
+    turbo-darwin-64: "npm:2.5.6"
+    turbo-darwin-arm64: "npm:2.5.6"
+    turbo-linux-64: "npm:2.5.6"
+    turbo-linux-arm64: "npm:2.5.6"
+    turbo-windows-64: "npm:2.5.6"
+    turbo-windows-arm64: "npm:2.5.6"
   dependenciesMeta:
     turbo-darwin-64:
       optional: true
@@ -6135,7 +6135,7 @@ __metadata:
       optional: true
   bin:
     turbo: bin/turbo
-  checksum: 10/edbaf7f88a1238b52655bee7846460b9807b31f29e6712202c1723d548b2da6c79824afe90d700054b1f8e3ab76cf633fb5a40745815e7060369501b51f48a66
+  checksum: 10/8b6509854c32b3163a6de943787e9a33d2c610577360968db1a0cc959b79aaf7e8e80611a349384295e9181ac26edede2a86ea9867d8e6b3d2d676c584b2a3a5
   languageName: node
   linkType: hard
 
