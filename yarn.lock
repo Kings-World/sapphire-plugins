@@ -701,7 +701,7 @@ __metadata:
     concurrently: "npm:^9.2.0"
     croner: "npm:^9.1.0"
     tsup: "npm:^8.5.0"
-    tsx: "npm:^4.20.4"
+    tsx: "npm:^4.20.5"
     typescript: "npm:^5.9.2"
   languageName: unknown
   linkType: soft
@@ -722,7 +722,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": "npm:^7.18.0"
     "@typescript-eslint/parser": "npm:^7.18.0"
     cz-conventional-changelog: "npm:^3.3.0"
-    discord.js: "npm:^14.22.0"
+    discord.js: "npm:^14.22.1"
     esbuild-plugin-file-path-extensions: "npm:^2.1.4"
     esbuild-plugin-version-injector: "npm:^1.2.1"
     eslint: "npm:^8.57.1"
@@ -2735,9 +2735,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"discord.js@npm:^14.22.0":
-  version: 14.22.0
-  resolution: "discord.js@npm:14.22.0"
+"discord.js@npm:^14.22.1":
+  version: 14.22.1
+  resolution: "discord.js@npm:14.22.1"
   dependencies:
     "@discordjs/builders": "npm:^1.11.2"
     "@discordjs/collection": "npm:1.5.3"
@@ -2752,7 +2752,7 @@ __metadata:
     magic-bytes.js: "npm:^1.10.0"
     tslib: "npm:^2.6.3"
     undici: "npm:6.21.3"
-  checksum: 10/dd350df697bdecc97ae8047b4ed001ce260a6d007c94940190355fa305e5efb7e9144ed72a31738bed1e3ddb8676e767a212ec5be89670010ecfd25f85d2c04b
+  checksum: 10/16d9273bf55c34ac45e59dcd678bb2ab7bc8a2813a2f90c85ac3e722cd03339e8bd96904e9d06a0bdeaa6157d250bb05f64bedb4a3858c000c776f0f326c4b44
   languageName: node
   linkType: hard
 
@@ -5989,9 +5989,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tsx@npm:^4.20.4":
-  version: 4.20.4
-  resolution: "tsx@npm:4.20.4"
+"tsx@npm:^4.20.5":
+  version: 4.20.5
+  resolution: "tsx@npm:4.20.5"
   dependencies:
     esbuild: "npm:~0.25.0"
     fsevents: "npm:~2.3.3"
@@ -6001,7 +6001,7 @@ __metadata:
       optional: true
   bin:
     tsx: dist/cli.mjs
-  checksum: 10/dc5d7b7a15fc67f9e3bd20a6d0b3322bd798aa544ce6ab1e857134ea5803f2cd7ac8f4a2099e4ca842dd6e22f2d5a5ea0e0057f571f4d2101ba64b676ffaea3d
+  checksum: 10/161420678027c43d07b60b7b6b512cc67ff86ae3cca0641a19b0d3e742c5e262bca57034c4bff6d9346f9269e9ada24b6030e1d2bc890df5e1a9754865d3c08a
   languageName: node
   linkType: hard
 
