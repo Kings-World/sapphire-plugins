@@ -696,8 +696,8 @@ __metadata:
   dependencies:
     "@favware/cliff-jumper": "npm:^6.0.0"
     "@favware/rollup-type-bundler": "npm:^4.0.0"
-    "@sentry/node": "npm:^10.8.0"
-    "@types/node": "npm:^22.18.0"
+    "@sentry/node": "npm:^10.10.0"
+    "@types/node": "npm:^22.18.1"
     concurrently: "npm:^9.2.1"
     croner: "npm:^9.1.0"
     tsup: "npm:^8.5.0"
@@ -718,7 +718,7 @@ __metadata:
     "@sapphire/pieces": "npm:^4.4.1"
     "@sapphire/prettier-config": "npm:^2.0.0"
     "@sapphire/ts-config": "npm:^5.0.1"
-    "@types/node": "npm:^22.18.0"
+    "@types/node": "npm:^22.18.1"
     "@typescript-eslint/eslint-plugin": "npm:^7.18.0"
     "@typescript-eslint/parser": "npm:^7.18.0"
     cz-conventional-changelog: "npm:^3.3.0"
@@ -728,7 +728,7 @@ __metadata:
     eslint: "npm:^8.57.1"
     eslint-config-prettier: "npm:^10.1.8"
     eslint-plugin-prettier: "npm:^5.5.4"
-    lint-staged: "npm:^16.1.5"
+    lint-staged: "npm:^16.1.6"
     prettier: "npm:^3.6.2"
     rimraf: "npm:^6.0.1"
     tsup: "npm:^8.5.0"
@@ -1642,19 +1642,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sentry/core@npm:10.8.0":
-  version: 10.8.0
-  resolution: "@sentry/core@npm:10.8.0"
-  checksum: 10/a6c14b3d92b723a0daa0f07267d4f7db628931bc80941eacc68ac90cf4f574eddbbe8b5085bd8b695fa203b085dc47a5599ba15944490311891c8100e31f6ce8
+"@sentry/core@npm:10.10.0":
+  version: 10.10.0
+  resolution: "@sentry/core@npm:10.10.0"
+  checksum: 10/88b63948e07ba12d8a68774e93b872d2cefbe62216b1615f68a13a64c5d5b6d32cd702db1e639d2e79fff7abb0bc6b3f491c5f39116832fe8f2e9412d994cb45
   languageName: node
   linkType: hard
 
-"@sentry/node-core@npm:10.8.0":
-  version: 10.8.0
-  resolution: "@sentry/node-core@npm:10.8.0"
+"@sentry/node-core@npm:10.10.0":
+  version: 10.10.0
+  resolution: "@sentry/node-core@npm:10.10.0"
   dependencies:
-    "@sentry/core": "npm:10.8.0"
-    "@sentry/opentelemetry": "npm:10.8.0"
+    "@sentry/core": "npm:10.10.0"
+    "@sentry/opentelemetry": "npm:10.10.0"
     import-in-the-middle: "npm:^1.14.2"
   peerDependencies:
     "@opentelemetry/api": ^1.9.0
@@ -1664,13 +1664,13 @@ __metadata:
     "@opentelemetry/resources": ^1.30.1 || ^2.0.0
     "@opentelemetry/sdk-trace-base": ^1.30.1 || ^2.0.0
     "@opentelemetry/semantic-conventions": ^1.34.0
-  checksum: 10/b271b131ceb0ac25078497aa03c68e1a2f3f322f4081ad5cc1259aafb1e14e406b656a82a079e17f8e3917ae0a851d17032bd5ced76a3e948da9b6955e9725a6
+  checksum: 10/31eb756cc3afe43bbf94a024121893c80dde0f725fbfa347813d19a2c59b82e3285e130cbaf80590235b78fd2d3cac2cf13e6191dd4f2947a9e3c540ddc194c6
   languageName: node
   linkType: hard
 
-"@sentry/node@npm:^10.8.0":
-  version: 10.8.0
-  resolution: "@sentry/node@npm:10.8.0"
+"@sentry/node@npm:^10.10.0":
+  version: 10.10.0
+  resolution: "@sentry/node@npm:10.10.0"
   dependencies:
     "@opentelemetry/api": "npm:^1.9.0"
     "@opentelemetry/context-async-hooks": "npm:^2.0.0"
@@ -1702,27 +1702,27 @@ __metadata:
     "@opentelemetry/sdk-trace-base": "npm:^2.0.0"
     "@opentelemetry/semantic-conventions": "npm:^1.34.0"
     "@prisma/instrumentation": "npm:6.14.0"
-    "@sentry/core": "npm:10.8.0"
-    "@sentry/node-core": "npm:10.8.0"
-    "@sentry/opentelemetry": "npm:10.8.0"
+    "@sentry/core": "npm:10.10.0"
+    "@sentry/node-core": "npm:10.10.0"
+    "@sentry/opentelemetry": "npm:10.10.0"
     import-in-the-middle: "npm:^1.14.2"
     minimatch: "npm:^9.0.0"
-  checksum: 10/3a989b83f946d2a5bf5a687b2e42dc751cb893cb19f7077a59eaa10fdd40e10108276626f2b1ef3c4f0210ee209829d9a9ea9dfb6c4681dcb3c6268234767e83
+  checksum: 10/08753cce5f30aa0a4f59ce517210f8cd80dbb612f5d9210f70b5e0120e811e867acc69c4c365cc3f0a0ea1b8a03b8a983d31339741860130eb4581633e7b13e6
   languageName: node
   linkType: hard
 
-"@sentry/opentelemetry@npm:10.8.0":
-  version: 10.8.0
-  resolution: "@sentry/opentelemetry@npm:10.8.0"
+"@sentry/opentelemetry@npm:10.10.0":
+  version: 10.10.0
+  resolution: "@sentry/opentelemetry@npm:10.10.0"
   dependencies:
-    "@sentry/core": "npm:10.8.0"
+    "@sentry/core": "npm:10.10.0"
   peerDependencies:
     "@opentelemetry/api": ^1.9.0
     "@opentelemetry/context-async-hooks": ^1.30.1 || ^2.0.0
     "@opentelemetry/core": ^1.30.1 || ^2.0.0
     "@opentelemetry/sdk-trace-base": ^1.30.1 || ^2.0.0
     "@opentelemetry/semantic-conventions": ^1.34.0
-  checksum: 10/cac3bdbe6b186e27ee3414f4791010b2383fd8f2bcd8150202b25c540abe60bfa9f2ef15f1d6e3045992392eaaa1949a10c6713c1a9ab146c4986183c580f1a7
+  checksum: 10/dab1672f330c296b8d73777b92f38df6af80f75137cf03855084a1a053becf5de9b314d31743abfba18cdc8b96fe3d8a4e0539fa0d28f3f61671785dec823d8e
   languageName: node
   linkType: hard
 
@@ -1767,12 +1767,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^22.18.0":
-  version: 22.18.0
-  resolution: "@types/node@npm:22.18.0"
+"@types/node@npm:*, @types/node@npm:^22.18.1":
+  version: 22.18.1
+  resolution: "@types/node@npm:22.18.1"
   dependencies:
     undici-types: "npm:~6.21.0"
-  checksum: 10/c4e4cdac52aae71e120fb4a02a08f774366e8bd6654de9376fb1113fb66cfa2706176b72f188069cdecdb40e5cdde2befa031dc720a0cc0b1e349af9e38492ad
+  checksum: 10/da67f3c3fa4107fbca704e7a71fee36c27f3b6f44af1c466cd5c71eab76a9ffcd6a16f3b97d1e757b9763f1fa1085eebb60cb648c272e36794aca7305b2a15d9
   languageName: node
   linkType: hard
 
@@ -2279,10 +2279,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chalk@npm:^5.3.0, chalk@npm:^5.5.0":
-  version: 5.5.0
-  resolution: "chalk@npm:5.5.0"
-  checksum: 10/19f6905b47b628541976a534e2f39c3779f7f9276ff9693cb8f7cdb3e3e09ee5dee16e0c3768632fbb41c2a1f1653ee0041ea7730428b804068945eb0bab09c4
+"chalk@npm:^5.3.0, chalk@npm:^5.6.0":
+  version: 5.6.0
+  resolution: "chalk@npm:5.6.0"
+  checksum: 10/f0e0646a72adbd0f6e73441d3872d7f2f40ba98052924f08a30c10634ec6b1e2cd19cc3c40cc21081dad640e2a1a2749030418571690b89bd7782babf7f89866
   languageName: node
   linkType: hard
 
@@ -4214,15 +4214,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lint-staged@npm:^16.1.5":
-  version: 16.1.5
-  resolution: "lint-staged@npm:16.1.5"
+"lint-staged@npm:^16.1.6":
+  version: 16.1.6
+  resolution: "lint-staged@npm:16.1.6"
   dependencies:
-    chalk: "npm:^5.5.0"
+    chalk: "npm:^5.6.0"
     commander: "npm:^14.0.0"
     debug: "npm:^4.4.1"
     lilconfig: "npm:^3.1.3"
-    listr2: "npm:^9.0.1"
+    listr2: "npm:^9.0.3"
     micromatch: "npm:^4.0.8"
     nano-spawn: "npm:^1.0.2"
     pidtree: "npm:^0.6.0"
@@ -4230,13 +4230,13 @@ __metadata:
     yaml: "npm:^2.8.1"
   bin:
     lint-staged: bin/lint-staged.js
-  checksum: 10/02b284f89d7b8118e1b27b1f2068017ed84407e57a1166463789caa65f3429f206372c483bc37304ce03dcb30bd1dd3e624f0502ae4973d440fe73cdd04e0747
+  checksum: 10/922b4392ae5d3d56130e4eba706c2fa6151d5da5e21f57ab601b1d6ce9cc635ceb5e4c3dc00e7da83ba8f0cb244b82604469c7ea1470b1e6b6ea0fc12454aa08
   languageName: node
   linkType: hard
 
-"listr2@npm:^9.0.1":
-  version: 9.0.1
-  resolution: "listr2@npm:9.0.1"
+"listr2@npm:^9.0.3":
+  version: 9.0.3
+  resolution: "listr2@npm:9.0.3"
   dependencies:
     cli-truncate: "npm:^4.0.0"
     colorette: "npm:^2.0.20"
@@ -4244,7 +4244,7 @@ __metadata:
     log-update: "npm:^6.1.0"
     rfdc: "npm:^1.4.1"
     wrap-ansi: "npm:^9.0.0"
-  checksum: 10/ac5f98317fe17588d304bb4dce47ea22892f223511948656f588c5ab47b99d5d97ca4b812b4fb1237db8ec8d86a504875d8d6a0bb24c877553537eab44941983
+  checksum: 10/8cb7cd1cec0f4360502c14cd54af948f831134811d84d3fd2b38b2fa11ea66ee0b15ca8b00b8088d28d7381031afbe755ee3f46bc2c03c2c96c433f04296bd44
   languageName: node
   linkType: hard
 
