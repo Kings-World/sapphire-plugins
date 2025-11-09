@@ -20,7 +20,7 @@
 		"@commitlint/config-conventional": "^20.0.0",
 		"@favware/npm-deprecate": "^2.0.0",
 		"@sapphire/eslint-config": "^5.0.6",
-		"@sapphire/framework": "^5.3.7",
+		"@sapphire/framework": "^5.4.0",
 		"@sapphire/pieces": "^4.4.1",
 		"@sapphire/prettier-config": "^2.0.0",
 		"@sapphire/ts-config": "^5.0.1",
@@ -56,5 +56,5 @@
 		}
 	},
 	"prettier": "@sapphire/prettier-config",
-	"packageManager": "yarn@4.10.3"
+	"packageManager": "yarn@4.11.0"
 }

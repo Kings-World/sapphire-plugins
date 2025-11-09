@@ -250,7 +250,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@discordjs/builders@npm:^1.11.3, @discordjs/builders@npm:^1.13.0":
+"@discordjs/builders@npm:^1.13.0":
   version: 1.13.0
   resolution: "@discordjs/builders@npm:1.13.0"
   dependencies:
@@ -730,7 +730,7 @@ __metadata:
   dependencies:
     "@favware/cliff-jumper": "npm:^6.0.0"
     "@favware/rollup-type-bundler": "npm:^4.0.0"
-    "@sentry/node": "npm:^10.22.0"
+    "@sentry/node": "npm:^10.23.0"
     "@types/node": "npm:^24.10.0"
     concurrently: "npm:^9.2.1"
     croner: "npm:^9.1.0"
@@ -748,7 +748,7 @@ __metadata:
     "@commitlint/config-conventional": "npm:^20.0.0"
     "@favware/npm-deprecate": "npm:^2.0.0"
     "@sapphire/eslint-config": "npm:^5.0.6"
-    "@sapphire/framework": "npm:^5.3.7"
+    "@sapphire/framework": "npm:^5.4.0"
     "@sapphire/pieces": "npm:^4.4.1"
     "@sapphire/prettier-config": "npm:^2.0.0"
     "@sapphire/ts-config": "npm:^5.0.1"
@@ -1504,6 +1504,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@sapphire/discord-utilities@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "@sapphire/discord-utilities@npm:4.0.0"
+  dependencies:
+    discord-api-types: "npm:^0.38.30"
+  checksum: 10/d7be32d3759913de54fff3be7bdca7f5ebd61ec39c3aef58c182ceba135ede542e2935db22ff7826d5f3552c5b663f6dc4d040b7b6fb46930618c0f527311900
+  languageName: node
+  linkType: hard
+
 "@sapphire/discord.js-utilities@npm:^7.3.3":
   version: 7.3.3
   resolution: "@sapphire/discord.js-utilities@npm:7.3.3"
@@ -1545,29 +1554,29 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sapphire/framework@npm:^5.3.7":
-  version: 5.3.7
-  resolution: "@sapphire/framework@npm:5.3.7"
+"@sapphire/framework@npm:^5.4.0":
+  version: 5.4.0
+  resolution: "@sapphire/framework@npm:5.4.0"
   dependencies:
-    "@discordjs/builders": "npm:^1.11.3"
-    "@sapphire/discord-utilities": "npm:^3.5.0"
+    "@discordjs/builders": "npm:^1.13.0"
+    "@sapphire/discord-utilities": "npm:^4.0.0"
     "@sapphire/discord.js-utilities": "npm:^7.3.3"
-    "@sapphire/lexure": "npm:^1.1.11"
+    "@sapphire/lexure": "npm:^1.1.12"
     "@sapphire/pieces": "npm:^4.4.1"
     "@sapphire/ratelimits": "npm:^2.4.11"
-    "@sapphire/result": "npm:^2.7.3"
+    "@sapphire/result": "npm:^2.8.0"
     "@sapphire/stopwatch": "npm:^1.5.4"
     "@sapphire/utilities": "npm:^3.18.2"
-  checksum: 10/64889fb1305fc9bc5ca2d1c1c5e6b4941952a38b39e5596084315d4cc4284a3d85071c4160056b4a304a1f29f07064e52f45b473bf816aa1e772909362f150cf
+  checksum: 10/50ed6f9bcf3a7d0d026c2f0e4436129a974a680f0eb2a8a49bf5eacb780dd3cb2bbd5bfd4c1dc9ff25b1d0d1a5fa1e8db75087654b78e3ce3d1ed252b2ace81f
   languageName: node
   linkType: hard
 
-"@sapphire/lexure@npm:^1.1.11":
-  version: 1.1.11
-  resolution: "@sapphire/lexure@npm:1.1.11"
+"@sapphire/lexure@npm:^1.1.12":
+  version: 1.1.12
+  resolution: "@sapphire/lexure@npm:1.1.12"
   dependencies:
-    "@sapphire/result": "npm:^2.7.3"
-  checksum: 10/438cd5b2a54fd0eef452135cf145bd77d269f5e04a93789b78c9997d5dad7a27c374ee71497259bd1763ab51b71f092abfbbfbe010d2d495b879ebd5b9979b76
+    "@sapphire/result": "npm:^2.8.0"
+  checksum: 10/a6560ce1cba4b855fa8d410de5fd2017fb32418d4b71a40d97959fa0022963057ebd13b05f3dfe380a034247c736a00d0f5d38cdda95238ce3351dbb78fd5848
   languageName: node
   linkType: hard
 
@@ -1605,10 +1614,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sapphire/result@npm:^2.6.4, @sapphire/result@npm:^2.7.2, @sapphire/result@npm:^2.7.3":
-  version: 2.7.3
-  resolution: "@sapphire/result@npm:2.7.3"
-  checksum: 10/39d4bfa14b89b9324fd8c0e9ce41868a73d5ddb1ffcdb5f0813c50b1e471bb4f3c8060f9539e772f4f49422964ddf1af71361acb70b836d1b487bddfcc7beae8
+"@sapphire/result@npm:^2.6.4, @sapphire/result@npm:^2.7.2, @sapphire/result@npm:^2.8.0":
+  version: 2.8.0
+  resolution: "@sapphire/result@npm:2.8.0"
+  checksum: 10/d724707001a79412c65bb23ac522911677ba97576aa1b24e93180b75e9ab9e3ef26f7bfa549057ac0e12a0f8a8fc1d9cc86b3542f48405f89ed34548e3fff8ee
   languageName: node
   linkType: hard
 
@@ -1676,20 +1685,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sentry/core@npm:10.22.0":
-  version: 10.22.0
-  resolution: "@sentry/core@npm:10.22.0"
-  checksum: 10/e19f788512033349c76e19ae9dfed34dfd98122040806fbbbfd36227b1be3d8c4a08362db91bbcab4e4768c50ea1eef36b9a9ced92232e9923c9be66b780b7a5
+"@sentry/core@npm:10.23.0":
+  version: 10.23.0
+  resolution: "@sentry/core@npm:10.23.0"
+  checksum: 10/518fa8385311825322981321214ffe236c97484e500de0d0bc600e9fb068bcb8f09f999c224aefd485eaed1a88a32c850ac21e79e603ce7c84f504da8e26fc43
   languageName: node
   linkType: hard
 
-"@sentry/node-core@npm:10.22.0":
-  version: 10.22.0
-  resolution: "@sentry/node-core@npm:10.22.0"
+"@sentry/node-core@npm:10.23.0":
+  version: 10.23.0
+  resolution: "@sentry/node-core@npm:10.23.0"
   dependencies:
     "@apm-js-collab/tracing-hooks": "npm:^0.3.1"
-    "@sentry/core": "npm:10.22.0"
-    "@sentry/opentelemetry": "npm:10.22.0"
+    "@sentry/core": "npm:10.23.0"
+    "@sentry/opentelemetry": "npm:10.23.0"
     import-in-the-middle: "npm:^1.14.2"
   peerDependencies:
     "@opentelemetry/api": ^1.9.0
@@ -1699,13 +1708,13 @@ __metadata:
     "@opentelemetry/resources": ^1.30.1 || ^2.1.0
     "@opentelemetry/sdk-trace-base": ^1.30.1 || ^2.1.0
     "@opentelemetry/semantic-conventions": ^1.37.0
-  checksum: 10/2ffc35d8e7a2d044eef2dd8734ecd45d2a3db8196c852ebedeb7deaf95863bd3a30a555182cbd77205268a58986d09647da5f698bd4c72936b0b8e0776e252c6
+  checksum: 10/04ebe867cecd48ec02ed58fc16fb2fb57b32315c81bf7c090f6a232075ab0b950a4a4171432bc6ae4b96b4f9619622de84daaea1728afa8a208334f84087f957
   languageName: node
   linkType: hard
 
-"@sentry/node@npm:^10.22.0":
-  version: 10.22.0
-  resolution: "@sentry/node@npm:10.22.0"
+"@sentry/node@npm:^10.23.0":
+  version: 10.23.0
+  resolution: "@sentry/node@npm:10.23.0"
   dependencies:
     "@opentelemetry/api": "npm:^1.9.0"
     "@opentelemetry/context-async-hooks": "npm:^2.1.0"
@@ -1737,27 +1746,27 @@ __metadata:
     "@opentelemetry/sdk-trace-base": "npm:^2.1.0"
     "@opentelemetry/semantic-conventions": "npm:^1.37.0"
     "@prisma/instrumentation": "npm:6.15.0"
-    "@sentry/core": "npm:10.22.0"
-    "@sentry/node-core": "npm:10.22.0"
-    "@sentry/opentelemetry": "npm:10.22.0"
+    "@sentry/core": "npm:10.23.0"
+    "@sentry/node-core": "npm:10.23.0"
+    "@sentry/opentelemetry": "npm:10.23.0"
     import-in-the-middle: "npm:^1.14.2"
     minimatch: "npm:^9.0.0"
-  checksum: 10/0ae875f649370b11d270b6a2559eac339b61b545c53a3579e92201fd3c7473b73abf999157ea118c1c5aff93b43560e2149cc594eb9fb9520815a5c3866c3365
+  checksum: 10/3ed0e8b91501401b9ad752ee91bab76a91ee0d1e6959ba9ca918aee0cbfc704223c3870fd3c5a6d2cbf0ff681cd0d042b392183b04dcdd93b56b36e8f7386291
   languageName: node
   linkType: hard
 
-"@sentry/opentelemetry@npm:10.22.0":
-  version: 10.22.0
-  resolution: "@sentry/opentelemetry@npm:10.22.0"
+"@sentry/opentelemetry@npm:10.23.0":
+  version: 10.23.0
+  resolution: "@sentry/opentelemetry@npm:10.23.0"
   dependencies:
-    "@sentry/core": "npm:10.22.0"
+    "@sentry/core": "npm:10.23.0"
   peerDependencies:
     "@opentelemetry/api": ^1.9.0
     "@opentelemetry/context-async-hooks": ^1.30.1 || ^2.1.0
     "@opentelemetry/core": ^1.30.1 || ^2.1.0
     "@opentelemetry/sdk-trace-base": ^1.30.1 || ^2.1.0
     "@opentelemetry/semantic-conventions": ^1.37.0
-  checksum: 10/79c235427ce18be31bb7756a83699f046f627fe8bae7fe3e171897f73cab8bc718b1eca32c8da508353d7b4672ba195b4b1381a3614f9a581aafb38b73abc6cf
+  checksum: 10/2475d281bef59f97e6402b9e11e3a19dc4a1499bbc4469395e52e0dd0e8a13f70401a60959f6e3fc73c1e58ffbb4950d5605b1c458d983684a58a60a885842c0
   languageName: node
   linkType: hard
 
@@ -2762,10 +2771,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"discord-api-types@npm:^0.38.1, discord-api-types@npm:^0.38.16, discord-api-types@npm:^0.38.31":
-  version: 0.38.31
-  resolution: "discord-api-types@npm:0.38.31"
-  checksum: 10/7c3439f4e613434a3de50375508a0bf34894ca9079d91edb66d981260734c771fa7388abbfd27b5bbd94693a74e5cadc0c634c1f89121ad6719249cfef7943d0
+"discord-api-types@npm:^0.38.1, discord-api-types@npm:^0.38.16, discord-api-types@npm:^0.38.30, discord-api-types@npm:^0.38.31":
+  version: 0.38.32
+  resolution: "discord-api-types@npm:0.38.32"
+  checksum: 10/9d494888a96cdd057ff270681398e61fa8ea4dee331a849e652372668aad3c225ea170655ce8ab4d8db831bcc5194f4d172ee3ccc1736b192797a5f356ea88b3
   languageName: node
   linkType: hard
 
