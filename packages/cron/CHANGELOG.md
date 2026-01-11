@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+# [@kingsworld/plugin-cron@3.0.6](https://github.com/Kings-World/sapphire-plugins/compare/@kingsworld/plugin-cron@3.0.5...@kingsworld/plugin-cron@3.0.6) - (2026-01-11)
+
+## 🏠 Refactor
+
+- **cronTaskStore:** Remove unnecessary arrow function ([85cdd9b](https://github.com/Kings-World/sapphire-plugins/commit/85cdd9bbb88fb6beec2f1e58cd0e1d7cf3b5ccde))
+
+## 🐛 Bug Fixes
+
+- **deps:** Update all non-major dependencies ([96a4029](https://github.com/Kings-World/sapphire-plugins/commit/96a402959785e1287df250413eb0f10d4d2fe8c6)) ([#122](https://github.com/Kings-World/sapphire-plugins/pull/122) by @renovate[bot])
+
 # [@kingsworld/plugin-cron@3.0.5](https://github.com/Kings-World/sapphire-plugins/compare/@kingsworld/plugin-cron@3.0.4...@kingsworld/plugin-cron@3.0.5) - (2025-05-21)
 
 ## 🐛 Bug Fixes
