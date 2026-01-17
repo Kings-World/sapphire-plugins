@@ -739,7 +739,7 @@ __metadata:
   dependencies:
     "@favware/cliff-jumper": "npm:^6.0.0"
     "@favware/rollup-type-bundler": "npm:^4.0.0"
-    "@sentry/node": "npm:^10.33.0"
+    "@sentry/node": "npm:^10.34.0"
     "@types/node": "npm:^24.10.8"
     concurrently: "npm:^9.2.1"
     croner: "npm:^9.1.0"
@@ -1691,7 +1691,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sentry/node@npm:^10.33.0":
+"@sentry/node@npm:^10.34.0":
   version: 10.34.0
   resolution: "@sentry/node@npm:10.34.0"
   dependencies:
