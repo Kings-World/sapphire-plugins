@@ -773,7 +773,7 @@ __metadata:
     prettier: "npm:^3.8.1"
     rimraf: "npm:^6.1.3"
     tsup: "npm:^8.5.1"
-    turbo: "npm:^2.8.18"
+    turbo: "npm:^2.8.19"
     typescript: "npm:^5.9.3"
   languageName: unknown
   linkType: soft
@@ -5941,7 +5941,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"turbo@npm:^2.8.18":
+"turbo@npm:^2.8.19":
   version: 2.8.20
   resolution: "turbo@npm:2.8.20"
   dependencies:
