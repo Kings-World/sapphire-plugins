@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+# [@kingsworld/plugin-cron@4.0.0](https://github.com/Kings-World/sapphire-plugins/compare/@kingsworld/plugin-cron@3.0.6...@kingsworld/plugin-cron@4.0.0) - (2026-04-10)
+
+## 🐛 Bug Fixes
+
+- **deps:** Update dependency croner to v10 ([ff86fbe](https://github.com/Kings-World/sapphire-plugins/commit/ff86fbe6ce5b359892746d5e8b639c65e3846eeb)) ([#206](https://github.com/Kings-World/sapphire-plugins/pull/206) by @renovate[bot])
+  - 💥 **BREAKING CHANGE:** Croner v10 breaking changes can be found below.
+  - 💥 **BREAKING CHANGE:** The `?` character now acts as a wildcard alias (same as `*`) per OCPS 1.4
+  - 💥 **BREAKING CHANGE:** Minimum Deno version increased to 2.0
+  - 💥 **BREAKING CHANGE:** Stricter range parsing by default (use `sloppyRanges: true` for legacy behavior)
+  - 💥 **BREAKING CHANGE:** See https://github.com/Hexagon/croner/releases/tag/10.0.0 for more details
+
 # [@kingsworld/plugin-cron@3.0.6](https://github.com/Kings-World/sapphire-plugins/compare/@kingsworld/plugin-cron@3.0.5...@kingsworld/plugin-cron@3.0.6) - (2026-01-11)
 
 ## 🏠 Refactor
