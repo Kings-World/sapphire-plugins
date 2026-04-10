@@ -33,7 +33,9 @@ body = """
             {%- endif %}\
 		{% if commit.breaking %}\
 			{% for breakingChange in commit.footers %}\
-				\n{% raw %}  {% endraw %}- 💥 **{{ breakingChange.token }}{{ breakingChange.separator }}** {{ breakingChange.value }}\
+				{% if breakingChange.token != "Signed-off-by" and breakingChange.token != "Co-authored-by" %}\
+					\n{% raw %}  {% endraw %}- 💥 **{{ breakingChange.token }}{{ breakingChange.separator }}** {{ breakingChange.value }}\
+				{% endif %}\
 			{% endfor %}\
 		{% endif %}\
     {% endfor %}
