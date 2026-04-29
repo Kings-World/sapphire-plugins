@@ -37,9 +37,9 @@
 		"lint-staged": "^16.4.0",
 		"prettier": "^3.8.3",
 		"rimraf": "^6.1.3",
-		"tsup": "^8.5.1",
+		"tsup": "patch:tsup@npm%3A8.5.1#~/.yarn/patches/tsup-npm-8.5.1-41f4f7d59b.patch",
 		"turbo": "^2.9.6",
-		"typescript": "^5.9.3"
+		"typescript": "^6.0.3"
 	},
 	"commitlint": {
 		"extends": [
