@@ -17,8 +17,8 @@ for (const path of paths) {
 	const fileContent = await readFile(fullPathUrl, { encoding: 'utf8' });
 
 	const cleanedUpContent = fileContent
-		.replace(cleanupImportsRegex, '')
-		.replace(cleanupNewlineRegex, '\n\n')
+		.replaceAll(cleanupImportsRegex, '')
+		.replaceAll(cleanupNewlineRegex, '\n\n')
 		.replace('import "./index.js";', 'import "./index.cjs";');
 
 	await writeFile(fullPathUrl, cleanedUpContent, { encoding: 'utf8' });

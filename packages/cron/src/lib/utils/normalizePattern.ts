@@ -39,5 +39,5 @@ const tokensRegex = new RegExp(Object.keys(cronTokens).join('|'), 'g');
 
 export function normalizePattern(pattern: string): string {
 	if (Reflect.has(predefined, pattern)) return Reflect.get(predefined, pattern);
-	return pattern.replace(tokensRegex, (match) => String(Reflect.get(cronTokens, match)));
+	return pattern.replaceAll(tokensRegex, (match) => String(Reflect.get(cronTokens, match)));
 }
