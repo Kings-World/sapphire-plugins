@@ -51,7 +51,7 @@
 	"devDependencies": {
 		"@favware/cliff-jumper": "6.1.0",
 		"@favware/rollup-type-bundler": "4.0.0",
-		"@sentry/node": "10.50.0",
+		"@sentry/node": "10.51.0",
 		"@types/node": "24.12.2",
 		"concurrently": "9.2.1",
 		"tsup": "patch:tsup@npm%3A8.5.1#~/.yarn/patches/tsup-npm-8.5.1-41f4f7d59b.patch",
