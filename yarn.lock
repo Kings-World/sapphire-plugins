@@ -743,7 +743,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": "npm:7.18.0"
     "@typescript-eslint/parser": "npm:7.18.0"
     cz-conventional-changelog: "npm:3.3.0"
-    discord.js: "npm:14.26.3"
+    discord.js: "npm:14.26.4"
     esbuild-plugin-file-path-extensions: "npm:2.1.4"
     esbuild-plugin-version-injector: "npm:1.2.1"
     eslint: "npm:8.57.1"
@@ -753,7 +753,7 @@ __metadata:
     prettier: "npm:3.8.3"
     rimraf: "npm:6.1.3"
     tsup: "patch:tsup@npm%3A8.5.1#~/.yarn/patches/tsup-npm-8.5.1-41f4f7d59b.patch"
-    turbo: "npm:2.9.7"
+    turbo: "npm:2.9.9"
     typescript: "npm:6.0.3"
   languageName: unknown
   linkType: soft
@@ -1811,44 +1811,44 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@turbo/darwin-64@npm:2.9.7":
-  version: 2.9.7
-  resolution: "@turbo/darwin-64@npm:2.9.7"
+"@turbo/darwin-64@npm:2.9.9":
+  version: 2.9.9
+  resolution: "@turbo/darwin-64@npm:2.9.9"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@turbo/darwin-arm64@npm:2.9.7":
-  version: 2.9.7
-  resolution: "@turbo/darwin-arm64@npm:2.9.7"
+"@turbo/darwin-arm64@npm:2.9.9":
+  version: 2.9.9
+  resolution: "@turbo/darwin-arm64@npm:2.9.9"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@turbo/linux-64@npm:2.9.7":
-  version: 2.9.7
-  resolution: "@turbo/linux-64@npm:2.9.7"
+"@turbo/linux-64@npm:2.9.9":
+  version: 2.9.9
+  resolution: "@turbo/linux-64@npm:2.9.9"
   conditions: os=linux & cpu=x64
   languageName: node
   linkType: hard
 
-"@turbo/linux-arm64@npm:2.9.7":
-  version: 2.9.7
-  resolution: "@turbo/linux-arm64@npm:2.9.7"
+"@turbo/linux-arm64@npm:2.9.9":
+  version: 2.9.9
+  resolution: "@turbo/linux-arm64@npm:2.9.9"
   conditions: os=linux & cpu=arm64
   languageName: node
   linkType: hard
 
-"@turbo/windows-64@npm:2.9.7":
-  version: 2.9.7
-  resolution: "@turbo/windows-64@npm:2.9.7"
+"@turbo/windows-64@npm:2.9.9":
+  version: 2.9.9
+  resolution: "@turbo/windows-64@npm:2.9.9"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
 
-"@turbo/windows-arm64@npm:2.9.7":
-  version: 2.9.7
-  resolution: "@turbo/windows-arm64@npm:2.9.7"
+"@turbo/windows-arm64@npm:2.9.9":
+  version: 2.9.9
+  resolution: "@turbo/windows-arm64@npm:2.9.9"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
@@ -2835,9 +2835,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"discord.js@npm:14.26.3":
-  version: 14.26.3
-  resolution: "discord.js@npm:14.26.3"
+"discord.js@npm:14.26.4":
+  version: 14.26.4
+  resolution: "discord.js@npm:14.26.4"
   dependencies:
     "@discordjs/builders": "npm:^1.14.1"
     "@discordjs/collection": "npm:1.5.3"
@@ -2852,7 +2852,7 @@ __metadata:
     magic-bytes.js: "npm:^1.13.0"
     tslib: "npm:^2.6.3"
     undici: "npm:6.24.1"
-  checksum: 10/76cf0a6993c43d194c13a4902ac1591ff7a671b995162c925b02ecca6838f5ebdc6998bf51471888d12d86c8fdc20cd412b881928e257bcbabcafaa5328a7a61
+  checksum: 10/bff70f8d00f387bebf24302635910e2f0bc837800fcb6e3a31295842a8dc4809a4cbb7baeda402731c7a7ebcfd450097039dff1019dcaddf35cb8ff7f66be086
   languageName: node
   linkType: hard
 
@@ -5862,16 +5862,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"turbo@npm:2.9.7":
-  version: 2.9.7
-  resolution: "turbo@npm:2.9.7"
+"turbo@npm:2.9.9":
+  version: 2.9.9
+  resolution: "turbo@npm:2.9.9"
   dependencies:
-    "@turbo/darwin-64": "npm:2.9.7"
-    "@turbo/darwin-arm64": "npm:2.9.7"
-    "@turbo/linux-64": "npm:2.9.7"
-    "@turbo/linux-arm64": "npm:2.9.7"
-    "@turbo/windows-64": "npm:2.9.7"
-    "@turbo/windows-arm64": "npm:2.9.7"
+    "@turbo/darwin-64": "npm:2.9.9"
+    "@turbo/darwin-arm64": "npm:2.9.9"
+    "@turbo/linux-64": "npm:2.9.9"
+    "@turbo/linux-arm64": "npm:2.9.9"
+    "@turbo/windows-64": "npm:2.9.9"
+    "@turbo/windows-arm64": "npm:2.9.9"
   dependenciesMeta:
     "@turbo/darwin-64":
       optional: true
@@ -5887,7 +5887,7 @@ __metadata:
       optional: true
   bin:
     turbo: bin/turbo
-  checksum: 10/79659acea0b699b4a828fea6b5c962573db1fe77c8fe17b4f18311530092a5050b27ea4afa7395e052439abfe87909af9c051a2591a8aeb440cd0d4bb70dd509
+  checksum: 10/9fa919c66fa67f42f1f811daf27ca6598d9bef22a6087d89b893daa8905693095461f0887b88cd765d7d2266c7ec42a1178aeb9e906a2612b23d12b857b57e81
   languageName: node
   linkType: hard
 
