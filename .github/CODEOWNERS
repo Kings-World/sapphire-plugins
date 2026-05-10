@@ -1,1 +1,3 @@
 /packages/cron/**/*.ts @SerenModz21
+
+package.json @renovate-approve
