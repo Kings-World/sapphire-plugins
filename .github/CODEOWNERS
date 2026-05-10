@@ -1,1 +1,8 @@
-/packages/cron/**/*.ts @SerenModz21
+* @SerenModz21
+
+# reset for renovate prs
+/.github/workflows/*.yml
+/.github/renovate.json
+/packages/*/package.json
+/package.json
+/yarn.lock
