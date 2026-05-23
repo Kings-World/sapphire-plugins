@@ -4,5 +4,6 @@
 /.github/workflows/*.yml
 /.github/renovate.json
 /packages/*/package.json
+/.yarnrc.yml
 /package.json
 /yarn.lock
