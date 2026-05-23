@@ -2,7 +2,7 @@
 # Manual changes might be lost - proceed with caution!
 
 __metadata:
-  version: 9
+  version: 10
   cacheKey: 10
 
 "@babel/code-frame@npm:^7.0.0, @babel/code-frame@npm:^7.29.0":
@@ -902,7 +902,7 @@ __metadata:
     concurrently: "npm:9.2.1"
     croner: "npm:^10.0.1"
     tsup: "patch:tsup@npm%3A8.5.1#~/.yarn/patches/tsup-npm-8.5.1-41f4f7d59b.patch"
-    tsx: "npm:4.22.0"
+    tsx: "npm:4.22.3"
     typescript: "npm:6.0.3"
   languageName: unknown
   linkType: soft
@@ -929,7 +929,7 @@ __metadata:
     eslint: "npm:8.57.1"
     eslint-config-prettier: "npm:10.1.8"
     eslint-plugin-prettier: "npm:5.5.5"
-    lint-staged: "npm:17.0.4"
+    lint-staged: "npm:17.0.5"
     prettier: "npm:3.8.3"
     rimraf: "npm:6.1.3"
     tsup: "patch:tsup@npm%3A8.5.1#~/.yarn/patches/tsup-npm-8.5.1-41f4f7d59b.patch"
@@ -4471,9 +4471,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lint-staged@npm:17.0.4":
-  version: 17.0.4
-  resolution: "lint-staged@npm:17.0.4"
+"lint-staged@npm:17.0.5":
+  version: 17.0.5
+  resolution: "lint-staged@npm:17.0.5"
   dependencies:
     listr2: "npm:^10.2.1"
     picomatch: "npm:^4.0.4"
@@ -4485,7 +4485,7 @@ __metadata:
       optional: true
   bin:
     lint-staged: bin/lint-staged.js
-  checksum: 10/a9b1bf30450523ea301e6d95782963f3b94fc7dd012647a523fa494f072aa046f2e60d854885bb9f909bf69b6bf2e02d70ddc42553a8ead9307532688005f64c
+  checksum: 10/a0bea43689d68ec0bf6a56943884dbdb96b6b49e2677bf80654d802678b2edf9fc65338ca8ef3fc310f245933ea2a809db1ac94431dc445c57a4d49620d9d4da
   languageName: node
   linkType: hard
 
@@ -6070,9 +6070,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tsx@npm:4.22.0":
-  version: 4.22.0
-  resolution: "tsx@npm:4.22.0"
+"tsx@npm:4.22.3":
+  version: 4.22.3
+  resolution: "tsx@npm:4.22.3"
   dependencies:
     esbuild: "npm:~0.28.0"
     fsevents: "npm:~2.3.3"
@@ -6081,7 +6081,7 @@ __metadata:
       optional: true
   bin:
     tsx: dist/cli.mjs
-  checksum: 10/5d16edad135933fec2b527da1e85bb3d871525346af0fb7d4a94f3a3e91da31925e35298acfc0603c7bad04404f4ea322aecbcf8f53f370a7318045be197d40a
+  checksum: 10/bb1cf6b478c7bf79a99b52b715327c0d70a16461146062af1bde3d499a53220d66669e10a98abc25beed5d67a19c26466394500dc0048a67eaae05fad111cee7
   languageName: node
   linkType: hard
 
