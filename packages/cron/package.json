@@ -51,11 +51,11 @@
 	"devDependencies": {
 		"@favware/cliff-jumper": "6.1.0",
 		"@favware/rollup-type-bundler": "4.0.0",
-		"@sentry/node": "10.55.0",
+		"@sentry/node": "10.56.0",
 		"@types/node": "24.12.4",
-		"concurrently": "10.0.0",
+		"concurrently": "10.0.3",
 		"tsup": "patch:tsup@npm%3A8.5.1#~/.yarn/patches/tsup-npm-8.5.1-41f4f7d59b.patch",
-		"tsx": "4.22.3",
+		"tsx": "4.22.4",
 		"typescript": "6.0.3"
 	},
 	"homepage": "https://github.com/Kings-World/sapphire-plugins",
