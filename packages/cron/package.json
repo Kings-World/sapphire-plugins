@@ -52,7 +52,7 @@
 		"@favware/cliff-jumper": "6.1.0",
 		"@favware/rollup-type-bundler": "4.0.0",
 		"@sentry/node": "10.57.0",
-		"@types/node": "24.13.1",
+		"@types/node": "24.13.2",
 		"concurrently": "10.0.3",
 		"tsup": "patch:tsup@npm%3A8.5.1#~/.yarn/patches/tsup-npm-8.5.1-41f4f7d59b.patch",
 		"tsx": "4.22.4",
