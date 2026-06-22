@@ -46,9 +46,9 @@
 	"devDependencies": {
 		"@favware/cliff-jumper": "6.1.0",
 		"@sentry/node": "10.58.0",
-		"@types/node": "24.13.2",
-		"tsdown": "0.22.3",
-		"typescript": "6.0.3"
+		"@types/node": "catalog:",
+		"tsdown": "catalog:",
+		"typescript": "catalog:"
 	},
 	"homepage": "https://github.com/Kings-World/sapphire-plugins",
 	"repository": {
