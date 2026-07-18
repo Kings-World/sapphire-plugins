@@ -330,20 +330,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@discordjs/rest@npm:^2.5.1, @discordjs/rest@npm:^2.6.1":
-  version: 2.6.1
-  resolution: "@discordjs/rest@npm:2.6.1"
+"@discordjs/rest@npm:^2.5.1, @discordjs/rest@npm:^2.6.2":
+  version: 2.6.2
+  resolution: "@discordjs/rest@npm:2.6.2"
   dependencies:
     "@discordjs/collection": "npm:^2.1.1"
     "@discordjs/util": "npm:^1.2.0"
     "@sapphire/async-queue": "npm:^1.5.3"
     "@sapphire/snowflake": "npm:^3.5.5"
     "@vladfrangu/async_event_emitter": "npm:^2.4.6"
-    discord-api-types: "npm:^0.38.40"
+    discord-api-types: "npm:^0.38.49"
     magic-bytes.js: "npm:^1.13.0"
     tslib: "npm:^2.6.3"
-    undici: "npm:6.24.1"
-  checksum: 10/d320930fda4d835f0c7898c4c3158d54992af004f6112bb57047bdae1a0d798c7b9ffee2a9db1ffc85685ebdd89ce7838c2d74c1761988f62689980c79c4f356
+    undici: "npm:^6.27.0"
+  checksum: 10/05de970e9c3e14a6faeb69d6f6b7a4002a8e8bfed2ac10888ad21db5248e9c660f3f47784345a0e38416e5587fe05e341d34e51592e3adfa62adf15f4614af36
   languageName: node
   linkType: hard
 
@@ -632,7 +632,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": "npm:7.18.0"
     "@typescript-eslint/parser": "npm:7.18.0"
     cz-conventional-changelog: "npm:3.3.0"
-    discord.js: "npm:14.26.5"
+    discord.js: "npm:14.27.0"
     eslint: "npm:8.57.1"
     eslint-config-prettier: "npm:10.1.8"
     eslint-plugin-prettier: "npm:5.5.6"
@@ -1178,14 +1178,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sapphire/snowflake@npm:3.5.3":
-  version: 3.5.3
-  resolution: "@sapphire/snowflake@npm:3.5.3"
-  checksum: 10/f306626f76a6e9bdc7de9130c1baf7ddcd8681d7d03b2ab6f2404081f71c94085d4001e8a62ae2c2372b3b54d2d52ec21d43695f2c73fb101caabc2d3bf524aa
-  languageName: node
-  linkType: hard
-
-"@sapphire/snowflake@npm:^3.5.5":
+"@sapphire/snowflake@npm:3.5.5, @sapphire/snowflake@npm:^3.5.5":
   version: 3.5.5
   resolution: "@sapphire/snowflake@npm:3.5.5"
   checksum: 10/ccffcf71ebcad6762fd663ec7b6e176c7c3cc3ea03cae5b2eed8cc2a9a3645112b68f8f6da141341e2868dfd8ef833bfe93cdad91ab29b9d68e37ee87e5b1c4c
@@ -2422,31 +2415,31 @@ __metadata:
   languageName: node
   linkType: hard
 
-"discord-api-types@npm:^0.38.1, discord-api-types@npm:^0.38.30, discord-api-types@npm:^0.38.33, discord-api-types@npm:^0.38.40, discord-api-types@npm:^0.38.48":
+"discord-api-types@npm:^0.38.1, discord-api-types@npm:^0.38.30, discord-api-types@npm:^0.38.33, discord-api-types@npm:^0.38.40, discord-api-types@npm:^0.38.49":
   version: 0.38.50
   resolution: "discord-api-types@npm:0.38.50"
   checksum: 10/ff4603da1242138b46a75358eb5268d3869dbfc6547df2e6dd1726a65db358e8f5974dee9cc48bfa38003ab1f269a8c3e9117b310f2d1b5b146365dea6a618c9
   languageName: node
   linkType: hard
 
-"discord.js@npm:14.26.5":
-  version: 14.26.5
-  resolution: "discord.js@npm:14.26.5"
+"discord.js@npm:14.27.0":
+  version: 14.27.0
+  resolution: "discord.js@npm:14.27.0"
   dependencies:
     "@discordjs/builders": "npm:^1.14.1"
     "@discordjs/collection": "npm:1.5.3"
     "@discordjs/formatters": "npm:^0.6.2"
-    "@discordjs/rest": "npm:^2.6.1"
+    "@discordjs/rest": "npm:^2.6.2"
     "@discordjs/util": "npm:^1.2.0"
     "@discordjs/ws": "npm:^1.2.3"
-    "@sapphire/snowflake": "npm:3.5.3"
-    discord-api-types: "npm:^0.38.48"
+    "@sapphire/snowflake": "npm:3.5.5"
+    discord-api-types: "npm:^0.38.49"
     fast-deep-equal: "npm:3.1.3"
     lodash.snakecase: "npm:4.1.1"
     magic-bytes.js: "npm:^1.13.0"
     tslib: "npm:^2.6.3"
-    undici: "npm:6.24.1"
-  checksum: 10/cab994368e774771ff4942f811db4cc279ca222f8eb7b9c17ba23960a921cf2cb4ec2dade2cec2a78e1685dc07c551a79bdb463cb44ca2d5f96da4efdcd37378
+    undici: "npm:^6.27.0"
+  checksum: 10/5be8fa8551c334e3d3c6ddc66a96849050ebc1f8de226706f2bf71e4d6498603cca1718174f9191ba1457831459d029054d5027c8d52505a9909dd55602c3f25
   languageName: node
   linkType: hard
 
@@ -4434,32 +4427,32 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rolldown-plugin-dts@npm:^0.27.8":
-  version: 0.27.9
-  resolution: "rolldown-plugin-dts@npm:0.27.9"
+"rolldown-plugin-dts@npm:^0.27.9":
+  version: 0.27.11
+  resolution: "rolldown-plugin-dts@npm:0.27.11"
   dependencies:
     dts-resolver: "npm:^3.0.0"
     get-tsconfig: "npm:5.0.0-beta.5"
     obug: "npm:^2.1.3"
     yuku-ast: "npm:^0.1.7"
-    yuku-codegen: "npm:^0.6.1"
-    yuku-parser: "npm:^0.6.1"
+    yuku-codegen: "npm:^0.6.3"
+    yuku-parser: "npm:^0.6.3"
   peerDependencies:
-    "@ts-macro/tsc": ^0.3.6
     "@typescript/native-preview": "*"
+    "@volar/typescript": ~2.4.0
     rolldown: ^1.0.0
     typescript: ^5.0.0 || ^6.0.0 || ~7.0.0
     vue-tsc: ~3.2.0 || ~3.3.0
   peerDependenciesMeta:
-    "@ts-macro/tsc":
-      optional: true
     "@typescript/native-preview":
+      optional: true
+    "@volar/typescript":
       optional: true
     typescript:
       optional: true
     vue-tsc:
       optional: true
-  checksum: 10/31eaff14529e63898bd597479246513b25ce472b640d3986f9bad107221a5b451a7656cb981d7a5292fc2b19d5da9f2cebd9311d492c734a98c1710d9019e1c3
+  checksum: 10/b5cbcc415edad60beb155cb5a28d3b2613fd1bbfd301d244e2b3516562e03f69704bef77a11acfe24a8417b1c69bfdae069f4ee81cca11d3e7ca02efab84f049
   languageName: node
   linkType: hard
 
@@ -4901,9 +4894,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tsdown@npm:0.22.7":
-  version: 0.22.7
-  resolution: "tsdown@npm:0.22.7"
+"tsdown@npm:0.22.8":
+  version: 0.22.8
+  resolution: "tsdown@npm:0.22.8"
   dependencies:
     ansis: "npm:^4.3.1"
     cac: "npm:^7.0.0"
@@ -4914,7 +4907,7 @@ __metadata:
     obug: "npm:^2.1.3"
     picomatch: "npm:^4.0.5"
     rolldown: "npm:~1.1.5"
-    rolldown-plugin-dts: "npm:^0.27.8"
+    rolldown-plugin-dts: "npm:^0.27.9"
     semver: "npm:^7.8.5"
     tinyexec: "npm:^1.2.4"
     tinyglobby: "npm:^0.2.17"
@@ -4922,8 +4915,8 @@ __metadata:
     unconfig-core: "npm:^7.5.0"
   peerDependencies:
     "@arethetypeswrong/core": ^0.18.1
-    "@tsdown/css": 0.22.7
-    "@tsdown/exe": 0.22.7
+    "@tsdown/css": 0.22.8
+    "@tsdown/exe": 0.22.8
     "@vitejs/devtools": "*"
     publint: ^0.3.8
     tsx: "*"
@@ -4951,7 +4944,7 @@ __metadata:
       optional: true
   bin:
     tsdown: ./dist/run.mjs
-  checksum: 10/65a7a6195d8994664c49cc58f0acc149eb0053034c3d4a435858e75925085269cb66a7962a8a3bff7f6a252480241dd01ad138c775eb25d6d2ab41bc4dcb3c1d
+  checksum: 10/dd8ad6df7eed8391e955fce7afbd6682cd4e604f21fb5145e056498f5a0f681f2efdcf4033e6ae072998b27ef11cc6a8ebe0ac8a9429a5f1903f6c1d6d386bb3
   languageName: node
   linkType: hard
 
@@ -5078,10 +5071,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"undici@npm:6.24.1":
-  version: 6.24.1
-  resolution: "undici@npm:6.24.1"
-  checksum: 10/4f84e6045520eef9ba8eabb96360b50c759f59905c1703b12187c2dbcc6d1584c5d7ecddeb45b0ed6cac84ca2d132b21bfd8a38f77fa30378b1ac5d2ae390fd9
+"undici@npm:^6.27.0":
+  version: 6.27.0
+  resolution: "undici@npm:6.27.0"
+  checksum: 10/30c18cdb235edf4dd36f8aa3ace1ffaf44060289a7d62ad44c33180d2d74a224015d25574812f62ce9c625b5beb1b0b766495b650fedf356aca11eed7ce2c816
   languageName: node
   linkType: hard
 
@@ -5410,7 +5403,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"yuku-codegen@npm:^0.6.1":
+"yuku-codegen@npm:^0.6.3":
   version: 0.6.5
   resolution: "yuku-codegen@npm:0.6.5"
   dependencies:
@@ -5453,7 +5446,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"yuku-parser@npm:^0.6.1":
+"yuku-parser@npm:^0.6.3":
   version: 0.6.5
   resolution: "yuku-parser@npm:0.6.5"
   dependencies:
