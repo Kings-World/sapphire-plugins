@@ -45,7 +45,7 @@
 	},
 	"devDependencies": {
 		"@favware/cliff-jumper": "6.1.0",
-		"@sentry/node": "10.65.0",
+		"@sentry/node": "10.66.0",
 		"@types/node": "catalog:",
 		"tsdown": "catalog:",
 		"typescript": "catalog:"
