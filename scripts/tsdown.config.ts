@@ -6,7 +6,7 @@ const baseOptions: UserConfig = {
 	entry: ['src/**/*.ts'],
 	dts: true,
 	minify: false,
-	deps: { skipNodeModulesBundle: true },
+	deps: { neverBundle: true },
 	sourcemap: true,
 	target: 'es2021',
 	tsconfig: 'src/tsconfig.json',
