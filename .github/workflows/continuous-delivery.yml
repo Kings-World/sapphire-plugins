@@ -37,11 +37,13 @@ jobs:
         with:
           fetch-depth: 0
           ref: ${{ inputs.ref }}
+          persist-credentials: false
 
       - name: Setup Node.js
         uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7
         with:
           node-version: 24
+          package-manager-cache: false
 
       - name: Install Dependencies
         run: yarn install --immutable
@@ -53,7 +55,7 @@ jobs:
         working-directory: packages/${{ matrix.package }}
         run: |
           # Resolve the tag to be used. "next" for push events, "pr-{prNumber}" for dispatch events.
-          TAG=$([[ ${{ github.event_name }} == 'push' ]] && echo 'next' || echo 'pr-${{ github.event.inputs.prNumber }}')
+          TAG=$([[ ${{ github.event_name }} == 'push' ]] && echo 'next' || echo 'pr-${PR_NUMBER}')
 
           yarn config set npmAuthToken ${NODE_AUTH_TOKEN}
           yarn config set npmPublishRegistry "https://registry.yarnpkg.com"
@@ -64,3 +66,4 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.inputs.prNumber }}
