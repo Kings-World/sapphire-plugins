@@ -55,11 +55,12 @@ jobs:
         working-directory: packages/${{ matrix.package }}
         run: |
           # Resolve the tag to be used. "next" for push events, "pr-{prNumber}" for dispatch events.
-          TAG=$([[ ${{ github.event_name }} == 'push' ]] && echo 'next' || echo 'pr-${PR_NUMBER}')
+          TAG=$([[ ${{ github.event_name }} == 'push' ]] && echo 'next' || echo "pr-${PR_NUMBER}")
 
           yarn config set npmPublishRegistry "https://registry.yarnpkg.com"
 
           echo "tag = ${TAG}"
+          echo "pr number = ${PR_NUMBER}"
           echo "version = ${TAG}.$(git rev-parse --verify --short HEAD)"
 
           yarn bump --preid "${TAG}.$(git rev-parse --verify --short HEAD)" --skip-changelog
