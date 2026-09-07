@@ -59,6 +59,9 @@ jobs:
 
           yarn config set npmPublishRegistry "https://registry.yarnpkg.com"
 
+          echo "tag = ${TAG}"
+          echo "version = ${TAG}.$(git rev-parse --verify --short HEAD)"
+
           yarn bump --preid "${TAG}.$(git rev-parse --verify --short HEAD)" --skip-changelog
 
           yarn npm publish --tag ${TAG}
