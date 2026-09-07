@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+# [@kingsworld/plugin-cron@4.0.1](https://github.com/Kings-World/sapphire-plugins/compare/@kingsworld/plugin-cron@4.0.0...@kingsworld/plugin-cron@4.0.1) - (2026-09-07)
+
+## 🏠 Refactor
+
+- Prefer string.replaceAll() over string.replace() ([cc697d4](https://github.com/Kings-World/sapphire-plugins/commit/cc697d4ab96624e0fb394329ceaae6e33ab05b1e)) ([#275](https://github.com/Kings-World/sapphire-plugins/pull/275) by @SerenModz21)
+
 # [@kingsworld/plugin-cron@4.0.0](https://github.com/Kings-World/sapphire-plugins/compare/@kingsworld/plugin-cron@3.0.6...@kingsworld/plugin-cron@4.0.0) - (2026-04-10)
 
 ## 🐛 Bug Fixes
