@@ -55,15 +55,13 @@ jobs:
         working-directory: packages/${{ matrix.package }}
         run: |
           # Resolve the tag to be used. "next" for push events, "pr-{prNumber}" for dispatch events.
-          TAG=$([[ ${{ github.event_name }} == 'push' ]] && echo 'next' || echo 'pr-${PR_NUMBER}')
+          TAG=$([[ ${{ github.event_name }} == 'push' ]] && echo 'next' || echo "pr-${PR_NUMBER}")
 
-          yarn config set npmAuthToken ${NODE_AUTH_TOKEN}
           yarn config set npmPublishRegistry "https://registry.yarnpkg.com"
 
           yarn bump --preid "${TAG}.$(git rev-parse --verify --short HEAD)" --skip-changelog
 
           yarn npm publish --tag ${TAG}
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR_NUMBER: ${{ github.event.inputs.prNumber }}
