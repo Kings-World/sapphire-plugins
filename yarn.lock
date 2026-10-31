@@ -550,7 +550,7 @@ __metadata:
     "@favware/cliff-jumper": "npm:6.1.0"
     "@sentry/node": "npm:10.77.1"
     "@types/node": "catalog:"
-    croner: "npm:^10.0.1"
+    croner: "npm:^11.0.0"
     tsdown: "catalog:"
     typescript: "catalog:"
   languageName: unknown
@@ -2063,10 +2063,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"croner@npm:^10.0.1":
-  version: 10.0.1
-  resolution: "croner@npm:10.0.1"
-  checksum: 10/583b2e2d9dd56e23d423ec93fe1a9ab48637340a9ed301f9f65489fcba4d587dd54c72fbbeb5a707f237edce933771dd8c874fd372801cb0cbfe69a6efa1a053
+"croner@npm:^11.0.0":
+  version: 11.0.0
+  resolution: "croner@npm:11.0.0"
+  checksum: 10/e8e43e92fa9003254fd12d0e41468289a77eba664da13b13e32ebc46dba65eb504b1ff45e3e120916e326faa1cb8a47abce6398a821216fbea7b58e4c7eec8bd
   languageName: node
   linkType: hard
 
