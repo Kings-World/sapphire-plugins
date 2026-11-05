@@ -41,7 +41,7 @@
 		"check-update": "cliff-jumper --dry-run"
 	},
 	"dependencies": {
-		"croner": "^10.0.1"
+		"croner": "^11.0.0"
 	},
 	"devDependencies": {
 		"@favware/cliff-jumper": "6.1.0",
