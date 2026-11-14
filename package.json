@@ -33,7 +33,7 @@
 		"eslint-config-prettier": "10.1.8",
 		"eslint-plugin-prettier": "5.5.7",
 		"lint-staged": "17.6.0",
-		"prettier": "3.9.10",
+		"prettier": "3.10.0",
 		"rimraf": "6.1.4",
 		"tsdown": "catalog:",
 		"turbo": "2.11.10",
