@@ -602,7 +602,7 @@ __metadata:
     "@sapphire/framework": "npm:5.5.1"
     "@sapphire/pieces": "npm:4.4.1"
     "@sapphire/prettier-config": "npm:2.0.0"
-    "@sapphire/ts-config": "npm:5.0.3"
+    "@sapphire/ts-config": "npm:6.0.0"
     "@types/node": "catalog:"
     "@typescript-eslint/eslint-plugin": "npm:7.18.0"
     "@typescript-eslint/parser": "npm:7.18.0"
@@ -1253,13 +1253,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sapphire/ts-config@npm:5.0.3":
-  version: 5.0.3
-  resolution: "@sapphire/ts-config@npm:5.0.3"
+"@sapphire/ts-config@npm:6.0.0":
+  version: 6.0.0
+  resolution: "@sapphire/ts-config@npm:6.0.0"
   dependencies:
-    tslib: "npm:^2.8.1"
-    typescript: "npm:~5.4.5"
-  checksum: 10/187405f8ca6d46258600220910970cc71832687707394968b477b290e0f48023154a126cfdedfa298b317b3fda563091230a47766a49fd87dea02e7d0c08e1af
+    "@types/node": "npm:*"
+    typescript: "npm:~6.0.3"
+  checksum: 10/e804d8eb8ee96fcb1adf58c11cd8d709d5cd23b5d63f744206e8c4525658812637598183f151d4c33cf9e9f0b1f6312346071f79b7c4c21ea42f2a6fadf2b763
   languageName: node
   linkType: hard
 
@@ -4796,7 +4796,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:6.0.3":
+"typescript@npm:6.0.3, typescript@npm:~6.0.3":
   version: 6.0.3
   resolution: "typescript@npm:6.0.3"
   bin:
@@ -4816,7 +4816,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@npm%3A6.0.3#optional!builtin<compat/typescript>":
+"typescript@patch:typescript@npm%3A6.0.3#optional!builtin<compat/typescript>, typescript@patch:typescript@npm%3A~6.0.3#optional!builtin<compat/typescript>":
   version: 6.0.3
   resolution: "typescript@patch:typescript@npm%3A6.0.3#optional!builtin<compat/typescript>::version=6.0.3&hash=5786d5"
   bin:
