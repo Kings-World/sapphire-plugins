@@ -583,7 +583,7 @@ __metadata:
   resolution: "@kingsworld/plugin-cron@workspace:packages/cron"
   dependencies:
     "@favware/cliff-jumper": "npm:6.1.0"
-    "@sentry/node": "npm:11.12.0"
+    "@sentry/node": "npm:11.14.0"
     "@types/node": "catalog:"
     croner: "npm:^11.0.1"
     tsdown: "catalog:"
@@ -615,7 +615,7 @@ __metadata:
     prettier: "npm:3.10.1"
     rimraf: "npm:6.1.4"
     tsdown: "catalog:"
-    turbo: "npm:2.11.11"
+    turbo: "npm:2.11.12"
     typescript: "catalog:"
     unplugin-replace: "npm:0.9.1"
     unrun: "npm:0.3.1"
@@ -1284,11 +1284,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sentry/bundler-plugins@npm:11.12.0":
-  version: 11.12.0
-  resolution: "@sentry/bundler-plugins@npm:11.12.0"
+"@sentry/bundler-plugins@npm:11.14.0":
+  version: 11.14.0
+  resolution: "@sentry/bundler-plugins@npm:11.14.0"
   dependencies:
-    "@sentry/core": "npm:11.12.0"
+    "@sentry/core": "npm:11.14.0"
     dotenv: "npm:^17.4.2"
     glob: "npm:^14.0.3"
     magic-string: "npm:~0.30.8 || ^1.0.0"
@@ -1302,71 +1302,71 @@ __metadata:
       optional: true
     webpack:
       optional: true
-  checksum: 10/32bcf4d9637f3ec53da9251d1d8566543f7f27f777a3ed383bac8fa205cb06010bb01ed4429ac7dafb26f656975f3afcbd0179cc3964f0551b2763bbbd889318
+  checksum: 10/e6b8601b439bff1cc3bd5c631d53abc94fd24c123ef372c7bda3c58497fd4595e922511ec7c55523d69c13ce8260a8e00aec0299338c6e0322a4948176e58f06
   languageName: node
   linkType: hard
 
-"@sentry/conventions@npm:^0.32.0":
-  version: 0.32.0
-  resolution: "@sentry/conventions@npm:0.32.0"
-  checksum: 10/e23d0b46e7a8e3131fd06489dbe6d2917b15be6f26d9796db05dab4aa2d42097464c926a91e90aefc6525cf9a41a984359519c698dea7d047f7d1c23569a66db
+"@sentry/conventions@npm:^0.33.0":
+  version: 0.33.0
+  resolution: "@sentry/conventions@npm:0.33.0"
+  checksum: 10/05ff2981f17586f86bdfd08803c5540900fa7bf2d3124440aee23e347d88a09e9adfcf41424f16d1ad8d518c3603c2a00b342bcd11b3f573479f430b6a583227
   languageName: node
   linkType: hard
 
-"@sentry/core@npm:11.12.0":
-  version: 11.12.0
-  resolution: "@sentry/core@npm:11.12.0"
+"@sentry/core@npm:11.14.0":
+  version: 11.14.0
+  resolution: "@sentry/core@npm:11.14.0"
   dependencies:
-    "@sentry/conventions": "npm:^0.32.0"
-  checksum: 10/5a829cce86619be72171125328230a761aac975055c6f84b8a91df0905f4d68fdef6ae36376aedf78be23c3922026497a5a3162563058572d45ac7c9395f9226
+    "@sentry/conventions": "npm:^0.33.0"
+  checksum: 10/2497ee4d56ecf16026d18b08ddd2ae2632af857d82e27a5fc69817f44efde54b8d248de8c405cce1b40a6b3dbb83ed87a6606828e413a3e9a24ead59c0930513
   languageName: node
   linkType: hard
 
-"@sentry/node@npm:11.12.0":
-  version: 11.12.0
-  resolution: "@sentry/node@npm:11.12.0"
+"@sentry/node@npm:11.14.0":
+  version: 11.14.0
+  resolution: "@sentry/node@npm:11.14.0"
   dependencies:
     "@opentelemetry/api": "npm:^1.9.1"
-    "@sentry/bundler-plugins": "npm:11.12.0"
-    "@sentry/conventions": "npm:^0.32.0"
-    "@sentry/core": "npm:11.12.0"
-    "@sentry/opentelemetry": "npm:11.12.0"
-    "@sentry/server-runtime-injection": "npm:11.12.0"
-    "@sentry/server-utils": "npm:11.12.0"
-  checksum: 10/58e7a49a1e34a563e937d6a4046f6d685b3377c49c6af39a367dd4891e7c4b2a1992728db111791d407ab37563c9698e71a23250da320879575c954cc29ac799
+    "@sentry/bundler-plugins": "npm:11.14.0"
+    "@sentry/conventions": "npm:^0.33.0"
+    "@sentry/core": "npm:11.14.0"
+    "@sentry/opentelemetry": "npm:11.14.0"
+    "@sentry/server-runtime-injection": "npm:11.14.0"
+    "@sentry/server-utils": "npm:11.14.0"
+  checksum: 10/7088d54d908fbdb1b595281b2ab320408a76ba264f6d3cfe62d1e02a65eb8d20a109e17b6d7478bb0c92f0d10bab17bb13f999aa9af4fef99a884506abc367ff
   languageName: node
   linkType: hard
 
-"@sentry/opentelemetry@npm:11.12.0":
-  version: 11.12.0
-  resolution: "@sentry/opentelemetry@npm:11.12.0"
+"@sentry/opentelemetry@npm:11.14.0":
+  version: 11.14.0
+  resolution: "@sentry/opentelemetry@npm:11.14.0"
   dependencies:
-    "@sentry/conventions": "npm:^0.32.0"
-    "@sentry/core": "npm:11.12.0"
+    "@sentry/conventions": "npm:^0.33.0"
+    "@sentry/core": "npm:11.14.0"
   peerDependencies:
     "@opentelemetry/api": ^1.9.0
-  checksum: 10/2bde747c8ece9940d9b73e31225fbae2eb9f8f8072ffda78806ce6f3b1c4eab1a1a585da433d3df41738b1754850a3a89cc05dce757c9337dc430f8ce337f4d6
+  checksum: 10/ff0d6dffc19d514bc3c4bf8038a2ae2e9ba6012fb50185884f2aedb76c47df020dcbc383e1d94b7bd3275993b8774db276553a668f7162ba45714f6bf3c48c58
   languageName: node
   linkType: hard
 
-"@sentry/server-runtime-injection@npm:11.12.0":
-  version: 11.12.0
-  resolution: "@sentry/server-runtime-injection@npm:11.12.0"
+"@sentry/server-runtime-injection@npm:11.14.0":
+  version: 11.14.0
+  resolution: "@sentry/server-runtime-injection@npm:11.14.0"
   dependencies:
-    "@sentry/core": "npm:11.12.0"
-    "@sentry/server-utils": "npm:11.12.0"
-  checksum: 10/dc8bf44a5b87fc942a43707dc2819bc77c7f54de895456637e8e4a8bf20552312f3f3f4fe9f08ceba63ffda6adb51d1674ea7d3743a4bb32903a5c5db043435c
+    "@sentry/core": "npm:11.14.0"
+    "@sentry/server-utils": "npm:11.14.0"
+  checksum: 10/8cf38b377a2a6b36399cb9e7f280c732d7e8286b668beea7a6d961ae76d0e616d56c9206924b6702f8d9bd8fcff24f3d1134758961a32f4cf837dea8ee6eebb8
   languageName: node
   linkType: hard
 
-"@sentry/server-utils@npm:11.12.0":
-  version: 11.12.0
-  resolution: "@sentry/server-utils@npm:11.12.0"
+"@sentry/server-utils@npm:11.14.0":
+  version: 11.14.0
+  resolution: "@sentry/server-utils@npm:11.14.0"
   dependencies:
     "@opentelemetry/api": "npm:^1.9.1"
-    "@sentry/conventions": "npm:^0.32.0"
-    "@sentry/core": "npm:11.12.0"
-  checksum: 10/9ef1789a81b3d87ea5a38cb1f900bc6f3f075e6e10a72f1eb8c25f6a11d272aa33d2610324b21757a71a92857d0ecc6bbd2edeb1dfb649a50c092c96a34906be
+    "@sentry/conventions": "npm:^0.33.0"
+    "@sentry/core": "npm:11.14.0"
+  checksum: 10/f1cf9335652beba50fbb7129cc2da16d5ef9eb10a7e11240754d1ec85b5ef2ae7cb086c7d2282425467ea3281142dfd09cb7ea4c5a27642bc2505797a3eb3e6c
   languageName: node
   linkType: hard
 
@@ -1409,44 +1409,44 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@turbo/darwin-64@npm:2.11.11":
-  version: 2.11.11
-  resolution: "@turbo/darwin-64@npm:2.11.11"
+"@turbo/darwin-64@npm:2.11.12":
+  version: 2.11.12
+  resolution: "@turbo/darwin-64@npm:2.11.12"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@turbo/darwin-arm64@npm:2.11.11":
-  version: 2.11.11
-  resolution: "@turbo/darwin-arm64@npm:2.11.11"
+"@turbo/darwin-arm64@npm:2.11.12":
+  version: 2.11.12
+  resolution: "@turbo/darwin-arm64@npm:2.11.12"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@turbo/linux-64@npm:2.11.11":
-  version: 2.11.11
-  resolution: "@turbo/linux-64@npm:2.11.11"
+"@turbo/linux-64@npm:2.11.12":
+  version: 2.11.12
+  resolution: "@turbo/linux-64@npm:2.11.12"
   conditions: (os=android | os=linux) & cpu=x64
   languageName: node
   linkType: hard
 
-"@turbo/linux-arm64@npm:2.11.11":
-  version: 2.11.11
-  resolution: "@turbo/linux-arm64@npm:2.11.11"
+"@turbo/linux-arm64@npm:2.11.12":
+  version: 2.11.12
+  resolution: "@turbo/linux-arm64@npm:2.11.12"
   conditions: (os=android | os=linux) & cpu=arm64
   languageName: node
   linkType: hard
 
-"@turbo/windows-64@npm:2.11.11":
-  version: 2.11.11
-  resolution: "@turbo/windows-64@npm:2.11.11"
+"@turbo/windows-64@npm:2.11.12":
+  version: 2.11.12
+  resolution: "@turbo/windows-64@npm:2.11.12"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
 
-"@turbo/windows-arm64@npm:2.11.11":
-  version: 2.11.11
-  resolution: "@turbo/windows-arm64@npm:2.11.11"
+"@turbo/windows-arm64@npm:2.11.12":
+  version: 2.11.12
+  resolution: "@turbo/windows-arm64@npm:2.11.12"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
@@ -4087,21 +4087,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:3.10.1":
+"prettier@npm:3.10.1, prettier@npm:^3.0.0, prettier@npm:^3.5.3":
   version: 3.10.1
   resolution: "prettier@npm:3.10.1"
   bin:
     prettier: bin/prettier.cjs
   checksum: 10/ab4fc7bbee5823eb99200f89172e1dc360a8225facc19db336f30aa4e089bd8576f141ca8e129ce6ce850f1d7beb4d6e8b7630c2522b3b2fdc62330114f828b2
-  languageName: node
-  linkType: hard
-
-"prettier@npm:^3.0.0, prettier@npm:^3.5.3":
-  version: 3.9.10
-  resolution: "prettier@npm:3.9.10"
-  bin:
-    prettier: bin/prettier.cjs
-  checksum: 10/5d0118add4b44eb9d50c114f5c525451cc92be9da300ad0552787472535a3f23884baed3223d9b577bb7d1152eb58aeccfcc2b4541c0cf2274c0b4d328e36834
   languageName: node
   linkType: hard
 
@@ -4753,16 +4744,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"turbo@npm:2.11.11":
-  version: 2.11.11
-  resolution: "turbo@npm:2.11.11"
+"turbo@npm:2.11.12":
+  version: 2.11.12
+  resolution: "turbo@npm:2.11.12"
   dependencies:
-    "@turbo/darwin-64": "npm:2.11.11"
-    "@turbo/darwin-arm64": "npm:2.11.11"
-    "@turbo/linux-64": "npm:2.11.11"
-    "@turbo/linux-arm64": "npm:2.11.11"
-    "@turbo/windows-64": "npm:2.11.11"
-    "@turbo/windows-arm64": "npm:2.11.11"
+    "@turbo/darwin-64": "npm:2.11.12"
+    "@turbo/darwin-arm64": "npm:2.11.12"
+    "@turbo/linux-64": "npm:2.11.12"
+    "@turbo/linux-arm64": "npm:2.11.12"
+    "@turbo/windows-64": "npm:2.11.12"
+    "@turbo/windows-arm64": "npm:2.11.12"
   dependenciesMeta:
     "@turbo/darwin-64":
       optional: true
@@ -4778,7 +4769,7 @@ __metadata:
       optional: true
   bin:
     turbo: bin/turbo
-  checksum: 10/a5a647eccfc2ffea002f719e3cae21cb84f507aa86749245d930aa6f310ceaf8637c93396dff759f12c84a50a89c5b1268c59f566d2ef5e3a79557b540ce84b6
+  checksum: 10/dbb2f40a2aa33fa35c657b0f825385f27274f0a443178a4d8ddf5016d8f735dba70320e3dd6fd2146b59ccfba0f330e964d1b58b39bb0a8c3a57c78ed47bb598
   languageName: node
   linkType: hard
 
