@@ -36,7 +36,7 @@
 		"prettier": "3.10.1",
 		"rimraf": "6.1.4",
 		"tsdown": "catalog:",
-		"turbo": "2.11.11",
+		"turbo": "2.11.12",
 		"typescript": "catalog:",
 		"unplugin-replace": "0.9.1",
 		"unrun": "0.3.1"
