@@ -1,3 +1,4 @@
+/* eslint-disable import-x/no-duplicates */
 import './index';
 
 import { container, Plugin, postInitialization, postLogin, preGenericsInitialization, preLogin, SapphireClient } from '@sapphire/framework';
@@ -15,6 +16,7 @@ export class CronTaskPlugin extends Plugin {
 
 	public static override async [preLogin](this: SapphireClient) {
 		if (container.cronTasks.disableSentry) return;
+		// eslint-disable-next-line require-atomic-updates
 		container.cronTasks.sentry = await import('@sentry/node').catch(() => undefined);
 	}
 

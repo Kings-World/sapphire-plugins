@@ -16,7 +16,6 @@ export class CronTaskStore extends Store<CronTask, 'cron-tasks'> {
 	 * - Are enabled
 	 * - Are currently running
 	 * - Have not been permanently stopped
-	 *
 	 * @returns CronTaskStore
 	 */
 	public pauseAll() {
@@ -37,7 +36,6 @@ export class CronTaskStore extends Store<CronTask, 'cron-tasks'> {
 	 * - Are enabled
 	 * - Are not currently running
 	 * - Have not been permanently stopped
-	 *
 	 * @returns CronTaskStore
 	 */
 	public resumeAll() {
@@ -59,7 +57,6 @@ export class CronTaskStore extends Store<CronTask, 'cron-tasks'> {
 	 * - Have not been permanently stopped
 	 *
 	 * ⚠️ Stopping jobs is **permanent** and cannot be resumed afterwards!
-	 *
 	 * @returns CronTaskStore
 	 */
 	public stopAll() {
@@ -140,6 +137,6 @@ export class CronTaskStore extends Store<CronTask, 'cron-tasks'> {
 	 */
 	public override clear() {
 		this.stopAll();
-		return super.clear();
+		super.clear();
 	}
 }

@@ -1,4 +1,7 @@
 {
 	"extends": "./tsconfig.json",
-	"include": ["scripts", "packages/**/*.ts"]
+	"compilerOptions": {
+		"allowJs": true
+	},
+	"include": ["eslint.config.mjs", "packages", "scripts"]
 }

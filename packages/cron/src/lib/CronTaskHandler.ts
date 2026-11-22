@@ -5,6 +5,7 @@ export class CronTaskHandler {
 	/**
 	 * The default IANA/TZ timezone to use for all cron jobs.
 	 * You can override this per task, using the timezone option.
+	 *
 	 * @see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 	 */
 	public defaultTimezone?: CronTaskHandlerOptions['defaultTimezone'];
@@ -12,15 +13,16 @@ export class CronTaskHandler {
 	/**
 	 * The ability to opt-out of instrumenting cron jobs with Sentry.
 	 * If you don't use Sentry, you can ignore this option.
+	 *
 	 * @see https://docs.sentry.io/product/crons/
-	 * @default false
+	 * @defaultValue false
 	 */
 	public disableSentry: boolean;
 
 	/**
 	 * The Sentry instance to use for instrumenting cron jobs.
-	 * This is only available when [`@sentry/node`](https://www.npmjs.com/package/@sentry/node)
-	 * is installed and the {@linkcode disableSentry} option is set to false.
+	 * This is only available when [`@sentry/node`](https://www.npmjs.com/package/\@sentry/node)
+	 * is installed and the `disableSentry` option is set to false.
 	 */
 	public sentry?: typeof Sentry;
 
