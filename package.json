@@ -22,7 +22,7 @@
 		"@sapphire/eslint-config": "5.0.6",
 		"@sapphire/framework": "5.5.1",
 		"@sapphire/pieces": "4.4.1",
-		"@sapphire/prettier-config": "2.0.0",
+		"@sapphire/prettier-config": "3.0.0",
 		"@sapphire/ts-config": "5.0.3",
 		"@types/node": "catalog:",
 		"@typescript-eslint/eslint-plugin": "7.18.0",
