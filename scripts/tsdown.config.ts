@@ -35,7 +35,7 @@ export function versionInjectorPlugin(version: string) {
 	return Replace({
 		values: [
 			{
-				find: /\[VI\]{{inject}}\[\/VI\]/,
+				find: /\[VI]{{inject}}\[\/VI]/,
 				replacement: version
 			}
 		]

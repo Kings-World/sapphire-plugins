@@ -10,18 +10,20 @@ export interface CronTaskHandlerOptions {
 	/**
 	 * The ability to opt-out of instrumenting cron jobs with Sentry.
 	 * If you don't use Sentry, you can ignore this option.
+	 *
 	 * @see https://docs.sentry.io/product/crons/
-	 * @default false
+	 * @defaultValue false
 	 */
 	disableSentry: boolean;
 }
 
-export interface CronJobOptions extends Pick<CronOptions, 'maxRuns' | 'unref' | 'timezone'> {
-	pattern: string | Date;
+export interface CronJobOptions extends Pick<CronOptions, 'maxRuns' | 'timezone' | 'unref'> {
+	pattern: Date | string;
 	/**
 	 * If true, prevents the job from running if the previous execution is still in progress.
 	 * If the task has a protect method, it will be called if the job is blocked.
-	 * @default false
+	 *
+	 * @defaultValue false
 	 */
 	protect?: boolean;
 }

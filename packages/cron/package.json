@@ -45,6 +45,8 @@
 	},
 	"devDependencies": {
 		"@favware/cliff-jumper": "6.1.0",
+		"@sapphire/framework": "catalog:",
+		"@sapphire/pieces": "catalog:",
 		"@sentry/node": "11.14.0",
 		"@types/node": "catalog:",
 		"tsdown": "catalog:",

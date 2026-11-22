@@ -39,8 +39,9 @@ export abstract class CronTask<Options extends CronTask.Options = CronTask.Optio
 
 	/**
 	 * A helper function to log messages with the `CronTask[${name}]` prefix.
-	 * @param message The message to include after the prefix
-	 * @param other Extra parameters to pass to the logger
+	 *
+	 * @param message - The message to include after the prefix
+	 * @param other - Extra parameters to pass to the logger
 	 * @example
 	 * this.info('Hello world!'); // CronTask[my-task] Hello world!
 	 */
@@ -50,8 +51,9 @@ export abstract class CronTask<Options extends CronTask.Options = CronTask.Optio
 
 	/**
 	 * A helper function to log messages with the `CronTask[${name}]` prefix.
-	 * @param message The message to include after the prefix
-	 * @param other Extra parameters to pass to the logger
+	 *
+	 * @param message - The message to include after the prefix
+	 * @param other - Extra parameters to pass to the logger
 	 * @example
 	 * this.error('Something went wrong!'); // CronTask[my-task] Something went wrong!
 	 */
@@ -61,8 +63,9 @@ export abstract class CronTask<Options extends CronTask.Options = CronTask.Optio
 
 	/**
 	 * A helper function to log messages with the `CronTask[${name}]` prefix.
-	 * @param message The message to include after the prefix
-	 * @param other Extra parameters to pass to the logger
+	 *
+	 * @param message - The message to include after the prefix
+	 * @param other - Extra parameters to pass to the logger
 	 * @example
 	 * this.warn('Something is not right!'); // CronTask[my-task] Something is not right!
 	 */
@@ -72,8 +75,9 @@ export abstract class CronTask<Options extends CronTask.Options = CronTask.Optio
 
 	/**
 	 * A helper function to log messages with the `CronTask[${name}]` prefix.
-	 * @param message The message to include after the prefix
-	 * @param other Extra parameters to pass to the logger
+	 *
+	 * @param message - The message to include after the prefix
+	 * @param other - Extra parameters to pass to the logger
 	 * @example
 	 * this.debug('Something is happening!'); // CronTask[my-task] Something is happening!
 	 */
@@ -83,8 +87,9 @@ export abstract class CronTask<Options extends CronTask.Options = CronTask.Optio
 
 	/**
 	 * A helper function to log messages with the `CronTask[${name}]` prefix.
-	 * @param message The message to include after the prefix
-	 * @param other Extra parameters to pass to the logger
+	 *
+	 * @param message - The message to include after the prefix
+	 * @param other - Extra parameters to pass to the logger
 	 * @example
 	 * this.trace('Loaded the file.'); // CronTask[my-task] Loaded the file.
 	 */
@@ -93,9 +98,11 @@ export abstract class CronTask<Options extends CronTask.Options = CronTask.Optio
 	}
 }
 
-export namespace CronTask {
-	export type Options = Piece.Options & CronJobOptions;
-	/** @deprecated Use {@linkcode LoaderContext} instead. */
+export declare namespace CronTask {
+	export type Options = CronJobOptions & Piece.Options;
+	/**
+	 * @deprecated Use {@link LoaderContext} instead.
+	 */
 	export type Context = LoaderContext;
 	export type LoaderContext = Piece.LoaderContext<'cron-tasks'>;
 }
