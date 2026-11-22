@@ -4,34 +4,22 @@
 	"version": "4.0.1",
 	"author": "Seren_Modz 21 <seren@kings-world.net>",
 	"license": "MIT",
-	"main": "dist/cjs/index.cjs",
-	"module": "dist/esm/index.mjs",
-	"types": "dist/cjs/index.d.cts",
+	"type": "module",
+	"main": "dist/index.mjs",
+	"module": "dist/index.mjs",
+	"types": "dist/index.d.mts",
 	"exports": {
 		".": {
-			"import": {
-				"types": "./dist/esm/index.d.mts",
-				"default": "./dist/esm/index.mjs"
-			},
-			"require": {
-				"types": "./dist/cjs/index.d.cts",
-				"default": "./dist/cjs/index.cjs"
-			}
+			"types": "./dist/index.d.mts",
+			"default": "./dist/index.mjs"
 		},
 		"./register": {
-			"import": {
-				"types": "./dist/esm/register.d.mts",
-				"default": "./dist/esm/register.mjs"
-			},
-			"require": {
-				"types": "./dist/cjs/register.d.cts",
-				"default": "./dist/cjs/register.cjs"
-			}
+			"types": "./dist/register.d.mts",
+			"default": "./dist/register.mjs"
 		}
 	},
 	"sideEffects": [
-		"./dist/cjs/register.cjs",
-		"./dist/esm/register.mjs"
+		"./dist/register.mjs"
 	],
 	"scripts": {
 		"build": "tsdown --config-loader unrun",
@@ -81,6 +69,6 @@
 		"access": "public"
 	},
 	"engines": {
-		"node": ">=v18"
+		"node": ">=v24"
 	}
 }

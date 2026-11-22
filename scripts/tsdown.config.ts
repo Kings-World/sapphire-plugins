@@ -8,27 +8,15 @@ const baseOptions: UserConfig = {
 	minify: false,
 	deps: { neverBundle: true },
 	sourcemap: true,
-	target: 'es2021',
+	target: 'es2024',
 	tsconfig: 'src/tsconfig.json',
-	treeshake: true
+	treeshake: true,
+	outDir: 'dist',
+	format: 'esm'
 };
 
 export function createTsdownConfig(options: UserConfig = {}) {
-	return defineConfig([
-		{
-			...baseOptions,
-			...options,
-			outDir: 'dist/cjs',
-			format: 'cjs',
-			banner: { js: "'use strict';\n" }
-		},
-		{
-			...baseOptions,
-			...options,
-			outDir: 'dist/esm',
-			format: 'esm'
-		}
-	]);
+	return defineConfig({ ...baseOptions, ...options });
 }
 
 export function versionInjectorPlugin(version: string) {
