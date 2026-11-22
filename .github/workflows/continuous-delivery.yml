@@ -16,6 +16,10 @@ on:
     branches:
       - main
 
+concurrency:
+  group: ${{ github.workflow }}|${{ inputs.prNumber || 'next' }}
+  queue: max
+
 env:
   TURBO_TELEMETRY_DISABLED: 1
 
