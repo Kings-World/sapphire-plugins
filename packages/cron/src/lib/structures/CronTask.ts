@@ -100,9 +100,5 @@ export abstract class CronTask<Options extends CronTask.Options = CronTask.Optio
 
 export declare namespace CronTask {
 	export type Options = CronJobOptions & Piece.Options;
-	/**
-	 * @deprecated Use {@link LoaderContext} instead.
-	 */
-	export type Context = LoaderContext;
 	export type LoaderContext = Piece.LoaderContext<'cron-tasks'>;
 }
