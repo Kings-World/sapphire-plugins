@@ -23,7 +23,7 @@
 		"@sapphire/framework": "catalog:",
 		"@sapphire/pieces": "catalog:",
 		"@sapphire/prettier-config": "3.0.0",
-		"@sapphire/ts-config": "5.0.3",
+		"@sapphire/ts-config": "6.0.0",
 		"@types/node": "catalog:",
 		"@typescript-eslint/eslint-plugin": "8.73.0",
 		"@typescript-eslint/parser": "8.73.0",
