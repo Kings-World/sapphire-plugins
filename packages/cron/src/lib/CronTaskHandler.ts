@@ -22,7 +22,7 @@ export class CronTaskHandler {
 	/**
 	 * The Sentry instance to use for instrumenting cron jobs.
 	 * This is only available when [`@sentry/node`](https://www.npmjs.com/package/\@sentry/node)
-	 * is installed and the `disableSentry` option is set to false.
+	 * is installed and the {@link CronTaskHandler.disableSentry | `disableSentry`} option is set to false.
 	 */
 	public sentry?: typeof Sentry;
 
