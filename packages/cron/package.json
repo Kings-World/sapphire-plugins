@@ -47,7 +47,7 @@
 		"@favware/cliff-jumper": "6.1.0",
 		"@sapphire/framework": "catalog:",
 		"@sapphire/pieces": "catalog:",
-		"@sentry/node": "11.14.0",
+		"@sentry/node": "11.15.0",
 		"@types/node": "catalog:",
 		"tsdown": "catalog:",
 		"typescript": "catalog:"
