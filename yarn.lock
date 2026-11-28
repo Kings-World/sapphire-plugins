@@ -1697,7 +1697,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sapphire/pieces@npm:4.4.1, @sapphire/pieces@npm:^4.4.1":
+"@sapphire/pieces@npm:5.0.1":
+  version: 5.0.1
+  resolution: "@sapphire/pieces@npm:5.0.1"
+  dependencies:
+    "@discordjs/collection": "npm:^2.1.1"
+    "@sapphire/utilities": "npm:^3.18.3"
+  checksum: 10/1d9b37f7fccefe60e01c6f82322ec446beb89aca4335215c71642276b217e12a1bc475a902da659fb53b5086cf04e3b7b9e8086d42e72933559da3431350b370
+  languageName: node
+  linkType: hard
+
+"@sapphire/pieces@npm:^4.4.1":
   version: 4.4.1
   resolution: "@sapphire/pieces@npm:4.4.1"
   dependencies:
@@ -1774,7 +1784,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sapphire/utilities@npm:^3.17.0, @sapphire/utilities@npm:^3.18.2":
+"@sapphire/utilities@npm:^3.17.0, @sapphire/utilities@npm:^3.18.2, @sapphire/utilities@npm:^3.18.3":
   version: 3.18.3
   resolution: "@sapphire/utilities@npm:3.18.3"
   checksum: 10/28dc02411965acb5dc8423c0d86326f04f988e837c1ab8f87389c86ca149fa5d847526d33ccc60330685bb1882494c234113c3c0767d703c4dbd6fbb16cef759
